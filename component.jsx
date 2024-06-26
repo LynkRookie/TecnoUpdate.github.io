@@ -1,6 +1,6 @@
 /**
  * v0 by Vercel.
- * @see https://v0.dev/t/DST4fgxPY1n
+ * @see https://v0.dev/t/jZyZ68D6Uqp
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
