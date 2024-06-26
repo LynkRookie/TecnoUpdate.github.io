@@ -28,8 +28,8 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  .border-border {
+    @apply border;
   }
 
   body {
