@@ -488,7 +488,7 @@ video {
   margin-top: 1rem;
 }
 .mt-auto {
-  margin-top: auto;
+    margin-top: 30px;
 }
 .flex {
   display: flex;
