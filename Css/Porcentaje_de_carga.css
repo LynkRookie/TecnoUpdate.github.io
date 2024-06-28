@@ -16,14 +16,14 @@
     background-color: #159b04;
     transition: width .3s linear;
 }
-#tasks .collection.with-header .progresion {
+#tasks .collection.with-header .collection-item {
     padding: 0 24px;
     border-radius: 10px;
     color: white;
     background: linear-gradient(90deg, rgba(16, 43, 87, 0.8403010862548144) 2%, rgba(45, 41, 41, 1) 86%);
     padding-bottom: 0.1px;
 }
-#tasks .collection.with-header .progresion span.badge {
+#tasks .collection.with-header .collection-item span.badge {
     position: static;
     float: none;
     margin-left: 0;
