@@ -1,4 +1,4 @@
-/* Estilos para tema claro */
+/* Estilos para tema oscuro*/
 .theme-light .bg-gray-800 {
     
   background-color: #1f2937; /* Color gris oscuro para el tema oscuro */
@@ -11,7 +11,7 @@
     color: #ffffff ;
     
   }
-  /* Estilos para tema oscuro */
+  /* Estilos para tema claro*/
   .theme-dark .bg-gray-800 {
     background-color: #000000d1;
     color: #000000;
@@ -24,6 +24,9 @@
   }
   .theme-dark .bu{
     color: white;
+  }
+  .theme-dark .barra{
+    color:aqua
   }
   
   
