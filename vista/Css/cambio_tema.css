@@ -8,14 +8,12 @@
   }
   
   .theme-light .text-white {
-    color: #000000 ;
+    color: #ffffff ;
     
   }
-  
   /* Estilos para tema oscuro */
   .theme-dark .bg-gray-800 {
-   
-    background-color: #f2f4f6;
+    background-color: #000000d1;
     color: #000000;
     border-color: rgba(221, 221, 221, 1);
     
@@ -24,6 +22,8 @@
   .theme-dark .text-white {
     color: white;
   }
-  
+  .theme-dark .button{
+    color: white;
+  }
   
   
