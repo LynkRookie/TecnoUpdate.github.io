@@ -1,23 +1,2 @@
-/* Estilos para tema claro */
-.theme-light .bg-gray-800 {
-  background-color: #ffffff;
-  color: #000000;
-  border-color: rgba(221, 221, 221, 1);
-}
-
-.theme-light .text-white {
-  color:none;
-}
-
-/* Estilos para tema oscuro */
-.theme-dark .bg-gray-800 {
-  background-color: #1f2937; /* Color gris oscuro para el tema oscuro */
-  color: #000000;
-  border-color: rgba(31, 41, 55, 1); /* Color del borde en tema oscuro */
-}
-
-.theme-dark .text-white {
-  color: #ffffff !important;
-}
 
 
