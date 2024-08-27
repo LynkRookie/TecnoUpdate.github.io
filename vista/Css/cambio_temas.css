@@ -19,5 +19,9 @@
 .theme-dark .text-white {
   color: #ffffff !important;
 }
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 25 25);
+}
 
 
