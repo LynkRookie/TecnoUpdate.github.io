@@ -1,0 +1,21 @@
+
+/* Sidebar */
+#sidebar {
+  
+    transform: translateX(0);
+  }
+  
+  /* Mostrar el sidebar */
+  #sidebar.show {
+    width: 250px;
+    height: 100vh;
+    background-color: #181e28;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 23px;
+    transition: transform 0.3s ease;
+/*transform: translateX(-100%);*/
+  }
+  
