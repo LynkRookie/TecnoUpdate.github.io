@@ -11,6 +11,9 @@
     color: #ffffff ;
     
   }
+  .theme-light .bg-amber-500{
+    background-color: rgb(255, 153, 0);
+  }
   /* Estilos para tema claro*/
   .theme-dark .bg-gray-800 {
     background-color: #000000d1;
@@ -25,8 +28,8 @@
   .theme-dark .bu{
     color: white;
   }
-  .theme-dark .barra{
-    color:aqua
+  .theme-dark .bg-amber-500{
+    background-color: green;
   }
   
   
