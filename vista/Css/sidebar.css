@@ -1,11 +1,11 @@
-
-/* Sidebar */
+/*
+/* Sidebar 
 #sidebar {
   
     transform: translateX(0);
   }
   
-  /* Mostrar el sidebar */
+  /* Mostrar el sidebar 
   #sidebar.show {
     width: 250px;
     height: 100vh;
@@ -16,9 +16,49 @@
     left: 0;
     border-radius: 23px;
     transition: transform 0.3s ease;
-/*transform: translateX(-100%);*/
+/*transform: translateX(-100%);
   }
   #sidebar .bo{
     
   }
-  
+  */
+  /* Estilos para el sidebar expandido y contraído */
+#sidebar {
+  width: 80px;
+  transition: width 0.3s ease-in-out;
+}
+
+#sidebar.expanded {
+  width: 250px;
+}
+
+#sidebar .sidebar-text {
+  display: none;
+  margin-left: 10px;
+}
+
+#sidebar.expanded .sidebar-text {
+  display: inline;
+}
+
+#sidebar .sidebar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  transition: padding 0.3s ease-in-out;
+}
+
+#sidebar.expanded .sidebar-button {
+  justify-content: flex-start;
+}
+
+#main-content {
+  padding-left: 100px;
+  transition: padding-left 0.3s ease-in-out;
+}
+
+#sidebar.expanded ~ #main-content {
+  padding-left: 270px;
+}
