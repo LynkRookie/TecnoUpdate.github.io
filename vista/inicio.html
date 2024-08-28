@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TecnoUpdate</title>
+  <link href="Css/Generated.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="Css/cambio_teme.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="Css/sidebars.css" type="text/css" rel="stylesheet" media="screen">
+  <link href="globals.css" type="text/css" rel="stylesheet" media="screen">
+  <link class="logo" rel="website icon" type="image/png" href="img/newlogo_t.png">
+</head>
+<body class="theme-light">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="bx flex flex-col items-center w-20 bg-gray-900 text-white p-4 transition-width duration-300">
+      <span class="bulei relative flex overflow-hid rounded-full">
+        <img class="aspect-square h-full w-full" alt="User Avatar" 
+        src="img/1.png"
+        style="
+        border-radius: 9999px;"/>
+      </span>
+      <nav class="mt-4 space-y-4">
+        <!-- Botón de inicio -->
+        <button class="sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+          viewBox="0 0 24 24" fill="none" 
+          stroke="currentColor" stroke-width="2" 
+          stroke-linecap="round" stroke-linejoin="round" 
+          class="w-6 h-6">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span class="sidebar-text">Inicio</span>
+        </button>
+        <!-- Botón de archivos -->
+        <button class="sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+            <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
+          </svg>
+          <span class="sidebar-text">Archivos</span>
+        </button>
+        <!-- Botón de configuración -->
+        <button class="sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <span class="sidebar-text">Configuración</span>
+        </button>
+      </nav>
+      <!-- Modo claro/oscuro -->
+      <div class="mt-auto space-y-4" style="margin-top: 30px;">
+        <button id="theme-toggle" onclick="toggleTheme()" class="sidebar-button">
+          <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <span class="sidebar-text">Modo Claro/Oscuro</span>
+        </button>
+      </div>
+      <!-- Botón de sidebar -->
+      <div id="sidebar-toggle" class="mt-auto space-y-4" style="margin-top: 30px;">
+        <button id="sidebar-button" onclick="toggleSidebar()" class="sidebar-button fixed top-4 left-4 z-50 bg-gray-700 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="sidebar-icon" class="w-6 h-6">
+            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+            <path d="M9 3v18"></path>
+            <path d="m16 15-3-3 3-3"></path>
+          </svg>
+          <span class="sidebar-text">Contraer/Expandir Barra</span>
+        </button>
+      </div>
+    </aside>
+    <!-- Main content -->
+    <main id="main-content" class=" bz flex-1 p-6 bg-gradient-to-r from-green-500 to-blue-500 text-white transition-padding duration-300">
+      <h1 class="text-4xl font-bold mb-6 bu">Inicio</h1>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- div del datos sobre mi-->
+        <div class="rounded-lg border shadow-sm bg-gray-800 text-white" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Datos Sobre Mi</h3>
+          </div>
+          <div class="p-6">
+            <ul class="list-disc list-inside space-y-2">
+              <li>
+                Mi Nombre es Damián Jinel Cortés. Aquí mostraré todos mis códigos, proyectos y el proceso de aprendizaje de
+                programación que he realizado en estos años, en el cuales algunos son hechos en java otros en html,
+                php. todos mis códigos, proyectos y el proceso de aprendizaje de programación que he aprendido.
+              </li>
+              <li>
+                Soy un técnico analista programador en proceso de obtener un título en Ingeniería Informática, 
+                con experiencia en desarrollo web y mantenimiento de sistemas. 
+                Mi objetivo es aplicar mis conocimientos en un entorno profesional, 
+                contribuyendo al éxito de una organización a través de soluciones tecnológicas innovadoras. 
+                A largo plazo, aspiro a establecer una empresa en el sector tecnológico, enfocada en satisfacer las necesidades del mercado 
+                y la sociedad.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- fin de datos sobre mi-->
+
+        <!--div sobre los intereses-->
+        <div class="rounded-lg border shadow-sm bg-gray-800 text-white" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Intereses</h3>
+          </div>
+          <div class="p-6">
+            <ul class="list-disc list-inside space-y-2">
+              <li>Programación</li>
+              <li>Robótica</li>
+              <li>Música</li>
+              <li>Películas y Series</li>
+            </ul>
+          </div>
+        </div>
+        <!-- fin de los intereses-->
+
+        <!--div de las habilidades profesionales -->
+        <div class="rounded-lg border shadow-sm bg-gray-800 text-white" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+              Habilidades Profesionales
+            </h3>
+          </div>
+          <div class="p-6">
+            <ul class="list-disc list-inside space-y-2">
+              <li>Realizar Mantenimiento de diferentes equipos de forma interna y externa</li>
+              <li>Realizar limpieza a los equipos y dispositivos</li>
+            </ul>
+          </div>
+        </div>
+        <!-- fin de las habilidades profesionales-->
+
+        <!-- div de redes sociales -->
+        <div class="rounded-lg border shadow-sm bg-gray-800 text-white" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Redes Sociales</h3>
+          </div>
+          <div class="p-6">
+            <ul class="list-inside list-disc space-y-2">
+                <li><a href="https://www.instagram.com/lynk_rookie/?hl=es-la"> Instagram</a></li>
+                <li><a href="https://kick.com/lynk-rookie"> Kick</a></li>
+                <li><a href="https://github.com/LynkRookie"> Github</a></li>
+              </ul>
+          </div>
+        </div>
+        <!-- fin de las redes sociales-->
+
+        <!--div de porcentaje de programacion aprendidas-->
+        <div class="rounded-lg border shadow-sm bg-gray-800 text-white col-span-2" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">
+              Lenguajes de Programación Adquiridos
+            </h3>
+          </div>
+          <div class="p-6">
+            <div class="space-y-4 barra">
+              <div>
+                <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                  HTML
+                </label>
+                <br>
+                <span >77%</span>
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  role="progressbar"
+                  data-state="indeterminate"
+                  data-max="100"
+                  class="relative h-2 overflow-hidden rounded-full w-full bg-white text-green-500"
+                >
+                <div class="relative h-2 overflow-hidden rounded-full w-full bg-green-50">
+                  <div class="absolute top-0 left-0 h-full bg-amber-500" style="width: 77%;"></div>
+                </div>
+                  <div
+                    data-state="indeterminate"
+                    data-max="100"
+                    class="h-full w-full flex-1 bg-primary transition-all"
+                    style="transform: translateX(-25%);"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                  CSS
+                </label>
+                <br>
+                <span >70%</span>
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  role="progressbar"
+                  data-state="indeterminate"
+                  data-max="100"
+                  class="relative h-2 overflow-hidden rounded-full w-full bg-white text-green-500"
+                >
+                <div class="relative h-2 overflow-hidden rounded-full w-full bg-green-50">
+                  <div class="absolute top-0 left-0 h-full bg-amber-500" style="width: 70%; "></div>
+                </div>
+                  <div
+                    data-state="indeterminate"
+                    data-max="100"
+                    class="h-full w-full flex-1 bg-primary transition-all"
+                    style="transform: translateX(-33%);"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                  JAVASCRIPTS
+                
+                </label>
+                <br>
+                <span >30%</span>
+                <div aria-valuemax="100"aria-valuemin="0"role="progressbar"data-state="indeterminate"data-max="100"
+                  class="relative h-2 overflow-hidden rounded-full w-full bg-white text-green-500">
+                
+                <div class="relative h-2 overflow-hidden rounded-full w-full bg-green-50">
+                  <div class="absolute top-0 left-0 h-full bg-amber-500" style="width:30%;"></div>
+                </div>
+                
+                  <div
+                    data-state="indeterminate"
+                    data-max="100"
+                    class="h-full w-full flex-1 bg-primary transition-all"
+                    style="transform: translateX(-33%);"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                  PHP
+                </label>
+                <br>
+                <span >67%</span>
+                <div class="relative h-2 overflow-hidden rounded-full w-full bg-green-50">
+                  <div class="absolute top-0 left-0 h-full bg-amber-500" style="width: 67%;"></div>
+                </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+
+  <script src="Css/Js/Sidebars.js"></script>
+  <script src="Css/Js/cambio_color.js"></script>
+</body>
+</html>
