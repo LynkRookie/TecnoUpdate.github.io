@@ -13,17 +13,18 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>TecnoUpdate</title>
-      <link href="vista/Css/cambio_teme.css" type="text/css" rel="stylesheet" media="screen">
+      <link href="vista/Css/c_cambio_th_login.css" type="text/css" rel="stylesheet" media="screen">
       <link href="vista/Css/estilos.css" type="text/css" rel="stylesheet" >
-      <link href="vista/Css/estilo_login.css" type="text/css" rel="stylesheet" >
+      <link href="vista/Css/estilos_login.css" type="text/css" rel="stylesheet" >
       <link rel="website icon" type="png" href="vista/img/newlogo_t.png">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
-  <body class="theme-light cuerp">
-    <section class="from-green-500">
+  <body class=" cuerp">
+    <section class="theme-light">
       <form action="controlador/validador.php" method="post">
         <div class="cuerpo fixed top-0 right-0 h-screen w-[400px] bg-background shadow-lg">
-          <main class="flex h-full flex-col justify-center px-8 bg-muted">
+          <main class="flex h-full flex-col justify-center px-8 bg-muted  bx flex flex-col items-center 
+          w-20 bg-gray-800 bg-gray-900 p-4 transition-width duration-300 text-white">
             <div class="space-y-6">
               <img class="imagen" src="vista/img/newlogo_t.png" alt="Descripción de la imagen"/>
               <div class="flex items-center justify-between">
@@ -151,10 +152,18 @@
                     Correo
                   </button>
                 </div>
-                  <button type="submit" name="enviar" class="co inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full" >
+                  <!--<button type="submit" name="enviar" class="co inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full" >
                     Iniciar Sesión 
-                  </button>
-                   
+                  </button>-->
+                  <a class="co inline-flex items-center 
+                  justify-center whitespace-nowrap rounded-md 
+                  text-sm font-medium ring-offset-background 
+                  transition-colors focus-visible:outline-none 
+                  focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                  disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground 
+                  hover:bg-primary/90 h-10 px-4 py-2 w-full"href="vista/inicio.html">
+                             Iniciar sesión
+                        </a>
               </form>
               <div class="text-center text-sm text-muted-foreground"></div>
             </div>
@@ -178,6 +187,6 @@
         this.classList.toggle('fa-eye-slash');
       });
     </script>
-      <script src="vista/Css/Js/cambio_color.js"></script>
+      <script src="vista/Css/Js/c_color_login.js"></script>
   </body>
 </html>

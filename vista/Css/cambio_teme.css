@@ -38,4 +38,12 @@
   .theme-dark .bz{
     color: rgb(0, 0, 0);
   }
-  
+  .sun{
+    color: yellow;
+  }
+  .moon{
+    color: white;
+  }
+  .explorer{
+    color: white;
+  }

@@ -1,0 +1,46 @@
+/* Estilos para tema oscuro*/
+.theme-light .bg-gray-800 {
+    
+    background-color:rgb(104 119 139 / 32%); /* Color gris oscuro para el tema oscuro */
+      color: #fff7f7;
+      border-color: rgba(31, 41, 55, 1); /* Color del borde en tema oscuro */
+  
+    }
+    .theme-light .text-white {
+      color: #ffffff ;
+      
+    }
+    
+    /* Estilos para tema claro*/
+.theme-dark .bg-gray-900 {
+      background-color: #000000;
+      color: #000000;
+      border-color: rgba(221, 221, 221, 1);
+      
+    }
+    
+    
+    .theme-dark .text-white {
+      color: white;
+    }
+    .theme-dark .bu{
+      color: white;
+    }
+    .theme-dark .bg-amber-500{
+      background-color: green;
+    }
+     .theme-dark .bx{
+      color: white;
+    }
+    .theme-dark .bz{
+      color: rgb(126, 123, 123);
+    }
+    .sun{
+      color: yellow;
+    }
+    .moon{
+      color: white;
+    }
+    .explorer{
+      color: white;
+    }

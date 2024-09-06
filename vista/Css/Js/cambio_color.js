@@ -16,16 +16,16 @@ function toggleTheme() {
 
   // Cambiar icono del botón
   if (body.classList.contains('theme-dark')) {
-    themeIcon.innerHTML = `<path d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z"></path>`; // Icono de luna
+    themeIcon.innerHTML = `<path d="M21 12.79A9 9 0 1111.21 3 7.5 7.5 0 0021 12.79z"class="moon"></path>`; // Icono de luna
   } else {
-    themeIcon.innerHTML = `<circle cx="12" cy="12" r="4"></circle>
-                           <path d="M12 2v2"></path>
-                           <path d="M12 20v2"></path>
-                           <path d="m4.93 4.93 1.41 1.41"></path>
-                           <path d="m17.66 17.66 1.41 1.41"></path>
-                           <path d="M2 12h2"></path>
-                           <path d="M20 12h2"></path>
-                           <path d="m6.34 17.66-1.41 1.41"></path>
-                           <path d="m19.07 4.93-1.41 1.41"></path>`; // Icono de sol
+    themeIcon.innerHTML = `<circle cx="12" cy="12" r="4" class="sun"></circle>
+                           <path d="M12 2v2" class="sun"></path>
+                           <path d="M12 20v2" class="sun"></path>
+                           <path d="m4.93 4.93 1.41 1.41" class="sun"></path>
+                           <path d="m17.66 17.66 1.41 1.41" class="sun"></path>
+                           <path d="M2 12h2" class="sun"></path>
+                           <path d="M20 12h2" class="sun"></path>
+                           <path d="m6.34 17.66-1.41 1.41"class="sun"></path>
+                           <path d="m19.07 4.93-1.41 1.41"class="sun"></path>`; // Icono de sol
   }
 }
