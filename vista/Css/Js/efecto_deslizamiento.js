@@ -47,15 +47,31 @@ document.addEventListener('wheel', function (event) {
   });
   
   // Manejo de agrandamiento de imágenes en certificados al pasar el mouse
-  document.addEventListener('mouseover', function (event) {
-    if (event.target.closest('.curso2')) {
-      event.target.closest('.curso2').classList.add('hover-aumentados');
+document.addEventListener('mouseover', function (event) {
+    if (event.target.closest('.curso1')) {
+        event.target.closest('.curso1').classList.add('hover-aumentado');
     }
-  });
-  
-  document.addEventListener('mouseout', function (event) {
-    if (event.target.closest('.curso2')) {
-      event.target.closest('.curso2').classList.remove('hover-aumentados');
+}
+);
+
+document.addEventListener('mouseout', function (event) {
+    if (event.target.closest('.curso1')) {
+        event.target.closest('.curso1').classList.remove('hover-aumentado');
     }
-  });
+}
+);
+document.addEventListener('mouseover', function (event) {
+if (event.target.closest('.curso2')) {
+    event.target.closest('.curso2').classList.add('hover-aumentados');
+}
+}
+);
+
+document.addEventListener('mouseout', function (event) {
+if (event.target.closest('.curso2')) {
+    event.target.closest('.curso2').classList.remove('hover-aumentados');
+}
+}
+);
+
   
