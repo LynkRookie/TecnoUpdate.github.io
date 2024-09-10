@@ -22,7 +22,6 @@
 .contenedor {
   transition: transform .6s ease-in-out;
 }
-
 .contenedor.scroll-aumentado {
   transform: scale(1.25); /* El div se agranda un 25% */
 }
@@ -40,7 +39,9 @@
   transform: scale(0.9); /* Reduce el div un 10% */
 }
 /* CSS para agrandar al desplazarse hacia arriba */
-.debuel_mause1,
+.debuel_mause1{
+  transition: transform .8s ease-in-out;
+}
 .debuel_mause2 {
   transition: transform .8s ease-in-out;
 }
