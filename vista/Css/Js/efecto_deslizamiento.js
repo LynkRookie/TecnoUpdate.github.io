@@ -1,4 +1,5 @@
 document.addEventListener('wheel', function (event) {
+        const debueltaMauseElements = document.querySelectorAll('.debuel_mause1');
         // Manejo de agrandamiento de contenedores al hacer scroll
         const contenedor = document.querySelector('.contenedor');
         if (event.deltaY > 0) {
@@ -7,9 +8,7 @@ document.addEventListener('wheel', function (event) {
         } else {
             // Si el desplazamiento es hacia arriba, agranda los elementos con la clase debuelta_mause
             if (contenedor) contenedor.classList.remove('scroll-aumentado');
-            // Opcional: Eliminar la clase scroll-aumentado después de un tiempo si se requiere
-            const debueltaMauseElements = document.querySelectorAll('.debuel_mause1');
-            debueltaMauseElements.forEach(element => element.classList.add('scroll-aumentado'));
+            // Opcional: Eliminar la clase scroll-aumentado después de un tiempo si es necesario
             setTimeout(() => {
                 debueltaMauseElements.forEach(element => element.classList.remove('scroll-aumentado'));
             }, 500); // Ajusta el tiempo si es necesario
@@ -17,13 +16,18 @@ document.addEventListener('wheel', function (event) {
     }
 );
 document.addEventListener('wheel', function (event) {
+        const debueltaMauseElements = document.querySelectorAll('.debuel_mause2');
         const contenedor2 = document.querySelector('.contenedor_2');
         if (event.deltaY > 0) {
             if (contenedor2) contenedor2.classList.add('scroll-aumentado_2');
         } else {
             if (contenedor2) contenedor2.classList.remove('scroll-aumentado_2');
             const debueltaMauseElements = document.querySelectorAll('.debuel_mause2');
-            debueltaMauseElements.forEach(element => element.classList.add('scroll-aumentado'));
+            debueltaMauseElements.forEach(element => element.classList.add('scroll-aumentado_2'));
+             // Opcional: Eliminar la clase scroll-aumentado después de un tiempo si es necesario
+            setTimeout(() => {
+                debueltaMauseElements.forEach(element => element.classList.remove('scroll-aumentado_2'));
+            }, 500); // Ajusta el tiempo si es necesario
         }
     }
 );
