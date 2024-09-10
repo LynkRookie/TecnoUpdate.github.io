@@ -48,10 +48,10 @@
   transform: scale(2.1); /* Agranda la imagen un 10% al pasar el mouse sobre ella */
 }
 /* CSS para agrandar al desplazarse hacia arriba */
-.devuel_mause1 {
+.debuel_mause1 {
   transition: transform .9s ease-in-out;
 }
-.devuel_mause2 {
+.debuel_mause2 {
   transition: transform .8s ease-in-out;
 }
 .devueltamause.scroll-aumentado {
