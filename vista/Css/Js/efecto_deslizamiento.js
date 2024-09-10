@@ -1,7 +1,6 @@
 document.addEventListener('wheel', function(event) {
         // Manejo de agrandamiento de contenedores al hacer scroll
         const contenedor = document.querySelector('.contenedor');
-        
         if (event.deltaY > 0) {
             // Si el desplazamiento es hacia abajo, agranda ambos contenedores
             if (contenedor) contenedor.classList.add('scroll-aumentado');
@@ -12,8 +11,7 @@ document.addEventListener('wheel', function(event) {
             setTimeout(() => {
                 debueltaMauseElements.forEach(element => element.classList.remove('scroll-aumentado'));
             }, 500); // Ajusta el tiempo si es necesario
-        }
-        
+        } 
     }
 );
     document.addEventListener('wheel', function(event) {
