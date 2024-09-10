@@ -22,10 +22,11 @@
   font-family: monospace;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 12ch;
+  width: 25ch;
   animation: typing 2s steps(12),
    blink .5s infinite step-end alternate;
   overflow: hidden;
+  margin-left: 10ch;
   }
 @keyframes typing {
   from{ width: 0}
