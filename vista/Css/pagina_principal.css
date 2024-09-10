@@ -17,7 +17,23 @@
 }
 .htm{
     color: black;
-}.t{
+}.sp{
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 12ch;
+  animation: typing 2s steps(12),
+   blink .5s infinite step-end alternate;
+  overflow: hidden;
+  }
+@keyframes typing {
+  from{ width: 0}
+}
+@keyframes blink{
+  50% { border-color:transparent}
+}
+.t{
   font-size: 23px;
 }.pie{
 background-color: #000000d9;
