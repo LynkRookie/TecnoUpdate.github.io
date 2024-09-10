@@ -8,6 +8,8 @@ document.addEventListener('wheel', function (event) {
             // Si el desplazamiento es hacia arriba, agranda los elementos con la clase debuelta_mause
             if (contenedor) contenedor.classList.remove('scroll-aumentado');
             // Opcional: Eliminar la clase scroll-aumentado después de un tiempo si se requiere
+            const debueltaMauseElements = document.querySelectorAll('.debuel_mause1');
+            debueltaMauseElements.forEach(element => element.classList.add('scroll-aumentado'));
             setTimeout(() => {
                 debueltaMauseElements.forEach(element => element.classList.remove('scroll-aumentado'));
             }, 500); // Ajusta el tiempo si es necesario
@@ -20,6 +22,8 @@ document.addEventListener('wheel', function (event) {
             if (contenedor2) contenedor2.classList.add('scroll-aumentado_2');
         } else {
             if (contenedor2) contenedor2.classList.remove('scroll-aumentado_2');
+            const debueltaMauseElements = document.querySelectorAll('.debuel_mause2');
+            debueltaMauseElements.forEach(element => element.classList.add('scroll-aumentado'));
         }
     }
 );
