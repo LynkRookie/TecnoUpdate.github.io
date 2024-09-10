@@ -22,14 +22,14 @@ document.addEventListener('wheel', function(event) {
 );
   // Manejo de agrandamiento de imágenes en certificados al pasar el mouse
   document.addEventListener('mouseover', function(event) {
-    if (event.target.closest('.cursos1')) {
-      event.target.closest('.cursos1').classList.add('hovers-aumentado');
+    if (event.target.closest('.curso1')) {
+      event.target.closest('.curso1').classList.add('hover-aumentado');
     }
   });
   
   document.addEventListener('mouseout', function(event) {
-    if (event.target.closest('.cursos1')) {
-      event.target.closest('.cursos1').classList.remove('hovers-aumentado');
+    if (event.target.closest('.curso1')) {
+      event.target.closest('.curso1').classList.remove('hover-aumentado');
     }
   });
   
