@@ -17,6 +17,11 @@
 }
 .htm{
     color: black;
+}.contenedor.sobre{
+  apacity: .6;
+  transform: scale(.8);
+}.contenedor{
+transition: transform .5s ease-in-out;
 }
 .t{
   font-size: 23px;
