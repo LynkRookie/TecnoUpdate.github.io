@@ -40,7 +40,7 @@ color: white;
   width: 25ch;
   animation: typing 2s steps(12), blink .5s infinite step-end alternate;
   overflow: hidden;
-  margin-left: 0;
+  margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
 }
