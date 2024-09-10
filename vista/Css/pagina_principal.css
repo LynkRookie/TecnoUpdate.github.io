@@ -17,14 +17,17 @@
 }
 .htm{
     color: black;
-}.contenedor {
+}
+.contenedor,.contenedor_2 {
+  transition: transform .5s ease-in-out;
+}
+.contenedor {
   transition: transform .5s ease-in-out;
 }
 
 .contenedor.scroll-aumentado {
   transform: scale(1.3); /* El div se agranda un 10% */
 }
-
 .t{
   font-size: 23px;
 }.pie{
@@ -34,7 +37,8 @@ color: white;
 .tx{
   margin-top: -42px;
 
-}.ix{
+}
+.ix{
   color: black;
 }
 .curso1{
