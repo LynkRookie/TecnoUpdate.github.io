@@ -48,13 +48,16 @@
   transform: scale(2.1); /* Agranda la imagen un 10% al pasar el mouse sobre ella */
 }
 /* CSS para agrandar al desplazarse hacia arriba */
-/*.debuel_mause1 {
+.debuel_mause1 {
   transition: transform .9s ease-in-out;
 }
 .debuel_mause2 {
   transition: transform .8s ease-in-out;
-}*/
-.devueltamause.scroll-aumentado {
+}
+.debuel_mause1.scroll-aumentado {
+  transform: scale(1.1); /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
+}
+.debuel_mause2.scroll-aumentado_2 {
   transform: scale(1.1); /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
 }
 .t{
