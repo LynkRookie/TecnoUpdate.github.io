@@ -1,60 +1,61 @@
 document.addEventListener('wheel', function (event) {
-        const debueltaMauseElements = document.querySelectorAll('.debuel_mause1');
-        // Manejo de agrandamiento de contenedores al hacer scroll
-        const contenedor = document.querySelector('.contenedor');
-        if (event.deltaY > 0) {
-            // Si el desplazamiento es hacia abajo, agranda ambos contenedores
-            if (contenedor) contenedor.classList.add('scroll-aumentado');
-        } else {
-            // Si el desplazamiento es hacia arriba, agranda los elementos con la clase debuelta_mause
-            if (contenedor) contenedor.classList.remove('scroll-aumentado');
-            // Opcional: Eliminar la clase scroll-aumentado después de un tiempo si es necesario
-            setTimeout(() => {
-                debueltaMauseElements.forEach(element => element.classList.remove('scroll-aumentado'));
-            }, 500); // Ajusta el tiempo si es necesario
-        }
+    const contenedor = document.querySelector('.contenedor');
+    const contenedor2 = document.querySelector('.contenedor_2');
+  
+    if (event.deltaY > 0) {
+      // Desplazamiento hacia abajo
+      if (contenedor) {
+        contenedor.classList.add('scroll-aumentado');
+        contenedor.classList.remove('scroll-reducido');
+      }
+      if (contenedor2) {
+        contenedor2.classList.add('scroll-aumentado');
+        contenedor2.classList.remove('scroll-reducido');
+      }
+    } else {
+      // Desplazamiento hacia arriba
+      if (contenedor) {
+        contenedor.classList.remove('scroll-aumentado');
+        contenedor.classList.add('scroll-reducido');
+      }
+      if (contenedor2) {
+        contenedor2.classList.remove('scroll-aumentado');
+        contenedor2.classList.add('scroll-reducido');
+      }
+      
+      // Agrandar elementos con la clase debuel_mause1 y debuel_mause2
+      const debueltaMauseElements1 = document.querySelectorAll('.debuel_mause1');
+      const debueltaMauseElements2 = document.querySelectorAll('.debuel_mause2');
+      
+      debueltaMauseElements1.forEach(element => {
+        element.classList.add('scroll-aumentado');
+      });
+      debueltaMauseElements2.forEach(element => {
+        element.classList.add('scroll-aumentado');
+      });
+      
+      // Reducir elementos con la clase debuel_mause1 y debuel_mause2 después de un tiempo
+      setTimeout(() => {
+        debueltaMauseElements1.forEach(element => {
+          element.classList.remove('scroll-aumentado');
+        });
+        debueltaMauseElements2.forEach(element => {
+          element.classList.remove('scroll-aumentado');
+        });
+      }, 500); // Ajusta el tiempo si es necesario
     }
-);
-document.addEventListener('wheel', function (event) {
-        const debueltaMauseElements = document.querySelectorAll('.debuel_mause2');
-        const contenedor2 = document.querySelector('.contenedor_2');
-        if (event.deltaY > 0) {
-            if (contenedor2) contenedor2.classList.add('scroll-aumentado_2');
-        } else {
-            if (contenedor2) contenedor2.classList.remove('scroll-aumentado_2');
-            const debueltaMauseElements = document.querySelectorAll('.debuel_mause2');
-            debueltaMauseElements.forEach(element => element.classList.add('scroll-aumentado_2'));
-             // Opcional: Eliminar la clase scroll-aumentado después de un tiempo si es necesario
-            setTimeout(() => {
-                debueltaMauseElements.forEach(element => element.classList.remove('scroll-aumentado_2'));
-            }, 500); // Ajusta el tiempo si es necesario
-        }
-    }
-);
-// Manejo de agrandamiento de imágenes en certificados al pasar el mouse
-document.addEventListener('mouseover', function (event) {
-        if (event.target.closest('.curso1')) {
-            event.target.closest('.curso1').classList.add('hover-aumentado');
-        }
-    }
-);
-
-document.addEventListener('mouseout', function (event) {
-        if (event.target.closest('.curso1')) {
-            event.target.closest('.curso1').classList.remove('hover-aumentado');
-        }
-    }
-);
-document.addEventListener('mouseover', function (event) {
+  });
+  
+  // Manejo de agrandamiento de imágenes en certificados al pasar el mouse
+  document.addEventListener('mouseover', function (event) {
     if (event.target.closest('.curso2')) {
-        event.target.closest('.curso2').classList.add('hover-aumentados');
+      event.target.closest('.curso2').classList.add('hover-aumentados');
     }
-}
-);
-
-document.addEventListener('mouseout', function (event) {
+  });
+  
+  document.addEventListener('mouseout', function (event) {
     if (event.target.closest('.curso2')) {
-        event.target.closest('.curso2').classList.remove('hover-aumentados');
+      event.target.closest('.curso2').classList.remove('hover-aumentados');
     }
-}
-);
+  });
+  

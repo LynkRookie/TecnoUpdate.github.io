@@ -18,23 +18,39 @@
 .htm{
     color: black;
 }
+/* CSS para los contenedores */
 .contenedor {
   transition: transform .6s ease-in-out;
 }
+
 .contenedor.scroll-aumentado {
-  transform: scale(1.25); /* El div se agranda un 10% */
+  transform: scale(1.25); /* El div se agranda un 25% */
+}
+.contenedor.scroll-reducido {
+  transform: scale(0.9); /* El div se reduce un 10% */
 }
 /* CSS para el contenedor de proyectos */
 .contenedor_2 {
   transition: transform .8s ease-in-out;
 }
-.scroll-aumentado {
-  transform: scale(1.3); /* Agranda el div un 10% */
+.contenedor_2.scroll-aumentado {
+  transform: scale(1.3); /* Agranda el div un 30% */
 }
-.scroll-aumentado_2{
-  transform: scale(1.28); /* Agranda el div un 10% */
+.contenedor_2.scroll-reducido {
+  transform: scale(0.9); /* Reduce el div un 10% */
 }
-/* CSS para los certificados */
+/* CSS para agrandar al desplazarse hacia arriba */
+.debuel_mause1,
+.debuel_mause2 {
+  transition: transform .8s ease-in-out;
+}
+.debuel_mause1.scroll-aumentado {
+  transform: scale(1.1); /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
+}
+.debuel_mause2.scroll-aumentado {
+  transform: scale(1.1); /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
+}
+/* CSS para las imágenes de certificados */
 .curso1 {
   transition: transform .3s ease-in-out;
 }
@@ -46,19 +62,6 @@
 }
 .hover-aumentados {
   transform: scale(2.1); /* Agranda la imagen un 10% al pasar el mouse sobre ella */
-}
-/* CSS para agrandar al desplazarse hacia arriba */
-.debuel_mause1 {
-  transition: transform .9s ease-in-out;
-}
-.debuel_mause2 {
-  transition: transform .8s ease-in-out;
-}
-.debuel_mause1.scroll-aumentado {
-  transform: scale(1.1); /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
-}
-.debuel_mause2.scroll-aumentado_2 {
-  transform: scale(1.1); /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
 }
 .t{
   font-size: 23px;
