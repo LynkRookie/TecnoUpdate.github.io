@@ -29,7 +29,7 @@
   transition: transform .5s ease-in-out;
 }
 .scroll-aumentado {
-  transform: scale(1.1); /* Agranda el div un 10% */
+  transform: scale(1.3); /* Agranda el div un 10% */
 }
 /* CSS para los certificados */
 .curso1 {
