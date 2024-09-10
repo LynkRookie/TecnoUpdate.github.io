@@ -17,12 +17,14 @@
 }
 .htm{
     color: black;
-}.contenedor.sobre{
-  apacity: .6;
-  transform: scale(.8);
-}.contenedor{
-transition: transform .5s ease-in-out;
+}.contenedor {
+  transition: transform .5s ease-in-out;
 }
+
+.contenedor.scroll-aumentado {
+  transform: scale(1.1); /* El div se agranda un 10% */
+}
+
 .t{
   font-size: 23px;
 }.pie{
