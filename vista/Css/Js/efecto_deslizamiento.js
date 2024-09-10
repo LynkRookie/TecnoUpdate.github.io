@@ -1,4 +1,4 @@
-document.addEventListener('wheel', function(event) {
+document.addEventListener('wheel', function (event) {
         // Manejo de agrandamiento de contenedores al hacer scroll
         const contenedor = document.querySelector('.contenedor');
         if (event.deltaY > 0) {
@@ -11,28 +11,29 @@ document.addEventListener('wheel', function(event) {
             setTimeout(() => {
                 debueltaMauseElements.forEach(element => element.classList.remove('scroll-aumentado'));
             }, 500); // Ajusta el tiempo si es necesario
-        } 
+        }
     }
 );
-    document.addEventListener('wheel', function(event) {
-            const contenedor2 = document.querySelector('.contenedor_2');
-            if(event.deltaY > 0){
-                if (contenedor2) contenedor2.classList.add('scroll-aumentado');
-            }else{
-                if (contenedor2) contenedor2.classList.remove('scroll-aumentado'); 
-            }
+document.addEventListener('wheel', function (event) {
+        const contenedor2 = document.querySelector('.contenedor_2');
+        if (event.deltaY > 0) {
+            if (contenedor2) contenedor2.classList.add('scroll-aumentado_2');
+        } else {
+            if (contenedor2) contenedor2.classList.remove('scroll-aumentado_2');
         }
-    );
-  // Manejo de agrandamiento de imágenes en certificados al pasar el mouse
-  document.addEventListener('mouseover', function(event) {
-    if (event.target.closest('.curso1')) {
-      event.target.closest('.curso1').classList.add('hover-aumentado');
     }
-  });
-  
-  document.addEventListener('mouseout', function(event) {
-    if (event.target.closest('.curso1')) {
-      event.target.closest('.curso1').classList.remove('hover-aumentado');
+);
+// Manejo de agrandamiento de imágenes en certificados al pasar el mouse
+document.addEventListener('mouseover', function (event) {
+        if (event.target.closest('.curso1')) {
+            event.target.closest('.curso1').classList.add('hover-aumentado');
+        }
     }
-  });
-  
+);
+
+document.addEventListener('mouseout', function (event) {
+        if (event.target.closest('.curso1')) {
+            event.target.closest('.curso1').classList.remove('hover-aumentado');
+        }
+    }
+);
