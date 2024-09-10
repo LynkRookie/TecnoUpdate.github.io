@@ -37,3 +37,16 @@ document.addEventListener('mouseout', function (event) {
         }
     }
 );
+document.addEventListener('mouseover', function (event) {
+    if (event.target.closest('.curso2')) {
+        event.target.closest('.curso2').classList.add('hover-aumentado');
+    }
+}
+);
+
+document.addEventListener('mouseout', function (event) {
+    if (event.target.closest('.curso2')) {
+        event.target.closest('.curso2').classList.remove('hover-aumentado');
+    }
+}
+);
