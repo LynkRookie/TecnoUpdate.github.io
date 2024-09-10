@@ -44,6 +44,9 @@
 .hover-aumentado {
   transform: scale(1.3); /* Agranda la imagen un 10% al pasar el mouse sobre ella */
 }
+.hover-aumentados {
+  transform: scale(1.6); /* Agranda la imagen un 10% al pasar el mouse sobre ella */
+}
 /* CSS para agrandar al desplazarse hacia arriba */
 .devuelta_mause {
   transition: transform .5s ease-in-out;
