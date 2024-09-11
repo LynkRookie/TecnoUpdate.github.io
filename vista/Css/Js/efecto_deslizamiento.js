@@ -1,9 +1,10 @@
-// Función para controlar la aparición de las secciones al hacer scroll
+// Función para controlar la aparición de las secciones "features" y "proyect" al hacer scroll
 document.addEventListener('scroll', function () {
-  const sections = document.querySelectorAll('section');
+  const featuresSection = document.getElementById('features');
+  const proyectSection = document.getElementById('proyect');
   const scrollY = window.scrollY;
 
-  sections.forEach(section => {
+  [featuresSection, proyectSection].forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
 
@@ -18,21 +19,21 @@ document.addEventListener('scroll', function () {
   });
 });
 
-// Efecto de agrandamiento al hacer scroll
+// Efecto de agrandamiento al hacer scroll SOLO en las secciones features y proyect
 document.addEventListener('scroll', function () {
-  const contenedor = document.querySelector('.contenedor');
-  const contenedor2 = document.querySelector('.contenedor_2');
+  const contenedor = document.querySelector('#features .contenedor');
+  const contenedor2 = document.querySelector('#proyect .contenedor_2');
 
   if (window.scrollY > 200) {
-      contenedor.classList.add('scroll-aumentado');
-      contenedor2.classList.add('scroll-aumentado_2');
+      if (contenedor) contenedor.classList.add('scroll-aumentado');
+      if (contenedor2) contenedor2.classList.add('scroll-aumentado_2');
   } else {
-      contenedor.classList.remove('scroll-aumentado');
-      contenedor2.classList.remove('scroll-aumentado_2');
+      if (contenedor) contenedor.classList.remove('scroll-aumentado');
+      if (contenedor2) contenedor2.classList.remove('scroll-aumentado_2');
   }
 });
 
-// Manejo del hover para los certificados
+// Manejo del hover para las imágenes de certificados en las secciones
 document.addEventListener('mouseover', function (event) {
   if (event.target.closest('.curso1')) {
       event.target.closest('.curso1').classList.add('hover-aumentado');
