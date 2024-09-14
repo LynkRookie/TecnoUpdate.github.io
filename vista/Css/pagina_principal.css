@@ -17,6 +17,9 @@
 }
 .htm{
     color: black;
+}.imagen{
+  border-radius: 4%;
+  box-shadow: 40px 40px 0 4px #e1dfdf;
 }
 .sobre{
   text-align: justify;
