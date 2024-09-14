@@ -5,7 +5,7 @@ function toggleTheme() {
 
   // Cambiar entre 'theme-light' y 'theme-dark' en el body
   body.classList.toggle('theme-dark');
-  
+
   // Cambiar las clases en los elementos que lo requieran
   elementsToChange.forEach(element => {
     element.classList.toggle('bg-gray-800');
