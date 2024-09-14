@@ -19,7 +19,7 @@
     color: black;
 }
 .sobre{
-  text-align: inherit;
+  text-align: justify;
 }
 /* CSS para agrandar al desplazarse hacia arriba */
 .debuel_mause1{
@@ -80,7 +80,7 @@
   transition: transform 0.3s ease-in-out;
 }*/
 .t{
-  font-size: 23px;
+  font-size: 19px;
 }.pie{
 background-color: #000000d9;
 color: white;
