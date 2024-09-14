@@ -4,17 +4,14 @@
   background-color: #1f2937; /* Color gris oscuro para el tema oscuro */
     color: #ffffff;
     border-color: rgba(31, 41, 55, 1); /* Color del borde en tema oscuro */
-
   }
-  
   .theme-light .text-white {
     color: #ffffff ;
-    
+
   }
   .theme-light .bg-amber-500{
     background-color: rgb(255, 153, 0);
   }
-
   /* Estilos para tema claro*/
   .theme-dark .bg-gray-800 {
     background-color: #000000d1;
