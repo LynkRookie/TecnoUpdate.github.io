@@ -19,7 +19,8 @@
     color: black;
 }.imagen{
   border-radius: 4%;
-  box-shadow: 40px 40px 0 4px #e1dfdf;
+  box-shadow: 20px 15px 0 5px #e1dfdf;
+  width: 10rem;
 }
 .sobre{
   text-align: justify;
