@@ -24,7 +24,14 @@
   width: 92rem;
   margin-inline-start: auto;
 }
-
+.opuesto{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Espacio entre la imagen y el texto */
+  flex-direction: row-reverse; /* Coloca la imagen a la derecha */
+  padding: 20px;
+}
 .sobre {
   text-align: justify;
   margin-left: 123px;
