@@ -20,9 +20,11 @@
 }
 .imagen {
   border-radius: 4%;
-  box-shadow: 20px 15px 0 5px #e1dfdf;
+ 
+  box-shadow: 42px 26px 0 1px #03030363;
+  /*box-shadow: 42px 26px 0 1px #e1dfdf;*/
   width: 92rem;
-  margin-inline-start: auto;
+  margin-inline-start: -122px;
 }
 .opuesto{
   display: flex;
@@ -35,6 +37,7 @@
 .sobre {
   text-align: justify;
   margin-left: 123px;
+  margin-right: 124px;
 }
 
 .t {
