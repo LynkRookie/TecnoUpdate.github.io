@@ -61,7 +61,7 @@
 }
 /* CSS para la animación de scroll solo en features y proyect */
 #features, #proyect {
-  opacity: 0;
+ 
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 #features.scroll-entrar, #proyect.scroll-entrar {
