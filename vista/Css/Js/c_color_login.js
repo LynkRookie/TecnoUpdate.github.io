@@ -14,6 +14,7 @@ function toggleTheme() {
       element.classList.toggle('text-white');
       element.classList.toggle('bg-white');
       element.classList.toggle('text-black');
+      element.classList.toggle('bu');
     });
   
     // Cambiar icono del botón
