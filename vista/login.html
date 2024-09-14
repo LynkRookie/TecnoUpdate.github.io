@@ -13,7 +13,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>TecnoUpdate</title>
-      <link href="Css/c_cambio_th_login.css" type="text/css" rel="stylesheet" media="screen">
+      <link href="Css/cambio_teme.css" type="text/css" rel="stylesheet" media="screen">
       <link href="Css/estilos.css" type="text/css" rel="stylesheet" >
       <link href="Css/estilo_login.css" type="text/css" rel="stylesheet" >
       <link rel="website icon" type="png" href="img/newlogo_t.png">
@@ -21,7 +21,7 @@
   </head>
   <body class="theme-light cuerp">
     <section class="from-green-500">
-      <form action="controlador/validador.php" method="post">
+      <form action="../controlador/Validador.php" method="post">
         <div class="cuerpo fixed top-0 right-0 h-screen w-[400px] bg-background shadow-lg">
           <main class="flex h-full flex-col justify-center px-8 bg-muted">
             <div class="space-y-6">
@@ -80,7 +80,7 @@
                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring 
                       focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                       id="password" required="" value="" name="password" type="password"/>
-                    <button type="button" class="ojo inline-flex items-center 
+                    <button class="ojo inline-flex items-center 
                     justify-center whitespace-nowrap 
                     rounded-md text-sm font-medium 
                     ring-offset-background transition-colors focus-visible:outline-none 
@@ -89,7 +89,7 @@
                     hover:text-accent-foreground absolute bottom-1 right-1 h-7 w-7
                     " 
                    style="background: none;">
-                      <span  type="button" id="togglePassword" class="fas fas-fwb fas-eye toggle-password " ></span>
+                      <span  id="togglePassword" class="fas fas-fwb fas-eye toggle-password " ></span>
                     </button>
                   </div>
                 </div>
@@ -151,15 +151,9 @@
                     Correo
                   </button>
                 </div>
-                <a class="co inline-flex items-center 
-                justify-center whitespace-nowrap rounded-md 
-                text-sm font-medium ring-offset-background 
-                transition-colors focus-visible:outline-none 
-                focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
-                disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground 
-                hover:bg-primary/90 h-10 px-4 py-2 w-full"href="inicio.html">
-                           Iniciar sesión
-                      </a>
+                  <button type="submit" name="enviar" class="co inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full" >
+                    Iniciar Sesión 
+                  </button>
                    
               </form>
               <div class="text-center text-sm text-muted-foreground"></div>
@@ -184,6 +178,6 @@
         this.classList.toggle('fa-eye-slash');
       });
     </script>
-      <script src="Css/Js/c_color_login.js"></script>
+      <script src="Css/Js/cambio_color.js"></script>
   </body>
 </html>
