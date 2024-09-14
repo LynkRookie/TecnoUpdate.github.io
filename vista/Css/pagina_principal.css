@@ -17,23 +17,12 @@
 }
 .htm{
     color: black;
-}/*
-.imagen{
+}
+.imagen {
   border-radius: 4%;
   box-shadow: 20px 15px 0 5px #e1dfdf;
   width: 10rem;
   margin-inline-start: auto;
-}
-.sobre{
-  text-align: justify;
-}
-.t{
-  font-size: 19px;
-}*/
-.imagen {
-  border-radius: 4%;
-  box-shadow: 20px 15px 0 5px #e1dfdf;
-  width: 100%;
 }
 
 .sobre {
