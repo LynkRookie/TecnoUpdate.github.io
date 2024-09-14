@@ -17,7 +17,8 @@
 }
 .htm{
     color: black;
-}.imagen{
+}/*
+.imagen{
   border-radius: 4%;
   box-shadow: 20px 15px 0 5px #e1dfdf;
   width: 10rem;
@@ -26,6 +27,39 @@
 .sobre{
   text-align: justify;
 }
+.t{
+  font-size: 19px;
+}*/
+.imagen {
+  border-radius: 4%;
+  box-shadow: 20px 15px 0 5px #e1dfdf;
+  width: 100%;
+}
+
+.sobre {
+  text-align: justify;
+}
+
+.t {
+  font-size: 19px;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+
 /* CSS para agrandar al desplazarse hacia arriba */
 .debuel_mause1{
   transition: transform .8s ease-in-out;
@@ -84,9 +118,8 @@
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
 }*/
-.t{
-  font-size: 19px;
-}.pie{
+
+.pie{
 background-color: #000000d9;
 color: white;
 }

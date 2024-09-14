@@ -1,3 +1,4 @@
+
 /* modo oscuro*/
 .theme-light .bg-gray-80 {
   background-color: #1f2937; /* modo Color  oscuro para el tema oscuro */
@@ -7,6 +8,7 @@
   .theme-light .text-white {
     color: #ffffff ;
   }
+
   /* modo claro*/
   .theme-dark .bg-gray-800 {
     background-color: #ffffffd1;
@@ -19,13 +21,8 @@
     color: white;
     background-color: black;
   }
-   .theme-dark .bx{
-    color: white;
   
-  }
-  .theme-dark .bz{
-    color: rgb(0, 0, 0);
-  }
+  /*color de los icono de modo claro y oscuro*/
   .sun{
     color: yellow;
   }
