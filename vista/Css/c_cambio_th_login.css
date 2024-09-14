@@ -17,10 +17,11 @@
   }
   .theme-dark .bu{
     color: white;
+    background-color: black;
   }
    .theme-dark .bx{
     color: white;
-    background-color: black;
+  
   }
   .theme-dark .bz{
     color: rgb(0, 0, 0);
