@@ -18,7 +18,9 @@
 .htm{
     color: black;
 }
-/* CSS para los contenedores */
+.sobre{
+  text-align: inherit;
+}
 /* CSS para agrandar al desplazarse hacia arriba */
 .debuel_mause1{
   transition: transform .8s ease-in-out;
