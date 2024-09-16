@@ -1,4 +1,3 @@
-
 *,
 ::before,
 ::after {
@@ -11,18 +10,21 @@
   border-color: #e5e7eb;
   /* 2 */
 }
+
 ::before,
 ::after {
   --tw-content: '';
 }
-.htm{
-    color: black;
+
+.htm {
+  color: black;
 }
+
 .imagen {
-  border-radius: 4%;
-  box-shadow: 22px 21px 0 -1px #0000004f;
-  width: 100%; /* Ajusta al ancho del contenedor */
-  max-width: 528px; /* Limita el tamaño máximo de la imagen */
+  width: 100%;
+  /* Ajusta al ancho del contenedor */
+  max-width: 528px;
+  /* Limita el tamaño máximo de la imagen */
   margin-inline-start: 0;
 }
 
@@ -30,31 +32,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px; /* Espacio entre la imagen y el texto */
-  flex-direction: row-reverse; /* Coloca la imagen a la derecha */
+  gap: 20px;
+  /* Espacio entre la imagen y el texto */
+  flex-direction: row-reverse;
+  /* Coloca la imagen a la derecha */
   padding: 20px;
 }
 
 .sobre {
   text-align: justify;
-  margin: 0; /* Remueve márgenes grandes */
-  padding: 0 20px; /* Espacio interno en lugar de margen */
+  margin: 0;
+  /* Remueve márgenes grandes */
+  padding: 0 20px;
+  /* Espacio interno en lugar de margen */
 }
 
 .t {
-  font-size: 1rem; /* Tamaño de fuente adaptable */
+  font-size: 1rem;
+  /* Tamaño de fuente adaptable */
 }
 
 /* Mantén el diseño normal en PC */
 @media (min-width: 1024px) {
   .opuesto {
-    flex-direction: row-reverse; /* Mantén imagen a la derecha y texto a la izquierda */
+    flex-direction: row-reverse;
+    /* Mantén imagen a la derecha y texto a la izquierda */
   }
 
   .imagen {
-    width: 149rem; /* Tamaño más grande en pantallas grandes */
+    width: 149rem;
+    /* Tamaño más grande en pantallas grandes */
     margin-inline-start: -121px;
+    border-radius: 4%;
+    box-shadow: 22px 21px 0 -1px #0000004f;
   }
+
   .sobre {
     text-align: justify;
     margin-left: 123px;
@@ -65,13 +77,17 @@
 /* Media queries para dispositivos medianos (tablets) */
 @media (max-width: 1024px) {
   .opuesto {
-    flex-direction: column-reverse; /* Coloca la imagen arriba del texto en tablets */
+    flex-direction: column-reverse;
+    /* Coloca la imagen arriba del texto en tablets */
     text-align: center;
   }
 
   .imagen {
-    width: 80%; /* Imagen más pequeña en pantallas medianas */
+    width: 80%;
+    /* Imagen más pequeña en pantallas medianas */
     max-width: 350px;
+    border-radius: 4%;
+    box-shadow: 22px 21px 0 -1px #0000004f;
   }
 
   .sobre {
@@ -83,12 +99,15 @@
 /* Media queries para dispositivos móviles */
 @media (max-width: 640px) {
   .t {
-    font-size: 0.9rem; /* Tamaño de fuente más pequeño en móviles */
+    font-size: 0.9rem;
+    /* Tamaño de fuente más pequeño en móviles */
   }
 
   .imagen {
-    width: 100%; /* Imagen ocupa todo el ancho en móviles */
+    width: 100%;
+    /* Imagen ocupa todo el ancho en móviles */
     max-width: 300px;
+    border-radius: 4%;
   }
 }
 
@@ -110,79 +129,107 @@
 
 
 /* CSS para agrandar al desplazarse hacia arriba */
-.debuel_mause1{
+.debuel_mause1 {
   transition: transform .8s ease-in-out;
 }
+
 .debuel_mause2 {
   transition: transform .8s ease-in-out;
 }
+
 .debuel_mause1.scroll-aumentado {
-  transform: scale(1.1); /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
+  transform: scale(1.1);
+  /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
 }
+
 .debuel_mause2.scroll-aumentado {
-  transform: scale(1.1); /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
+  transform: scale(1.1);
+  /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
 }
+
 /* CSS para las imágenes de certificados */
 .curso1 {
   transition: transform .3s ease-in-out;
 }
+
 .curso2 {
   transition: transform .3s ease-in-out;
 }
+
 .hover-aumentado {
-  transform: scale(1.3); /* Agranda la imagen un 10% al pasar el mouse sobre ella */
+  transform: scale(1.3);
+  /* Agranda la imagen un 10% al pasar el mouse sobre ella */
 }
+
 .hover-aumentados {
-  transform: scale(2.1); /* Agranda la imagen un 10% al pasar el mouse sobre ella */
+  transform: scale(2.1);
+  /* Agranda la imagen un 10% al pasar el mouse sobre ella */
 }
+
 /* Contenedor principal de la sección de "features" */
 #features .contenedor {
   transition: transform 0.6s ease-in-out;
 }
+
 #features .contenedor.scroll-aumentado {
-  transform: scale(1.25); /* Se agranda un 25% */
+  transform: scale(1.25);
+  /* Se agranda un 25% */
 }
+
 /* Para el contenedor de proyectos */
 #proyect .contenedor_2 {
   transition: transform 0.8s ease-in-out;
 }
+
 #proyect .contenedor_2.scroll-aumentado_2 {
-  transform: scale(1.3); /* Agranda un 30% */
+  transform: scale(1.3);
+  /* Agranda un 30% */
 }
+
 /* CSS para la animación de scroll solo en features y proyect */
-#features, #proyect {
+#features,
+#proyect {
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-#features.scroll-entrar, #proyect.scroll-entrar {
+
+#features.scroll-entrar,
+#proyect.scroll-entrar {
   opacity: 1;
   transform: translateY(0);
 }
-#features.scroll-salir, #proyect.scroll-salir {
+
+#features.scroll-salir,
+#proyect.scroll-salir {
   opacity: 0.3;
   transform: translateY(50px);
 }
+
 /* Efecto de agrandar al pasar el mouse en los cursos */
 /*.curso1:hover, .curso2:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
 }*/
 
-.pie{
-background-color: #000000d9;
-color: white;
+.pie {
+  background-color: #000000d9;
+  color: white;
 }
-.tx{
+
+.tx {
   margin-top: -42px;
 
 }
-.ix{
+
+.ix {
   color: black;
 }
-.curso1{
+
+.curso1 {
   width: 141px;
   height: 120px;
 }
+
 .sp {
   display: block;
   font-family: monospace;
@@ -195,20 +242,30 @@ color: white;
   margin-right: auto;
   margin-top: 20px;
 }
+
 @keyframes typing {
-  from { width: 0 }
+  from {
+    width: 0
+  }
 }
+
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
+
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
   .sp {
-      font-size: 1.5rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
-      width: 20ch; /* Reduce el tamaño del ancho para que sea más adaptativo */
-      margin-left: 0;
+    font-size: 1.5rem;
+    /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    width: 20ch;
+    /* Reduce el tamaño del ancho para que sea más adaptativo */
+    margin-left: 0;
   }
 }
+
 .sec_1 {
   background-image: url("../img/red_5.png");
   color: white;
@@ -217,6 +274,7 @@ color: white;
   background-position: center;
   position: relative;
 }
+
 .sec_1::before {
   content: "";
   position: absolute;
@@ -227,11 +285,13 @@ color: white;
   background: rgba(18, 18, 18, 0.82);
   z-index: 1;
 }
-.sec_1 > * {
+
+.sec_1>* {
   position: relative;
   z-index: 2;
   color: white;
 }
+
 .sec_12 {
   background-image: url("../img/red_3.jpg");
   color: white;
@@ -239,56 +299,81 @@ color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative; /* Añadido para que el pseudo-elemento ::before se posicione correctamente */
+  position: relative;
+  /* Añadido para que el pseudo-elemento ::before se posicione correctamente */
 }
+
 .sec_12::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Asegura que la capa oscura cubra todo el contenedor */
-  border-radius: 10px; /* Igual al border-radius del contenedor para mantener un estilo consistente */
-  background: rgba(18, 18, 18, 0.84); /* Capa oscura semitransparente */
-  z-index: 1; /* Asegura que esté sobre el fondo pero debajo del contenido */
+  height: 100%;
+  /* Asegura que la capa oscura cubra todo el contenedor */
+  border-radius: 10px;
+  /* Igual al border-radius del contenedor para mantener un estilo consistente */
+  background: rgba(18, 18, 18, 0.84);
+  /* Capa oscura semitransparente */
+  z-index: 1;
+  /* Asegura que esté sobre el fondo pero debajo del contenido */
 }
-.sec_12 > * {
+
+.sec_12>* {
   position: relative;
-  z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
-  color: white; /* Para que el texto sea visible */
+  z-index: 2;
+  /* Asegura que el contenido esté por encima de la capa oscura */
+  color: white;
+  /* Para que el texto sea visible */
 }
+
 .sec_13 {
   background-color: black;
   color: white;
   border-radius: 5px;
-  background-size: cover; /* La imagen se ajusta al tamaño del contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center; /* Centra la imagen en el contenedor */
-  position: relative; /* Necesario para posicionar el pseudo-elemento correctamente */
+  background-size: cover;
+  /* La imagen se ajusta al tamaño del contenedor */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-position: center;
+  /* Centra la imagen en el contenedor */
+  position: relative;
+  /* Necesario para posicionar el pseudo-elemento correctamente */
 }
+
 .sec_13::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Se adapta al tamaño total del contenedor */
-  border-radius: 5px; /* Asegura que tenga el mismo radio de borde */
-  background: rgba(18, 18, 18, 0.84); /* Capa oscura semitransparente */
-  z-index: 1; /* Asegura que esté sobre el fondo pero debajo del contenido */
+  height: 100%;
+  /* Se adapta al tamaño total del contenedor */
+  border-radius: 5px;
+  /* Asegura que tenga el mismo radio de borde */
+  background: rgba(18, 18, 18, 0.84);
+  /* Capa oscura semitransparente */
+  z-index: 1;
+  /* Asegura que esté sobre el fondo pero debajo del contenido */
 }
-.sec_13 > * {
+
+.sec_13>* {
   position: relative;
-  z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
-  color: white; /* Para que el texto sea visible */
+  z-index: 2;
+  /* Asegura que el contenido esté por encima de la capa oscura */
+  color: white;
+  /* Para que el texto sea visible */
 }
-.p{
+
+.p {
   position: relative;
 }
-.bu{
+
+.bu {
   background-color: rgb(255, 252, 252);
   color: rgb(0, 0, 0);
 }
+
 html,
 :host {
   line-height: 1.5;
@@ -308,6 +393,7 @@ html,
   -webkit-tap-highlight-color: transparent;
   /* 7 */
 }
+
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
@@ -318,6 +404,7 @@ body {
   line-height: inherit;
   /* 2 */
 }
+
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -331,12 +418,14 @@ hr {
   border-top-width: 1px;
   /* 3 */
 }
+
 /*
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 abbr:where([title]) {
   text-decoration: underline dotted;
 }
+
 /*
 Remove the default font size and weight for headings.
 */
@@ -349,6 +438,7 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
 */
@@ -356,6 +446,7 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
 /*
 Add the correct font weight in Edge and Safari.
 */
@@ -363,6 +454,7 @@ b,
 strong {
   font-weight: bolder;
 }
+
 /*
 1. Use the user's configured `mono` font-family by default.
 2. Use the user's configured `mono` font-feature-settings by default.
@@ -382,12 +474,14 @@ pre {
   font-size: 1em;
   /* 4 */
 }
+
 /*
 Add the correct font size in all browsers.
 */
 small {
   font-size: 80%;
 }
+
 /*
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
@@ -398,12 +492,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
+
 /*
 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
@@ -417,6 +514,7 @@ table {
   border-collapse: collapse;
   /* 3 */
 }
+
 /*
 1. Change the font styles in all browsers.
 2. Remove the margin in Firefox and Safari.
@@ -448,6 +546,7 @@ textarea {
   padding: 0;
   /* 3 */
 }
+
 /*
 Remove the inheritance of text transform in Edge and Firefox.
 */
@@ -455,6 +554,7 @@ button,
 select {
   text-transform: none;
 }
+
 /*
 1. Correct the inability to style clickable types in iOS and Safari.
 2. Remove default button styles.
@@ -470,24 +570,28 @@ input:where([type='submit']) {
   background-image: none;
   /* 2 */
 }
+
 /*
 Use the modern Firefox focus style for all focusable elements.
 */
 :-moz-focusring {
   outline: auto;
 }
+
 /*
 Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
 */
 :-moz-ui-invalid {
   box-shadow: none;
 }
+
 /*
 Add the correct vertical alignment in Chrome and Firefox.
 */
 progress {
   vertical-align: baseline;
 }
+
 /*
 Correct the cursor style of increment and decrement buttons in Safari.
 */
@@ -495,6 +599,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 ::-webkit-outer-spin-button {
   height: auto;
 }
+
 /*
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
@@ -505,12 +610,14 @@ Correct the cursor style of increment and decrement buttons in Safari.
   outline-offset: -2px;
   /* 2 */
 }
+
 /*
 Remove the inner padding in Chrome and Safari on macOS.
 */
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 /*
 1. Correct the inability to style clickable types in iOS and Safari.
 2. Change font properties to `inherit` in Safari.
@@ -521,12 +628,14 @@ Remove the inner padding in Chrome and Safari on macOS.
   font: inherit;
   /* 2 */
 }
+
 /*
 Add the correct display in Chrome and Safari.
 */
 summary {
   display: list-item;
 }
+
 /*
 Removes the default spacing and border for appropriate elements.
 */
@@ -545,13 +654,16 @@ p,
 pre {
   margin: 0;
 }
+
 fieldset {
   margin: 0;
   padding: 0;
 }
+
 legend {
   padding: 0;
 }
+
 ol,
 ul,
 menu {
@@ -559,18 +671,21 @@ menu {
   margin: 0;
   padding: 0;
 }
+
 /*
 Reset default styling for dialogs.
 */
 dialog {
   padding: 0;
 }
+
 /*
 Prevent resizing textareas horizontally by default.
 */
 textarea {
   resize: vertical;
 }
+
 /*
 1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
 2. Set the default placeholder color to the user's configured gray 400 color.
@@ -582,6 +697,7 @@ textarea::placeholder {
   color: #9ca3af;
   /* 2 */
 }
+
 /*
 Set the default cursor for buttons.
 */
@@ -589,12 +705,14 @@ button,
 [role="button"] {
   cursor: pointer;
 }
+
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
 :disabled {
   cursor: default;
 }
+
 /*
 1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
 2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
@@ -613,6 +731,7 @@ object {
   vertical-align: middle;
   /* 2 */
 }
+
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
@@ -621,11 +740,15 @@ video {
   max-width: 100%;
   height: auto;
 }
+
 /* Make elements with the HTML hidden attribute stay hidden by default */
 [hidden] {
   display: none;
 }
-*, ::before, ::after {
+
+*,
+::before,
+::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -678,6 +801,7 @@ video {
   --tw-contain-paint: ;
   --tw-contain-style: ;
 }
+
 ::backdrop {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -731,319 +855,409 @@ video {
   --tw-contain-paint: ;
   --tw-contain-style: ;
 }
+
 .container {
   width: 100%;
 }
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
+
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
   }
 }
+
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
 }
+
 @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
   }
 }
+
 .pointer-events-none {
   pointer-events: none;
 }
+
 .relative {
   position: relative;
 }
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
+
 .flex {
   display: flex;
 }
+
 .inline-flex {
   display: inline-flex;
 }
+
 .grid {
   display: grid;
 }
+
 .hidden {
   display: none;
 }
+
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
+
 .h-10 {
   height: 2.5rem;
 }
+
 .h-6 {
   height: 1.5rem;
 }
+
 .h-8 {
   height: 2rem;
 }
+
 .h-full {
   height: 100%;
 }
+
 .min-h-\[100dvh\] {
   min-height: 100dvh;
 }
+
 .min-h-\[80px\] {
   min-height: 80px;
 }
+
 .w-10 {
   width: 2.5rem;
 }
+
 .w-6 {
   width: 1.5rem;
 }
+
 .w-8 {
   width: 2rem;
 }
+
 .w-full {
   width: 100%;
 }
+
 .max-w-4xl {
   max-width: 56rem;
 }
+
 .flex-1 {
   flex: 1 1 0%;
 }
+
 .shrink-0 {
   flex-shrink: 0;
 }
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
 .flex-col {
   flex-direction: column;
 }
+
 .items-center {
   align-items: center;
 }
+
 .justify-center {
   justify-content: center;
 }
+
 .justify-between {
   justify-content: space-between;
 }
+
 .gap-2 {
   gap: 0.5rem;
 }
+
 .gap-4 {
   gap: 1rem;
 }
+
 .gap-6 {
   gap: 1.5rem;
 }
+
 .gap-8 {
   gap: 2rem;
 }
-.space-y-12 > :not([hidden]) ~ :not([hidden]) {
+
+.space-y-12> :not([hidden])~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+
+.space-y-4> :not([hidden])~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+
+.space-y-6> :not([hidden])~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
+
 .overflow-hidden {
   overflow: hidden;
 }
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
+
 .rounded-full {
   border-radius: 9999px;
 }
+
 .rounded-md {
   border-radius: 0.375rem;
 }
+
 .border {
   border-width: 1px;
 }
+
 .border-0 {
   border-width: 0px;
 }
+
 .bg-transparent {
   background-color: transparent;
 }
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+
 .py-4 {
   padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: black;
-    color: white;
+  padding-bottom: 1rem;
+  background-color: black;
+  color: white;
 }
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
 .text-center {
   text-align: center;
 }
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 0.25rem;
 }
+
 .text-4xl {
   font-size: 2.0rem;
   line-height: 2.5rem;
 }
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+
 .font-bold {
   font-weight: 700;
 }
+
 .font-medium {
   font-weight: 500;
 }
+
 .underline {
   text-decoration-line: underline;
 }
+
 .underline-offset-4 {
   text-underline-offset: 4px;
 }
+
 .opacity-50 {
   opacity: 0.5;
 }
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
 .ring-2 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+
 .ring-offset-2 {
   --tw-ring-offset-width: 2px;
 }
+
 .sepia {
   --tw-sepia: sepia(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
+
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
 .file\:border-0::file-selector-button {
   border-width: 0px;
 }
+
 .file\:bg-transparent::file-selector-button {
   background-color: transparent;
 }
+
 .file\:text-sm::file-selector-button {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+
 .file\:font-medium::file-selector-button {
   font-weight: 500;
 }
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
 .focus\:ring-2:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
 }
+
 .focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
 .focus-visible\:ring-2:focus-visible {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+
 .focus-visible\:ring-offset-2:focus-visible {
   --tw-ring-offset-width: 2px;
 }
+
 .disabled\:pointer-events-none:disabled {
   pointer-events: none;
 }
+
 .disabled\:cursor-not-allowed:disabled {
   cursor: not-allowed;
 }
+
 .disabled\:opacity-50:disabled {
   opacity: 0.5;
 }
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
   }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
