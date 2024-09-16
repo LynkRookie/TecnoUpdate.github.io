@@ -207,37 +207,47 @@
     padding: 0;
     margin: 0;
     gap: 30px;
-    /* Espacio entre los logos */
     animation: move-left 19s linear infinite;
-    /* Animación infinita */
   }
+  .ul-skillss {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+    animation: move-right 19s linear infinite;
+  }
+  /* Estilo de las imágenes */
   .image-skills {
-    height: auto;
-    max-width: 88px;
+    height: 80px;
   }
-@keyframes move-left {
-  0% {
-    transform: translateX(318%);
-    /* Inicia fuera del contenedor a la derecha */
+  .image-skillss {
+    height: 53px;
+    /* width: 174px; */
+    max-width: 10rem;
   }
+  @keyframes move-left {
+    0% {
+      transform: translateX(318%);
+      /* Inicia fuera del contenedor a la derecha */
+    }
 
-  100% {
-    transform: translateX(-128%);
-    /* Termina fuera del contenedor a la izquierda */
+    100% {
+      transform: translateX(-128%);
+      /* Termina fuera del contenedor a la izquierda */
+    }
   }
-}
- /* Animación para mover las imágenes de izquierda a derecha sin pausa */
- @keyframes move-right {
-  0% {
-    transform: translateX(-128%);
-    /* Inicia fuera del contenedor a la izquierda */
+  /* Animación para mover las imágenes de izquierda a derecha sin pausa */
+  @keyframes move-right {
+    0% {
+      transform: translateX(-128%);
+      /* Inicia fuera del contenedor a la izquierda */
+    }
+    100% {
+      transform: translateX(318%);
+      /* Termina fuera del contenedor a la derecha */
+    }
   }
-
-  100% {
-    transform: translateX(318%);
-    /* Termina fuera del contenedor a la derecha */
-  }
-}
 }
 
 /* Media queries para dispositivos móviles */
