@@ -18,7 +18,7 @@
 /* Clase deslice para el comportamiento de deslizamiento */
 .deslice {
   overflow: hidden;
-  padding: 20px; /* Puedes ajustar el espacio interno */
+  padding: 20px;
 }
 
 .image-container {
@@ -29,53 +29,35 @@
 
 .ul-skills {
   display: flex;
-  justify-content: space-around; /* Espacio entre los logos */
+  justify-content: space-around;
   align-items: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  gap: 20px; /* Espacio entre los elementos */
+  gap: 20px;
+  animation: slideLoop 15s linear infinite; /* Animación continua */
 }
 
 .image-skills {
-  width: 60px; /* Ajusta el tamaño de los logos según sea necesario */
+  width: 60px;
   height: auto;
-  transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+  transition: transform 0.3s ease;
 }
 
 .image-skills:hover {
-  transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse sobre el logo */
+  transform: scale(1.1);
 }
 
-/* Animación de deslizamiento de entrada */
-@keyframes slideIn {
-  from {
-      transform: translateX(-100%);
+/* Animación para mover las imágenes de izquierda a derecha en bucle */
+@keyframes slideLoop {
+  0% {
+    transform: translateX(100%); /* Comienza fuera del contenedor */
   }
-  to {
-      transform: translateX(0);
-  }
-}
-
-/* Animación de deslizamiento de salida */
-@keyframes slideOut {
-  from {
-      transform: translateX(0);
-  }
-  to {
-      transform: translateX(100%);
+  100% {
+    transform: translateX(-100%); /* Se mueve hasta fuera por la izquierda */
   }
 }
 
-/* Aplica la animación de deslizamiento */
-.ul-skills {
-  animation: slideIn 1s forwards;
-}
-
-/* Opción: Puedes hacer que se deslicen hacia afuera al hacer hover */
-.ul-skills:hover {
-  animation: slideOut 1s forwards;
-}
 
 .htm {
   color: black;
