@@ -119,10 +119,11 @@
     padding: 0;
   }
 
- /* #features .contenedor.scroll-aumentado {
-    transform: scale(1.14);
+ #features .contenedor.scroll-aumentado {
+    transform: scale(1.09);
  
   }
+    /*
     #proyect .contenedor_2.scroll-aumentado_2 {
     transform: scale(1.15);
   }
