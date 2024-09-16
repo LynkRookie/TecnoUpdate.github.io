@@ -31,25 +31,25 @@
   margin: 0;
   gap: 30px;
   /* Espacio entre los logos */
-  animation: move-left 10s linear infinite;
+  animation: move-left 24s linear infinite;
   /* Animación infinita */
 }
 
 /* Estilo de las imágenes */
 .image-skills {
-  width: 60px;
+  width: 80px;
   height: auto;
 }
 
 /* Animación para mover las imágenes de derecha a izquierda sin pausa */
 @keyframes move-left {
   0% {
-    transform: translateX(100%);
+    transform: translateX(318%);
     /* Inicia fuera del contenedor a la derecha */
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-128%);
     /* Termina fuera del contenedor a la izquierda */
   }
 }
