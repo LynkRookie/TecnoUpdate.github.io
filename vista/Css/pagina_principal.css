@@ -223,6 +223,7 @@
 /* Estilo de las imágenes */
 .image-skills {
   height: auto;
+  max-width: 88px;
 }
 
 /* Animación para mover las imágenes de derecha a izquierda sin pausa */
