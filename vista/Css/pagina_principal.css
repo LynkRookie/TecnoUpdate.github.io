@@ -101,7 +101,9 @@
     height: 80px;
   }
   .image-skillss {
-    height: auto;
+    height: 53px;
+    /* width: 174px; */
+    max-width: 10rem;
   }
   /* Animación para mover las imágenes de derecha a izquierda sin pausa */
   @keyframes move-left {
@@ -152,19 +154,16 @@
     /* Coloca la imagen arriba del texto en tablets */
     text-align: center;
   }
-
   .imagen {
     width: 80%;
     /* Imagen más pequeña en pantallas medianas */
     max-width: 350px;
     border-radius: 4%;
   }
-
   .sobre {
     margin: 0;
     padding: 0;
   }
-
   #features .contenedor.scroll-aumentado {
     transform: scale(1.09);
     transition: transform 0.5s ease-in-out;
@@ -172,33 +171,20 @@
   #features .contenedor.scroll-disminuido {
     transform: scale(0.3);
     transition: transform 0.8s ease-in-out;
-}
- 
-
-  /*
-    #proyect .contenedor_2.scroll-aumentado_2 {
-    transform: scale(1.15);
   }
-  */
-  #features,
-  #proyect {
+  #features,#proyect {
     opacity: 0;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
-
-  #features.scroll-entrar,
-  #proyect.scroll-entrar {
+  #features.scroll-entrar,#proyect.scroll-entrar {
     opacity: 1;
     transform: translateY(0);
   }
-
-  #features.scroll-salir,
-  #proyect.scroll-salir {
+  #features.scroll-salir,#proyect.scroll-salir {
     opacity: 0.3;
     transform: translateY(50px);
     transition: transform 0.8s ease-in-out;
   }
-
   #languaje .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -207,36 +193,28 @@
     align-items: center;
     justify-items: center;
   }
-
   .len {
     margin-left: -26px;
   }
-  /* Contenedor principal con overflow oculto */
-.deslice {
-  overflow: hidden;
-  padding: 20px;
-  position: relative;
-}
-
-/* Estilos de la lista de imágenes */
-.ul-skills {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  gap: 30px;
-  /* Espacio entre los logos */
-  animation: move-left 19s linear infinite;
-  /* Animación infinita */
-}
-
-/* Estilo de las imágenes */
-.image-skills {
-  height: auto;
-  max-width: 88px;
-}
-
-/* Animación para mover las imágenes de derecha a izquierda sin pausa */
+  .deslice {
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+  }
+  .ul-skills {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+    /* Espacio entre los logos */
+    animation: move-left 19s linear infinite;
+    /* Animación infinita */
+  }
+  .image-skills {
+    height: auto;
+    max-width: 88px;
+  }
 @keyframes move-left {
   0% {
     transform: translateX(318%);
