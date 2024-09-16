@@ -102,7 +102,7 @@
     /* Se agranda un 25% */
   }
   #proyect .contenedor_2.scroll-aumentado_2 {
-    transform: scale(1.18);
+    transform: scale(1.15);
     /* Agranda un 30% */
   }
 }
