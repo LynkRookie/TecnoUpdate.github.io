@@ -72,6 +72,10 @@
     margin-left: 123px;
     margin-right: 125px;
   }
+  .t {
+    font-size: 1.3rem;
+    /* Tamaño de fuente adaptable */
+  }
 }
 
 /* Media queries para dispositivos medianos (tablets) */
