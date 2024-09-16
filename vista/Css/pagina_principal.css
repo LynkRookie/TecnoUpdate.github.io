@@ -53,7 +53,7 @@
 
   .imagen {
     width: 149rem; /* Tamaño más grande en pantallas grandes */
-    margin-inline-start: -121;
+    margin-inline-start: -121px;
   }
   .sobre {
     text-align: justify;
