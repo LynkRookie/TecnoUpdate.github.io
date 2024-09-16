@@ -23,8 +23,8 @@
  
   box-shadow: 22px 21px 0 -1px #0000004f;
   /*box-shadow: 42px 26px 0 1px #e1dfdf;*/
-  width: 75rem;
-  margin-inline-start: -122px;
+  width: 99rem;
+  margin-inline-start: -211px;
 }
 .opuesto{
   display: flex;
@@ -37,7 +37,7 @@
 .sobre {
   text-align: justify;
   margin-left: 123px;
-  margin-right: 124px;
+  margin-right: 313px;
 }
 
 .t {
