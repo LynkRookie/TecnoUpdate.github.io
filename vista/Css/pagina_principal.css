@@ -15,6 +15,67 @@
 ::after {
   --tw-content: '';
 }
+/* Clase deslice para el comportamiento de deslizamiento */
+.deslice {
+  overflow: hidden;
+  padding: 20px; /* Puedes ajustar el espacio interno */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul-skills {
+  display: flex;
+  justify-content: space-around; /* Espacio entre los logos */
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.image-skills {
+  width: 60px; /* Ajusta el tamaño de los logos según sea necesario */
+  height: auto;
+  transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+.image-skills:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse sobre el logo */
+}
+
+/* Animación de deslizamiento de entrada */
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+/* Animación de deslizamiento de salida */
+@keyframes slideOut {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(100%);
+  }
+}
+
+/* Aplica la animación de deslizamiento */
+.ul-skills {
+  animation: slideIn 1s forwards;
+}
+
+/* Opción: Puedes hacer que se deslicen hacia afuera al hacer hover */
+.ul-skills:hover {
+  animation: slideOut 1s forwards;
+}
 
 .htm {
   color: black;
@@ -98,7 +159,6 @@
     /* Agranda un 30% */
   }
 }
-
 /* Media queries para dispositivos medianos (tablets) */
 @media (max-width: 1024px) {
   .opuesto {
@@ -165,22 +225,6 @@ margin-left: -26px;
   }
 }
 
-/*
-.stats {
-  display: flex;
-  gap: 2rem;
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat h3 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-*/
-/* CSS para agrandar al desplazarse hacia arriba */
 .debuel_mause1 {
   transition: transform .8s ease-in-out;
 }
@@ -198,29 +242,22 @@ margin-left: -26px;
   transform: scale(1.1);
   /* Agranda la imagen o texto un 10% al hacer scroll hacia arriba */
 }
-
 /* CSS para las imágenes de certificados */
 .curso1 {
   transition: transform .3s ease-in-out;
 }
-
 .curso2 {
   transition: transform .3s ease-in-out;
 }
-
 .hover-aumentado {
   transform: scale(1.3);
   /* Agranda la imagen un 10% al pasar el mouse sobre ella */
 }
-
 .hover-aumentados {
   transform: scale(2.1);
   /* Agranda la imagen un 10% al pasar el mouse sobre ella */
 }
-
-
 /* CSS para la animación de scroll solo en features y proyect */
-
 /* Efecto de agrandar al pasar el mouse en los cursos */
 /*.curso1:hover, .curso2:hover {
   transform: scale(1.2);
