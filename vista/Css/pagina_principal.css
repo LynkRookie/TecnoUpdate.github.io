@@ -21,7 +21,7 @@
 .imagen {
   border-radius: 4%;
  
-  box-shadow: 42px 26px 0 1px #03030363;
+  box-shadow: 22px 21px 0 -1px #03030363;
   /*box-shadow: 42px 26px 0 1px #e1dfdf;*/
   width: 75rem;
   margin-inline-start: -122px;
