@@ -122,12 +122,11 @@
  /* #features .contenedor.scroll-aumentado {
     transform: scale(1.14);
  
-  }*/
-
-  #proyect .contenedor_2.scroll-aumentado_2 {
-    transform: scale(1.15);
-    /* Agranda un 30% */
   }
+    #proyect .contenedor_2.scroll-aumentado_2 {
+    transform: scale(1.15);
+  }
+  */
 
   #features,#proyect {
     opacity: 0;
