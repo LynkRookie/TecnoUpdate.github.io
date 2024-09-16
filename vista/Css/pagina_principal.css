@@ -19,10 +19,7 @@
 .htm {
   color: black;
 }
-.me{
-  background: linear-gradient(90deg, rgb(0 0 0 / 14%) 8%,
-   rgb(18 17 17 / 18%) 47%, rgba(255, 255, 255, 1) 82%);
-}
+
 .imagen {
   width: 100%;
   /* Ajusta al ancho del contenedor */
