@@ -146,6 +146,9 @@
     align-items: center;
     justify-items: center;
 }
+.len{
+margin-left: -26px;
+}
 }
 /* Media queries para dispositivos móviles */
 @media (max-width: 640px) {
