@@ -142,6 +142,13 @@
     opacity: 0.3;
     transform: translateY(50px);
   }
+  #languaje .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas grandes */
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
 }
 /* Media queries para dispositivos móviles */
 @media (max-width: 640px) {
