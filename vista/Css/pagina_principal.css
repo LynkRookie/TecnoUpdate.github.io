@@ -106,7 +106,7 @@
     max-height: 73px;
   }
   /* Animación para mover las imágenes de derecha a izquierda sin pausa */
-  @keyframes move-left {
+@keyframes move-left {
     0% {
       transform: translateX(318%);
       /* Inicia fuera del contenedor a la derecha */
@@ -117,6 +117,7 @@
       /* Termina fuera del contenedor a la izquierda */
     }
   }
+}
   /* Animación para mover las imágenes de izquierda a derecha sin pausa */
   @keyframes move-right {
     0% {
