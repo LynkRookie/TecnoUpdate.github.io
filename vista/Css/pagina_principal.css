@@ -20,13 +20,13 @@
 }
 .imagen {
   border-radius: 4%;
- 
   box-shadow: 22px 21px 0 -1px #0000004f;
-  /*box-shadow: 42px 26px 0 1px #e1dfdf;*/
-  width: 149rem;
-  margin-inline-start: -211px;
+  width: 100%; /* Ajusta al ancho del contenedor */
+  max-width: 400px; /* Limita el tamaño máximo de la imagen */
+  margin-inline-start: 0;
 }
-.opuesto{
+
+.opuesto {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,15 +34,47 @@
   flex-direction: row-reverse; /* Coloca la imagen a la derecha */
   padding: 20px;
 }
+
 .sobre {
   text-align: justify;
-  margin-left: 123px;
-  margin-right: 250px;
+  margin: 0; /* Remueve márgenes grandes */
+  padding: 0 20px; /* Espacio interno en lugar de margen */
 }
 
 .t {
-  font-size: 19px;
+  font-size: 1rem; /* Tamaño de fuente adaptable */
 }
+
+/* Media queries para dispositivos pequeños */
+@media (max-width: 1024px) {
+  .opuesto {
+    flex-direction: column-reverse; /* Coloca la imagen arriba del texto en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .imagen {
+    width: 80%; /* Imagen más pequeña en pantallas medianas */
+    margin-inline-start: 0;
+  }
+
+  .sobre {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 640px) {
+  .t {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño en móviles */
+  }
+
+  .imagen {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    max-width: 300px; /* Límite de tamaño en móviles */
+  }
+}
+
 /*
 .stats {
   display: flex;
