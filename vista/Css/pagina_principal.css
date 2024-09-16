@@ -22,7 +22,7 @@
   border-radius: 4%;
   box-shadow: 22px 21px 0 -1px #0000004f;
   width: 100%; /* Ajusta al ancho del contenedor */
-  max-width: 400px; /* Limita el tamaño máximo de la imagen */
+  max-width: 528px; /* Limita el tamaño máximo de la imagen */
   margin-inline-start: 0;
 }
 
@@ -53,6 +53,7 @@
 
   .imagen {
     width: 149rem; /* Tamaño más grande en pantallas grandes */
+    margin-inline-start: -121;
   }
   .sobre {
     text-align: justify;
