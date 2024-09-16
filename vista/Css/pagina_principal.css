@@ -101,6 +101,10 @@
     transform: scale(1.18);
     /* Se agranda un 25% */
   }
+  #proyect .contenedor_2.scroll-aumentado_2 {
+    transform: scale(1.18);
+    /* Agranda un 30% */
+  }
 }
 
 /* Media queries para dispositivos móviles */
