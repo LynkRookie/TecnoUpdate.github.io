@@ -54,6 +54,11 @@
   .imagen {
     width: 149rem; /* Tamaño más grande en pantallas grandes */
   }
+  .sobre {
+    text-align: justify;
+    margin-left: 123px;
+    margin-right: 250px;
+  }
 }
 
 /* Media queries para dispositivos medianos (tablets) */
