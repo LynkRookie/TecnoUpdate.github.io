@@ -53,8 +53,6 @@
     /* Termina fuera del contenedor a la izquierda */
   }
 }
-
-
 .htm {
   color: black;
 }
@@ -162,11 +160,11 @@
     transform: scale(1.09);
     transition: transform 0.5s ease-in-out;
   }
-  #features .contenedor.scroll-salir {
-    opacity: 0.3;
-    transform: translateY(50px);
+  #features .contenedor.scroll-disminuido {
+    transform: scale(0.3);
     transition: transform 0.5s ease-in-out;
-  }
+}
+ 
 
   /*
     #proyect .contenedor_2.scroll-aumentado_2 {
