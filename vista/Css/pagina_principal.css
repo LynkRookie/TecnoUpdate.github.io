@@ -52,7 +52,7 @@
   }
 
   .imagen {
-    max-width: 450px; /* Tamaño más grande en pantallas grandes */
+    width: 149rem; /* Tamaño más grande en pantallas grandes */
   }
 }
 
