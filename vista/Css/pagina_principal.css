@@ -98,12 +98,12 @@
   }
   /* Estilo de las imágenes */
   .image-skills {
-    height: 80px;
+    max-height: 5rem;
   }
   .image-skillss {
-    height: 53px;
-    /* width: 174px; */
     max-width: 10rem;
+    max-height: 5rem;
+    margin-top: 4rem;
   }
   /* Animación para mover las imágenes de derecha a izquierda sin pausa */
   @keyframes move-left {
@@ -215,7 +215,7 @@
     padding: 0;
     margin: 0;
     gap: 30px;
-    animation: move-right 19s linear infinite;
+    animation: move-right 25s linear infinite;
   }
   /* Estilo de las imágenes */
   .image-skills {
