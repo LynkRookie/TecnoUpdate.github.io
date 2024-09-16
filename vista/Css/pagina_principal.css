@@ -31,7 +31,7 @@
   margin: 0;
   gap: 30px;
   /* Espacio entre los logos */
-  animation: move-left 24s linear infinite;
+  animation: move-left 19s linear infinite;
   /* Animación infinita */
 }
 
