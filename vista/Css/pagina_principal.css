@@ -106,48 +106,40 @@
     /* Coloca la imagen arriba del texto en tablets */
     text-align: center;
   }
-
   .imagen {
     width: 80%;
     /* Imagen más pequeña en pantallas medianas */
     max-width: 350px;
     border-radius: 4%;
   }
-
   .sobre {
     margin: 0;
     padding: 0;
   }
-
  #features .contenedor.scroll-aumentado {
     transform: scale(1.09);
- 
+    transition: transform 0.5s ease-in-out;
   }
-    /*
+   /*
     #proyect .contenedor_2.scroll-aumentado_2 {
     transform: scale(1.15);
   }
   */
-
   #features,#proyect {
     opacity: 0;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
-
   #features.scroll-entrar,
   #proyect.scroll-entrar {
     opacity: 1;
     transform: translateY(0);
   }
-
   #features.scroll-salir,
   #proyect.scroll-salir {
     opacity: 0.3;
     transform: translateY(50px);
   }
-
 }
-
 /* Media queries para dispositivos móviles */
 @media (max-width: 640px) {
   .t {
