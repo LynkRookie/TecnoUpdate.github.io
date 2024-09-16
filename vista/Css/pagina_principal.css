@@ -86,7 +86,7 @@
     padding: 0;
     margin: 0;
     gap: 30px;
-    animation: move-left 19s linear infinite;
+    animation: move-left 24s linear infinite;
   }
   .ul-skillss {
     display: flex;
@@ -94,16 +94,16 @@
     padding: 0;
     margin: 0;
     gap: 30px;
-    animation: move-right 19s linear infinite;
+    animation: move-right 24s linear infinite;
   }
   /* Estilo de las imágenes */
   .image-skills {
     height: 80px;
   }
   .image-skillss {
-    height: 53px;
-    /* width: 174px; */
     max-width: 10rem;
+    margin-top: 30px;
+    max-height: 73px;
   }
   /* Animación para mover las imágenes de derecha a izquierda sin pausa */
   @keyframes move-left {
