@@ -87,7 +87,6 @@
     /* Imagen más pequeña en pantallas medianas */
     max-width: 350px;
     border-radius: 4%;
-    box-shadow: 22px 21px 0 -1px #0000004f;
   }
 
   .sobre {
