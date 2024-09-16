@@ -86,7 +86,7 @@
     padding: 0;
     margin: 0;
     gap: 30px;
-    animation: move-left 24s linear infinite;
+    animation: move-left 19s linear infinite;
   }
   .ul-skillss {
     display: flex;
@@ -113,7 +113,7 @@
     }
 
     100% {
-      transform: translateX(-268%);
+      transform: translateX(-357%);
       /* Termina fuera del contenedor a la izquierda */
     }
   }
