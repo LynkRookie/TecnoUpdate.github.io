@@ -226,6 +226,18 @@
     /* Termina fuera del contenedor a la izquierda */
   }
 }
+ /* Animación para mover las imágenes de izquierda a derecha sin pausa */
+ @keyframes move-right {
+  0% {
+    transform: translateX(-128%);
+    /* Inicia fuera del contenedor a la izquierda */
+  }
+
+  100% {
+    transform: translateX(318%);
+    /* Termina fuera del contenedor a la derecha */
+  }
+}
 }
 
 /* Media queries para dispositivos móviles */
