@@ -45,16 +45,27 @@
   font-size: 1rem; /* Tamaño de fuente adaptable */
 }
 
-/* Media queries para dispositivos pequeños */
+/* Mantén el diseño normal en PC */
+@media (min-width: 1024px) {
+  .opuesto {
+    flex-direction: row-reverse; /* Mantén imagen a la derecha y texto a la izquierda */
+  }
+
+  .imagen {
+    max-width: 450px; /* Tamaño más grande en pantallas grandes */
+  }
+}
+
+/* Media queries para dispositivos medianos (tablets) */
 @media (max-width: 1024px) {
   .opuesto {
-    flex-direction: column-reverse; /* Coloca la imagen arriba del texto en pantallas pequeñas */
+    flex-direction: column-reverse; /* Coloca la imagen arriba del texto en tablets */
     text-align: center;
   }
 
   .imagen {
     width: 80%; /* Imagen más pequeña en pantallas medianas */
-    margin-inline-start: 0;
+    max-width: 350px;
   }
 
   .sobre {
@@ -70,8 +81,8 @@
   }
 
   .imagen {
-    width: 100%; /* Imagen ocupa todo el ancho */
-    max-width: 300px; /* Límite de tamaño en móviles */
+    width: 100%; /* Imagen ocupa todo el ancho en móviles */
+    max-width: 300px;
   }
 }
 
