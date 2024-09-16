@@ -97,6 +97,10 @@
     margin: 0;
     padding: 0;
   }
+  #features .contenedor.scroll-aumentado {
+    transform: scale(1.18);
+    /* Se agranda un 25% */
+  }
 }
 
 /* Media queries para dispositivos móviles */
@@ -129,8 +133,6 @@
   font-weight: bold;
 }
 */
-
-
 /* CSS para agrandar al desplazarse hacia arriba */
 .debuel_mause1 {
   transition: transform .8s ease-in-out;
@@ -175,7 +177,7 @@
 }
 
 #features .contenedor.scroll-aumentado {
-  transform: scale(1.25);
+  transform: scale(1.18);
   /* Se agranda un 25% */
 }
 
