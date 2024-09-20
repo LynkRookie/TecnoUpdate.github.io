@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IA bot</title>
+    <link href="style.css" type="text/css" rel="stylesheet" media="screen">
+</head>
+
+<body class="theme-light">
+    <div class="flex flex-col min-h-[100dvh] bg-background text-foreground">
+        <header class="px-4 lg:px-6 h-14 flex items-center border-b border-muted bg-black text-white">
+            <div class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="h-6 w-6">
+                    <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+                </svg>
+                <span class="sr-only"></span>
+                <p class="hear">
+                    IA bot TecnoUpdate
+                </p>
+            </div>
+            <div class="ml-auto flex items-center gap-4">
+                <button
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="h-5 w-5">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                    <span class="sr-only">Toggle light mode</span>
+                </button>
+                <button
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="h-5 w-5">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                    <span class="sr-only">Toggle dark mode</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="flex flex-1">
+            <div class="bg-muted/20 p-4 border-r border-muted flex flex-col gap-4 hidden md:flex">
+                <div class="sticky top-0 p-2">
+                    <button
+                        class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 py-2 justify-start w-full gap-2 px-2 text-left">
+                        <div class="flex items-center justify-center rounded-full w-7 h-7">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+                            </svg>
+                        </div>
+                        <div class="overflow-hidden text-sm grow text-ellipsis whitespace-nowrap">IA TechCraft</div>
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-4 h-4">
+                                <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                <path d="M9 3v18"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="flex-1 overflow-auto">
+                    <div class="grid gap-1 p-2 text-foreground">
+                        <div class="px-2 text-xs font-medium text-muted-foreground">Hoy</div>
+                        <a href="#"
+                            class="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50">
+                            Procesamiento de lenguaje natural
+                        </a>
+                        <a href="#"
+                            class="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50">
+                            Generación de texto
+                        </a>
+                        <a href="#"
+                            class="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50">
+                            Análisis de texto
+                        </a>
+                    </div>
+                    <div class="grid gap-1 p-2 text-foreground">
+                        <div class="px-2 text-xs font-medium text-muted-foreground">Ayer</div>
+                        <a class="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
+                            href="#">
+                            Respuesta a preguntas
+                        </a>
+                        <a href="#"
+                            class="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50">
+                            Generación de contenido
+                        </a>
+                        <a href="#"
+                            class="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50">
+                            Análisis de sentimiento
+                        </a>
+                        <a class="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50"
+                            href="#">
+                            Traducción de idiomas
+                        </a>
+                        <a href="#"
+                            class="flex-1 block p-2 overflow-hidden text-sm truncate transition-colors rounded-md whitespace-nowrap hover:bg-muted/50">
+                            Resumen de texto
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <main class="flex-1 flex flex-col" style="margin: 0 auto;width: 63%;">
+                <div class="container px-4 md:px-6 py-8 flex-1 flex flex-col">
+                    <div class="flex-1 flex flex-col gap-4">
+                        <div class="flex items-start gap-4">
+                            <div class="rounded-lg w-11 h-11 bg-[#55efc4] text-3xl flex items-center justify-center">🤖
+                            </div>
+                            <div class="grid gap-1 items-start text-sm">
+                                <div class="flex items-center gap-2">
+                                    <div class="font-bold">Bot TechCraft</div>
+                                    <div class="text-sm text-muted-foreground">2:39pm</div>
+                                </div>
+                                <div>
+                                    <p>¡Hola! ¿En qué puedo ayudarte hoy?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 flex-row-reverse">
+                            <div class="rounded-lg w-11 h-11 bg-[#ffeaa7] text-3xl flex items-center justify-center">👤
+                            </div>
+                            <div class="grid gap-1 items-start text-sm">
+                                <div class="flex items-center gap-2 justify-end">
+                                    <div class="font-bold">Usuario</div>
+                                    <div class="text-sm text-muted-foreground">2:40pm</div>
+                                </div>
+                                <div>
+                                    <p>Hola, quisiera saber más sobre tus funcionalidades.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="rounded-lg w-11 h-11 bg-[#55efc4] text-3xl flex items-center justify-center">🤖
+                            </div>
+                            <div class="grid gap-1 items-start text-sm">
+                                <div class="flex items-center gap-2">
+                                    <div class="font-bold">Bot TechCraft</div>
+                                    <div class="text-sm text-muted-foreground">2:41pm</div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Como asistente de IA, puedo ayudarte con una variedad de tareas, como responder
+                                        preguntas, brindar
+                                        información, realizar cálculos, y mucho más. ¿Hay algo específico en lo que
+                                        pueda ayudarte?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 flex-row-reverse">
+                            <div class="rounded-lg w-11 h-11 bg-[#ffeaa7] text-3xl flex items-center justify-center">👤
+                            </div>
+                            <div class="grid gap-1 items-start text-sm">
+                                <div class="flex items-center gap-2 justify-end">
+                                    <div class="font-bold">Usuario</div>
+                                    <div class="text-sm text-muted-foreground">2:42pm</div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Me gustaría saber más sobre tus capacidades de procesamiento de lenguaje natural
+                                        y generación de
+                                        texto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start gap-4">
+                            <div class="rounded-lg w-11 h-11 bg-[#55efc4] text-3xl flex items-center justify-center">🤖
+                            </div>
+                            <div class="grid gap-1 items-start text-sm">
+                                <div class="flex items-center gap-2">
+                                    <div class="font-bold">Bot TechCraft</div>
+                                    <div class="text-sm text-muted-foreground">2:43pm</div>
+                                </div>
+                                <div>
+                                    <p>
+                                        Tengo capacidades avanzadas de procesamiento de lenguaje natural que me permiten
+                                        entender y generar
+                                        texto de manera fluida. Puedo responder a preguntas, generar contenido original,
+                                        realizar análisis
+                                        de texto y mucho más. ¿Hay alguna tarea específica en la que pueda ayudarte?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <form class="flex items-center w-full space-x-2">
+                            <input
+                                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 flex-1"
+                                id="message" placeholder="Escribe tu mensaje..." autocomplete="off" style="
+                            border-color: black;
+                        " />
+                            <button
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 w-10 animate-pulse"
+                                type="submit" style="background-color:black; color:white;width: 8rem;">
+                                <svg data-id="60" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                    <path d="m22 2-7 20-4-9-9-4Z"></path>
+                                    <path d="M22 2 11 13"></path>
+                                </svg>
+                                <p class="nom">
+                                    Enviar
+                                </p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
