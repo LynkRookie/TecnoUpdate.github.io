@@ -3,6 +3,10 @@
   width: 80px;
   transition: width 0.3s ease-in-out;
 }
+/* Estilo para mostrar el lápiz al hacer hover */
+.group:hover .group-hover\:block {
+  display: block;
+}
 
 #sidebar.expanded {
   width: 250px;
