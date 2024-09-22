@@ -1,39 +1,32 @@
-// Selecciona el icono de configuración
-const configIcon = document.getElementById('config-icon');
+// Función para agregar lápices a los divs indicados
+function agregarLapices() {
+    // Lista de los ids de los divs donde se deben agregar los lápices
+    const secciones = ['datos-sobre-mi', 'intereses', 'habilidades-profesionales', 'redes-sociales', 'lenguajes-programacion'];
 
-// Divs donde se agregarán los lápices
-const divs = [
-    'datos-sobre-mi',
-    'intereses',
-    'habilidades-profesionales',
-    'redes-sociales',
-    'lenguajes-programacion'
-];
+    // Iterar sobre cada div y agregar el ícono de lápiz
+    secciones.forEach(id => {
+        const div = document.getElementById(id);
+        if (div) {
+            // Crear el icono de lápiz
+            const lapiz = document.createElement('i');
+            lapiz.classList.add('lapiz-icono', 'fa', 'fa-pencil'); // Agregar clases para el ícono (FontAwesome, por ejemplo)
+            lapiz.style.position = 'absolute';
+            lapiz.style.top = '0';
+            lapiz.style.right = '0';
+            lapiz.style.cursor = 'pointer';
 
-// Función para crear los lápices en los divs
-configIcon.addEventListener('click', () => {
-    divs.forEach(divId => {
-        const div = document.getElementById(divId);
+            // Hacer que el div sea editable al hacer clic en el lápiz
+            lapiz.addEventListener('click', () => {
+                div.setAttribute('contenteditable', 'true');
+                div.focus(); // Poner el foco en el div para editar
+            });
 
-        // Crear el ícono de lápiz
-        const pencilIcon = document.createElement('i');
-        pencilIcon.classList.add('fa', 'fa-pencil'); // Font Awesome icono de lápiz
-        pencilIcon.style.position = 'absolute';
-        pencilIcon.style.top = '10px';  // Ajusta la posición
-        pencilIcon.style.right = '10px';
-        pencilIcon.style.cursor = 'pointer';
-        pencilIcon.style.fontSize = '20px';
-        pencilIcon.title = 'Editar';
-
-        // Hacer que el div sea editable al hacer clic en el lápiz
-        pencilIcon.addEventListener('click', () => {
-            div.contentEditable = true;  // Hacer el div editable
-            div.style.border = '1px dashed #ccc';  // Agregar estilo visual para la edición
-            div.focus();
-        });
-
-        // Agregar el ícono al div
-        div.style.position = 'relative';  // Asegurarse de que el div tenga posición relativa
-        div.appendChild(pencilIcon);
+            // Añadir el lápiz al div
+            div.style.position = 'relative'; // Para que el lápiz se ubique dentro del div
+            div.appendChild(lapiz);
+        }
     });
-});
+}
+
+// Escuchar el evento click en el botón de configuración
+document.getElementById('configuracion-btn').addEventListener('click', agregarLapices);
