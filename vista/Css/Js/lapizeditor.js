@@ -14,7 +14,7 @@ function toggleLapices() {
                 lapiz.classList.add('lapiz-icono', 'fa', 'fa-pencil');
                 lapiz.style.position = 'absolute';
                 lapiz.style.top = '0';
-                lapiz.style.right = '30px';
+                lapiz.style.right = '11px';
                 lapiz.style.cursor = 'pointer';
                 lapiz.id = `lapiz-${id}`;
                 
@@ -27,7 +27,6 @@ function toggleLapices() {
                 // Crear contenedor para los botones
                 const contenedorBotones = document.createElement('div');
                 contenedorBotones.style.textAlign = 'center';
-                contenedorBotones.style.position = 'absolute';
                 contenedorBotones.style.bottom = '10px';
                 contenedorBotones.style.width = '100%';
 
