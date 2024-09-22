@@ -14,7 +14,7 @@ function toggleLapices() {
                 lapiz.classList.add('lapiz-icono', 'fa', 'fa-pencil');
                 lapiz.style.position = 'absolute';
                 lapiz.style.top = '0';
-                lapiz.style.right = '30px'; // Ajustar posición
+                lapiz.style.right = '30px';
                 lapiz.style.cursor = 'pointer';
                 lapiz.id = `lapiz-${id}`;
                 
@@ -28,12 +28,20 @@ function toggleLapices() {
                 const contenedorBotones = document.createElement('div');
                 contenedorBotones.style.textAlign = 'center';
                 contenedorBotones.style.position = 'absolute';
-                contenedorBotones.style.bottom = '10px'; // Ajustar la distancia desde la parte inferior
+                contenedorBotones.style.bottom = '10px';
                 contenedorBotones.style.width = '100%';
 
                 // Crear botón Guardar
                 const btnGuardar = document.createElement('button');
                 btnGuardar.textContent = 'Guardar';
+                btnGuardar.style.padding = '10px';
+                btnGuardar.style.margin = '5px';
+                btnGuardar.style.border = 'none';
+                btnGuardar.style.backgroundColor = '#4CAF50'; // Color verde
+                btnGuardar.style.color = 'white';
+                btnGuardar.style.borderRadius = '5px'; // Esquinas redondeadas
+                btnGuardar.style.cursor = 'pointer';
+
                 btnGuardar.addEventListener('click', () => {
                     const contenido = div.innerHTML;
                     // Aquí podrías hacer la lógica para guardar en la base de datos
@@ -44,13 +52,31 @@ function toggleLapices() {
                 // Crear botón Cancelar
                 const btnCancelar = document.createElement('button');
                 btnCancelar.textContent = 'Cancelar';
+                btnCancelar.style.padding = '10px';
+                btnCancelar.style.margin = '5px';
+                btnCancelar.style.border = 'none';
+                btnCancelar.style.backgroundColor = '#f44336'; // Color rojo
+                btnCancelar.style.color = 'white';
+                btnCancelar.style.borderRadius = '5px';
+                btnCancelar.style.cursor = 'pointer';
+
                 btnCancelar.addEventListener('click', () => {
                     div.removeAttribute('contenteditable'); // Desactivar edición
+                    // Limpiar el contenido si se desea
+                    div.innerHTML = div.dataset.originalContent || div.innerHTML; // Reestablecer contenido original
                 });
 
                 // Crear botón Eliminar
                 const btnEliminar = document.createElement('button');
                 btnEliminar.textContent = 'Eliminar';
+                btnEliminar.style.padding = '10px';
+                btnEliminar.style.margin = '5px';
+                btnEliminar.style.border = 'none';
+                btnEliminar.style.backgroundColor = '#ff9800'; // Color naranja
+                btnEliminar.style.color = 'white';
+                btnEliminar.style.borderRadius = '5px';
+                btnEliminar.style.cursor = 'pointer';
+
                 btnEliminar.addEventListener('click', () => {
                     div.remove(); // Eliminar el div
                 });
@@ -64,6 +90,9 @@ function toggleLapices() {
                 div.style.position = 'relative';
                 div.appendChild(lapiz);
                 div.appendChild(contenedorBotones);
+
+                // Guardar el contenido original para restablecer en Cancelar
+                div.dataset.originalContent = div.innerHTML;
             } else {
                 // Si los lápices están visibles, quitarlos
                 const lapizExistente = document.getElementById(`lapiz-${id}`);
