@@ -1,4 +1,4 @@
-// Variable para llevar el control de la visibilidad de los lápices
+// Variable para llevar el control de la visibilidad de los lápices y botones
 let lapicesVisibles = false;
 
 // Función para alternar la visibilidad de los lápices y los botones
@@ -9,11 +9,11 @@ function toggleLapices() {
         const div = document.getElementById(id);
         if (div) {
             const lapiz = document.getElementById(`lapiz-${id}`);
-            const contenedorBotones = div.querySelector('div');
+            const contenedorBotones = div.querySelector('.botones-container');
 
             if (!lapicesVisibles) {
+                // Crear lápiz si no existe
                 if (!lapiz) {
-                    // Crear lápiz
                     const nuevoLapiz = document.createElement('i');
                     nuevoLapiz.classList.add('lapiz-icono', 'fa', 'fa-pencil');
                     nuevoLapiz.style.position = 'absolute';
@@ -28,8 +28,14 @@ function toggleLapices() {
                         div.focus();
                     });
 
-                    // Crear contenedor para los botones
+                    div.style.position = 'relative';
+                    div.appendChild(nuevoLapiz);
+                }
+
+                // Crear contenedor para los botones si no existe
+                if (!contenedorBotones) {
                     const botonesContenedor = document.createElement('div');
+                    botonesContenedor.classList.add('botones-container');
                     botonesContenedor.style.textAlign = 'center';
                     botonesContenedor.style.position = 'sticky';
                     botonesContenedor.style.bottom = '-40px';
@@ -66,7 +72,6 @@ function toggleLapices() {
 
                     btnCancelar.addEventListener('click', () => {
                         div.removeAttribute('contenteditable'); // Desactivar edición
-                        div.innerHTML = div.dataset.originalContent || div.innerHTML; // Reestablecer contenido original
                     });
 
                     // Crear botón Eliminar
@@ -89,13 +94,8 @@ function toggleLapices() {
                     botonesContenedor.appendChild(btnCancelar);
                     botonesContenedor.appendChild(btnEliminar);
 
-                    // Añadir el lápiz y el contenedor de botones al div
-                    div.style.position = 'relative';
-                    div.appendChild(nuevoLapiz);
+                    // Añadir el contenedor de botones al div
                     div.appendChild(botonesContenedor);
-
-                    // Guardar el contenido original para restablecer en Cancelar
-                    div.dataset.originalContent = div.innerHTML;
                 }
             } else {
                 // Si los lápices están visibles, quitarlos
