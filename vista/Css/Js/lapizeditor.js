@@ -31,7 +31,7 @@ function toggleLapices() {
                     // Crear contenedor para los botones
                     const botonesContenedor = document.createElement('div');
                     botonesContenedor.style.textAlign = 'center';
-                    botonesContenedor.style.position = 'relative';
+                    botonesContenedor.style.position = 'sticky';
                     botonesContenedor.style.bottom = '-40px';
                     botonesContenedor.style.width = '100%';
                     botonesContenedor.style.marginTop = '10px'; // Espacio entre el contenido y los botones
