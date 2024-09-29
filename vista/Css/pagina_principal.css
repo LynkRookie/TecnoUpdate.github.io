@@ -164,7 +164,7 @@
     transition: transform 0.6s ease-in-out;
   }
   #features .contenedor.scroll-aumentado {
-    transform: scale(1.18);
+    transform: scale(1.11);
     /* Se agranda un 25% */
   }
   /* Para el contenedor de proyectos */
