@@ -60,8 +60,8 @@
     background-color: white; /* Color de fondo del section */
     padding: 40px; /* Espaciado interno */
     margin: 40px auto; /* Espacio entre secciones y centrado */
-    width: 80%; /* Ajusta el ancho del section */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra para el efecto flotante */
+    width: 98%; /* Ajusta el ancho del section */
+    box-shadow:0 8px 20px rgb(0 0 0 / 44%); /* Sombra para el efecto flotante */
     border-radius: 20px; /* Borde redondeado en todas las esquinas */
     z-index: 1; /* Asegura que esté por encima de las otras secciones */
   }
@@ -80,34 +80,36 @@
 
   /* Difuminado en la parte superior */
   .sc_1::before {
-    top: -20px;
+    top: -7px;
     /* Mueve hacia arriba */
   }
 
   /* Difuminado en la parte inferior */
   .sc_1::after {
-    bottom: -20px; /* Mueve hacia abajo */
+    bottom: -5px; /* Mueve hacia abajo */
     transform: rotate(180deg); /* Invierte el degradado para la parte inferior */
   }
 
   .sc_2 {
     position: relative;
     background-color: white;
-    padding: 20px;
-    margin: 40px 0;
+    padding: 40px;
+    margin: 41px auto;
+    width: 98%;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 63%);
+    border-radius: 12px;
     z-index: 1;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
   }
 
   .sc_3 {
     position: relative;
     background-color: white;
-    padding: 20px;
-    margin: 40px 0;
+    padding: 40px;
+    margin: 41px auto;
+    width: 98%;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
+    border-radius: 12px;
     z-index: 1;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
   }
 
   .opuesto {
