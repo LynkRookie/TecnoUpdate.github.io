@@ -55,6 +55,15 @@
 
 /* Mantén el diseño normal en PC */
 @media (min-width: 1024px) {
+  .sc{
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    margin: 40px 0;
+    z-index: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
   .opuesto {
     flex-direction: row-reverse;
     /* Mantén imagen a la derecha y texto a la izquierda */
