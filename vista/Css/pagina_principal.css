@@ -55,7 +55,10 @@
 
 /* Mantén el diseño normal en PC */
 @media (min-width: 1024px) {
-  .sc_1 {
+
+
+
+  .sc_3 {
     position: relative;
     background-color: white;
     padding: 40px;
@@ -64,26 +67,6 @@
     box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
     border-radius: 12px;
     z-index: 1;
-  }
-
-  .sc_2 {
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    margin: 40px 0;
-    z-index: 1;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-  }
-
-  .sc_3 {
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    margin: 40px 0;
-    z-index: 1;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
   }
 
   .opuesto {
