@@ -57,12 +57,13 @@
 @media (min-width: 1024px) {
   .sc_1 {
     position: relative;
-    background-color: white;
-    padding: 20px;
-    margin: 40px 0;
-    z-index: 1;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    background-color: white; /* Color de fondo del section */
+    padding: 40px; /* Espaciado interno */
+    margin: 40px auto; /* Espacio entre secciones y centrado */
+    width: 80%; /* Ajusta el ancho del section */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra para el efecto flotante */
+    border-radius: 20px; /* Borde redondeado en todas las esquinas */
+    z-index: 1; /* Asegura que esté por encima de las otras secciones */
   }
 
   .sc_1::before,
@@ -71,11 +72,10 @@
     position: absolute;
     left: 0;
     right: 0;
-    height: 20px;
-    /* Altura del difuminado */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(82 79 79 / 49%) 100%);
-    z-index: -1;
-    /* Coloca debajo del section */
+    height: 20px; /* Altura del difuminado */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    z-index: -1; /* Coloca debajo del section */
+    border-radius: 20px; /* Asegura que el difuminado siga el mismo borde redondeado */
   }
 
   /* Difuminado en la parte superior */
@@ -86,10 +86,8 @@
 
   /* Difuminado en la parte inferior */
   .sc_1::after {
-    bottom: -20px;
-    /* Mueve hacia abajo */
-    transform: rotate(180deg);
-    /* Invierte el degradado para la parte inferior */
+    bottom: -20px; /* Mueve hacia abajo */
+    transform: rotate(180deg); /* Invierte el degradado para la parte inferior */
   }
 
   .sc_2 {
