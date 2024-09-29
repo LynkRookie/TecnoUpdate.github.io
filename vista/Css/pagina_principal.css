@@ -55,6 +55,14 @@
 
 /* Mantén el diseño normal en PC */
 @media (min-width: 1024px) {
+  body{
+    margin: 0;
+    line-height: inherit;
+    transform: scale(0.75);
+    transform-origin: top left;
+    width: 133.33%;
+    height: auto;
+  }
   .sc_1 {
     position: relative;
     background-color: white; /* Color de fondo del section */
