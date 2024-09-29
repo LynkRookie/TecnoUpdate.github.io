@@ -73,7 +73,7 @@
     right: 0;
     height: 20px;
     /* Altura del difuminado */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(82 79 79 / 49%) 100%);
     z-index: -1;
     /* Coloca debajo del section */
   }
