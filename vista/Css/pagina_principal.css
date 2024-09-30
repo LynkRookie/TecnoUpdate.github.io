@@ -59,7 +59,7 @@
 
   .sc_2 {
     position: relative;
-    background-color: white;
+    background: linear-gradient(170deg, rgb(124 124 124 / 21%) 8%, rgb(0 0 0 / 20%) 47%, rgba(255, 255, 255, 1) 82%);
     padding: 40px;
     margin: 41px auto;
     width: 98%;
