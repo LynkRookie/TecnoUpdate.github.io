@@ -66,7 +66,7 @@ body{
     background: linear-gradient(170deg, rgb(124 124 124 / 21%) 8%, rgb(0 0 0 / 20%) 47%, rgba(255, 255, 255, 1) 82%);
     padding: 40px;
     margin: 41px auto;
-    width: 98%;
+    width: 99.5%;
     box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
     border-radius: 12px;
     z-index: 1;
@@ -78,7 +78,7 @@ body{
     background-color: white;
     padding: 40px;
     margin: 41px auto;
-    width: 98%;
+    width: 99.5%;
     box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
     border-radius: 12px;
     z-index: 1;
@@ -194,6 +194,34 @@ body{
 
 /* Media queries para dispositivos medianos (tablets) */
 @media (max-width: 1024px) {
+  body{
+    background-color: #00000070;
+    margin: 0;
+      line-height: inherit;
+  }
+    .sc_2 {
+      position: relative;
+      background: linear-gradient(170deg, rgb(124 124 124 / 21%) 8%, rgb(0 0 0 / 20%) 47%, rgba(255, 255, 255, 1) 82%);
+      padding: 40px;
+      margin: 41px auto;
+      width: 99.5%;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
+      border-radius: 12px;
+      z-index: 1;
+    }
+  
+  
+    .sc_3 {
+      position: relative;
+      background-color: white;
+      padding: 40px;
+      margin: 41px auto;
+      width: 99.5%;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
+      border-radius: 12px;
+      z-index: 1;
+    }
+
   .opuesto {
     flex-direction: column-reverse;
     /* Coloca la imagen arriba del texto en tablets */
@@ -319,6 +347,33 @@ body{
 
 /* Media queries para dispositivos móviles */
 @media (max-width: 640px) {
+  body{
+    background-color: #00000070;
+    margin: 0;
+      line-height: inherit;
+  }
+    .sc_2 {
+      position: relative;
+      background: linear-gradient(170deg, rgb(124 124 124 / 21%) 8%, rgb(0 0 0 / 20%) 47%, rgba(255, 255, 255, 1) 82%);
+      padding: 40px;
+      margin: 41px auto;
+      width: 99.5%;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
+      border-radius: 12px;
+      z-index: 1;
+    }
+  
+  
+    .sc_3 {
+      position: relative;
+      background-color: white;
+      padding: 40px;
+      margin: 41px auto;
+      width: 99.5%;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
+      border-radius: 12px;
+      z-index: 1;
+    }
   .t {
     font-size: 0.9rem;
     /* Tamaño de fuente más pequeño en móviles */
