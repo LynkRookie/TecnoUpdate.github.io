@@ -55,12 +55,9 @@
 
 /* Mantén el diseño normal en PC */
 @media (min-width: 1024px) {
-
-body{
-  background-color: #00000070;
-  margin: 0;
-    line-height: inherit;
-}
+  .bd{
+    background-color: #00000070;
+  }
   .sc_2 {
     position: relative;
     background: linear-gradient(170deg, rgb(124 124 124 / 21%) 8%, rgb(0 0 0 / 20%) 47%, rgba(255, 255, 255, 1) 82%);
@@ -194,10 +191,8 @@ body{
 
 /* Media queries para dispositivos medianos (tablets) */
 @media (max-width: 1024px) {
-  body{
+  .bd{
     background-color: #00000070;
-    margin: 0;
-      line-height: inherit;
   }
     .sc_2 {
       position: relative;
