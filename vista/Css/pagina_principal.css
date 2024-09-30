@@ -347,10 +347,8 @@ body{
 
 /* Media queries para dispositivos móviles */
 @media (max-width: 640px) {
-  body{
+  .bd{
     background-color: #00000070;
-    margin: 0;
-      line-height: inherit;
   }
     .sc_2 {
       position: relative;
