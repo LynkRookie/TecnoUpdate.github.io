@@ -194,6 +194,19 @@
   .bd{
     background-color: #00000070;
   }
+  .sc_1{
+    position: relative;
+    background-color: white;
+    padding: 40px;
+    margin: 41px auto;
+    width: 99.5%;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 65%);
+    border-radius: 14px;
+    z-index: 1;
+  }
+  .sc_1::before{
+    border-radius: 15px;
+  }
     .sc_2 {
       position: relative;
       background-color: white;
