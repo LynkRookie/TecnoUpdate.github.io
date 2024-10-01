@@ -466,7 +466,7 @@
     padding: 0;
     margin: 0;
     gap: 30px;
-    animation: move-left 14s linear infinite;
+    animation: move-left 23s linear infinite;
   }
   .ul-skillss {
     display: flex;
