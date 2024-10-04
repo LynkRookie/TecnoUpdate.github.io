@@ -159,7 +159,7 @@
   .sc_2 {
     position: relative;
     background-color: white;
-  
+    /*padding: 40px;*/
     margin: 41px auto;
     width: 100%;
     box-shadow: 0 3px 20px rgb(0 0 0 / 65%);
