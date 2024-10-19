@@ -1,0 +1,692 @@
+:root {
+    --bg-light: #f0f4f8;
+    --text-light: #2d3748;
+    --bg-dark: #1a202c;
+    --text-dark: #e2e8f0;
+    --primary-color: #4299e1;
+    --secondary-color: #ed8936;
+    --sidebar-width: 250px;
+    --sidebar-width-collapsed: 80px;
+    --transition-speed: 0.3s;
+}
+.edit-title{
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.edit-percentage{
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding-right: 39px;
+}
+
+/* Estilos aplicados solo al botón de editar */
+.edit-button {
+    font-size: 20px;
+    display: inline-grid;
+    margin-left: 92px;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(51, 156, 255);
+    color: #ffffff;
+}
+
+.edit-button:hover {
+    background-color: #218838; /* Color cuando pasas el mouse por encima */
+}
+
+.edit-button svg {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Asegura que el contenedor del botón tenga suficiente espacio */
+.edit-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: flex-start; /* Cambia la alineación si lo necesitas */
+}
+
+.save-btn{
+    background-color: rgb(76, 175, 80); /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 10px; /* Espacio superior */
+    transition: background-color 0.3s; /* Transición suave */
+}
+.btn:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+/* Estilo específico para el botón de agregar habilidades */
+.add-skill-btn {
+    background-color: #28a745; /* Color de fondo para el botón de agregar */
+}
+/* Cambios en el color al pasar el mouse para el botón de agregar habilidades */
+.add-skill-btn:hover {
+    background-color: #218838; /* Color de fondo al pasar el mouse */
+}
+.delete-btn{
+    background-color: #ff0000; /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 10px; /* Espacio superior */
+    transition: background-color 0.3s; /* Transición suave */
+}
+.btn:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+/* Estilo específico para el botón de agregar habilidades */
+.add-skill-btn {
+    background-color: #28a745; /* Color de fondo para el botón de agregar */
+}
+/* Cambios en el color al pasar el mouse para el botón de agregar habilidades */
+.add-skill-btn:hover {
+    background-color: #218838; /* Color de fondo al pasar el mouse */
+}
+.btn-3{
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 10px; /* Espacio superior */
+    transition: background-color 0.3s; /* Transición suave */
+}
+.btn-3:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+/* Estilo específico para el botón de agregar habilidades */
+.add-skill-btn-3 {
+    background-color: #28a745; /* Color de fondo para el botón de agregar */
+}
+/* Cambios en el color al pasar el mouse para el botón de agregar habilidades */
+.add-skill-btn-3:hover {
+    background-color: #218838; /* Color de fondo al pasar el mouse */
+}
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+.help-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 110px;
+    right: 40px;
+    background-color: #007bff;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+.help-float:hover {
+    background-color: #0056b3;
+}
+#chat-container p {
+    color: black;
+    font-family: Arial, sans-serif;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#chat-container {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#user-input {
+    width: calc(100% - 70px);
+    padding: 5px;
+}
+#send-button {
+    width: 60px;
+    padding: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark-mode {
+    background-color: #15181ee0;
+    color: var(--text-dark);
+}
+
+body:not(.dark-mode) {
+    background-color: #0000002b;
+    color: var(--text-light);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: width var(--transition-speed);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-width-collapsed);
+}
+
+.dark-mode .sidebar {
+    background-color: #1a212e;
+}
+
+body:not(.dark-mode) .sidebar {
+    background-color: #ffffff;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.sidebar.collapsed .profile-name,
+.sidebar.collapsed nav span,
+.sidebar.collapsed .sidebar-footer span {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    margin-bottom: 1rem;
+}
+
+nav a, .sidebar-footer button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+nav a:hover, .sidebar-footer button:hover {
+    background-color: rgba(66, 153, 225, 0.1);
+    transform: translateX(5px);
+}
+
+nav a i, .sidebar-footer button i {
+    margin-right: 1rem;
+    color: var(--primary-color);
+}
+
+.sidebar-footer {
+
+}
+
+.sidebar-footer button {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: left;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    padding-bottom: 50px; /* Espacio para los botones */
+    animation: fadeIn 0.5s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.dark-mode .card {
+    background-color: #2d3748;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .card:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+body:not(.dark-mode) .card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .card:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cards {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    padding-bottom: 50px; /* Espacio para los botones */
+    animation: fadeIn 0.5s ease-in-out;
+}
+.cards:hover {
+    transform: translateY(-5px);
+}
+
+.dark-mode .cards {
+    background-color: #2d3748;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .cards:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+body:not(.dark-mode) .cards {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .cards:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-links i {
+    margin-right: 0.5rem;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.skill-bar {
+    height: 0.75rem;
+    background-color: #4a5568;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar.collapsed {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+
+/* ... (previous CSS remains unchanged) ... */
+
+.sidebar {
+    width: var(--sidebar-width);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all var(--transition-speed);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-width-collapsed);
+    padding: 2rem 0.5rem;
+}
+
+.sidebar.collapsed .profile-img {
+    width: 60px;
+    height: 60px;
+}
+
+.sidebar.collapsed nav a, 
+.sidebar.collapsed .sidebar-footer button {
+    justify-content: center;
+    padding: 0.75rem 0;
+}
+
+.sidebar.collapsed nav a i, 
+.sidebar.collapsed .sidebar-footer button i {
+    margin-right: 0;
+}
+
+/* ... (rest of the CSS remains unchanged) ... */
+
+@media (max-width: 768px) {
+    .sidebar.collapsed {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .sidebar.collapsed .profile,
+    .sidebar.collapsed .sidebar-footer {
+        display: none;
+    }
+
+    .sidebar.collapsed nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sidebar.collapsed nav li {
+        margin-bottom: 0;
+    }
+}
+/* ... (previous CSS remains unchanged) ... */
+/* ... (previous CSS remains unchanged) ... */
+
+/* Edit mode styles */
+.config-button,
+.add-card-button {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.config-button:hover,
+.add-card-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.config-button {
+    right: 20px;
+}
+
+.add-card-button {
+    right: 180px;
+}
+
+/* ... (CSS anterior se mantiene sin cambios) ... */
+
+/* Estilos para el modo de edición */
+.edit-mode .card {
+    position: relative;
+    border: 2px dashed var(--primary-color);
+}
+
+
+.edit-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.edit-controls button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-controls button:nth-child(1) { background-color: #2196F3; }
+.edit-controls button:nth-child(2) { background-color: #4CAF50; }
+.edit-controls button:nth-child(3) { background-color: #f44336; }
+
+@media (max-width: 768px) {
+    .edit-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Ajuste para el contenido principal */
+
+
+/* ... (El resto del CSS se mantiene sin cambios) ... */
+
+.edit-controls button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Ajustes para la visibilidad de los controles de edición */
+.sidebar:not(.collapsed) + main .edit-controls {
+    right: 10px;
+}
+
+.sidebar.collapsed + main .edit-controls {
+    right: 10px;
+}
+
+/* ... (El resto del CSS se mantiene sin cambios) ... */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1001;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ... (rest of the CSS remains unchanged) ... */
