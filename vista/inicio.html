@@ -12,7 +12,7 @@
     <div class="container">
         <aside class="sidebar expanded">
             <div class="profile">
-                <img src="img/1.png" alt="Profile" class="profile-img">
+                <img src="../TecnoUpdate.github.io/vista/img/1.png" alt="Profile" class="profile-img">
                 <h2 class="profile-name">Damián Jinel Cortés</h2>
             </div>
             <nav>
@@ -97,14 +97,19 @@
             <button id="help-button" class="help-float">
                 <i class="fa-solid fa-robot"></i>
             </button>
-            
-            <div id="help-modal" class="modal">
+            <div id="chat-modal" class="modal">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Asistente IA</h2>
-                    <div id="chat-container"></div>
-                    <input type="text" id="user-input" placeholder="Escribe tu pregunta aquí...">
-                    <button id="send-button">Enviar</button>
+                    <div class="modal-header">
+                        <h2>Asistente IA</h2>
+                        <button id="ai-theme-toggle" class="theme-toggle">
+                            <i data-lucide="sun"></i>
+                        </button>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div id="chat-container">
+                        <div id="chat-messages"></div>
+                        <div id="question-buttons"></div>
+                    </div>
                 </div>
             </div>
         </main>

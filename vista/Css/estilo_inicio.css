@@ -8,209 +8,14 @@
     --sidebar-width: 250px;
     --sidebar-width-collapsed: 80px;
     --transition-speed: 0.3s;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --modal-bg: #fefefe;
+    --user-message-bg: #e6f2ff;
+    --assistant-message-bg: #f0f0f0;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
 }
-.edit-title{
-    font-size: 1.5rem;
-    border-radius: 5px;
-}
-.edit-percentage{
-    font-size: 1.5rem;
-    border-radius: 5px;
-    padding-right: 39px;
-}
-
-/* Estilos aplicados solo al botón de editar */
-.edit-button {
-    font-size: 20px;
-    display: inline-grid;
-    margin-left: 92px;
-    padding: 11px 22px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: rgb(51, 156, 255);
-    color: #ffffff;
-}
-
-.edit-button:hover {
-    background-color: #218838; /* Color cuando pasas el mouse por encima */
-}
-
-.edit-button svg {
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
-}
-
-/* Asegura que el contenedor del botón tenga suficiente espacio */
-.edit-controls {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    display: flex;
-    justify-content: flex-start; /* Cambia la alineación si lo necesitas */
-}
-
-.save-btn{
-    background-color: rgb(76, 175, 80); /* Color de fondo */
-    color: white; /* Color de texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    margin-top: 10px; /* Espacio superior */
-    transition: background-color 0.3s; /* Transición suave */
-}
-.btn:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
-}
-/* Estilo específico para el botón de agregar habilidades */
-.add-skill-btn {
-    background-color: #28a745; /* Color de fondo para el botón de agregar */
-}
-/* Cambios en el color al pasar el mouse para el botón de agregar habilidades */
-.add-skill-btn:hover {
-    background-color: #218838; /* Color de fondo al pasar el mouse */
-}
-.delete-btn{
-    background-color: #ff0000; /* Color de fondo */
-    color: white; /* Color de texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    margin-top: 10px; /* Espacio superior */
-    transition: background-color 0.3s; /* Transición suave */
-}
-.btn:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
-}
-/* Estilo específico para el botón de agregar habilidades */
-.add-skill-btn {
-    background-color: #28a745; /* Color de fondo para el botón de agregar */
-}
-/* Cambios en el color al pasar el mouse para el botón de agregar habilidades */
-.add-skill-btn:hover {
-    background-color: #218838; /* Color de fondo al pasar el mouse */
-}
-.btn-3{
-    background-color: #007bff; /* Color de fondo */
-    color: white; /* Color de texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    margin-top: 10px; /* Espacio superior */
-    transition: background-color 0.3s; /* Transición suave */
-}
-.btn-3:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
-}
-/* Estilo específico para el botón de agregar habilidades */
-.add-skill-btn-3 {
-    background-color: #28a745; /* Color de fondo para el botón de agregar */
-}
-/* Cambios en el color al pasar el mouse para el botón de agregar habilidades */
-.add-skill-btn-3:hover {
-    background-color: #218838; /* Color de fondo al pasar el mouse */
-}
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.whatsapp-float:hover {
-    background-color: #128C7E;
-}
-.help-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 110px;
-    right: 40px;
-    background-color: #007bff;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-}
-.help-float:hover {
-    background-color: #0056b3;
-}
-#chat-container p {
-    color: black;
-    font-family: Arial, sans-serif;
-}
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-}
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-#chat-container {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-#user-input {
-    width: calc(100% - 70px);
-    padding: 5px;
-}
-#send-button {
-    width: 60px;
-    padding: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
 
 * {
     margin: 0;
@@ -222,16 +27,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-size: 16px;
 }
 
 body.dark-mode {
-    background-color: #15181ee0;
+    background-color: var(--bg-dark);
     color: var(--text-dark);
 }
 
 body:not(.dark-mode) {
-    background-color: #0000002b;
-    color: var(--text-light);
+    background-color: var(--bg-light);
+    color: #090909;
 }
 
 .container {
@@ -244,12 +50,13 @@ body:not(.dark-mode) {
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
-    transition: width var(--transition-speed);
+    transition: all var(--transition-speed);
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar.collapsed {
     width: var(--sidebar-width-collapsed);
+    padding: 2rem 0.5rem;
 }
 
 .dark-mode .sidebar {
@@ -318,10 +125,6 @@ nav a i, .sidebar-footer button i {
     color: var(--primary-color);
 }
 
-.sidebar-footer {
-
-}
-
 .sidebar-footer button {
     width: 100%;
     background: none;
@@ -340,7 +143,7 @@ main {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: white;
+    
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
 }
@@ -351,65 +154,35 @@ h1 {
     gap: 1.5rem;
 }
 
-.card {
+.card, .cards {
     padding: 1.5rem;
     border-radius: 0.75rem;
     margin-bottom: 1.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
-    padding-bottom: 50px; /* Espacio para los botones */
+    padding-bottom: 50px;
     animation: fadeIn 0.5s ease-in-out;
 }
-.card:hover {
+
+.card:hover, .cards:hover {
     transform: translateY(-5px);
 }
 
-.dark-mode .card {
+.dark-mode .card, .dark-mode .cards {
     background-color: #2d3748;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.dark-mode .card:hover {
+.dark-mode .card:hover, .dark-mode .cards:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-body:not(.dark-mode) .card {
+body:not(.dark-mode) .card, body:not(.dark-mode) .cards {
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-body:not(.dark-mode) .card:hover {
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cards {
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    padding-bottom: 50px; /* Espacio para los botones */
-    animation: fadeIn 0.5s ease-in-out;
-}
-.cards:hover {
-    transform: translateY(-5px);
-}
-
-.dark-mode .cards {
-    background-color: #2d3748;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode .cards:hover {
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-body:not(.dark-mode) .cards {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-body:not(.dark-mode) .cards:hover {
+body:not(.dark-mode) .card:hover, body:not(.dark-mode) .cards:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -426,6 +199,7 @@ h2 {
 .social-links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .social-links a {
@@ -475,113 +249,253 @@ h2 {
     transition: width 1s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-    }
-
-    .sidebar.collapsed {
-        width: 100%;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+.edit-title, .edit-percentage {
+    font-size: 1rem;
     border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
+.edit-button, .save-btn, .delete-btn, .btn-3 {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.3s;
 }
 
+.edit-button {
+    background-color: var(--button-bg);
+}
 
-/* ... (previous CSS remains unchanged) ... */
+.save-btn {
+    background-color: #4CAF50;
+}
 
-.sidebar {
-    width: var(--sidebar-width);
-    padding: 2rem 1.5rem;
+.delete-btn {
+    background-color: #f44336;
+}
+
+.btn-3 {
+    background-color: var(--button-bg);
+}
+
+.edit-button:hover, .save-btn:hover, .delete-btn:hover, .btn-3:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.edit-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
     display: flex;
-    flex-direction: column;
-    transition: all var(--transition-speed);
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    gap: 10px;
 }
 
-.sidebar.collapsed {
-    width: var(--sidebar-width-collapsed);
-    padding: 2rem 0.5rem;
-}
-
-.sidebar.collapsed .profile-img {
+.whatsapp-float, .help-float {
+    position: fixed;
     width: 60px;
     height: 60px;
-}
-
-.sidebar.collapsed nav a, 
-.sidebar.collapsed .sidebar-footer button {
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 0.75rem 0;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.sidebar.collapsed nav a i, 
-.sidebar.collapsed .sidebar-footer button i {
-    margin-right: 0;
+.whatsapp-float {
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
 }
 
-/* ... (rest of the CSS remains unchanged) ... */
-
-@media (max-width: 768px) {
-    .sidebar.collapsed {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 1rem;
-    }
-
-    .sidebar.collapsed .profile,
-    .sidebar.collapsed .sidebar-footer {
-        display: none;
-    }
-
-    .sidebar.collapsed nav ul {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .sidebar.collapsed nav li {
-        margin-bottom: 0;
-    }
+.help-float {
+    bottom: 110px;
+    right: 40px;
+    background-color: var(--button-bg);
+    color: #FFF;
+    border: none;
+    cursor: pointer;
 }
-/* ... (previous CSS remains unchanged) ... */
-/* ... (previous CSS remains unchanged) ... */
 
-/* Edit mode styles */
+.whatsapp-float:hover, .help-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+
+.help-float:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: var(--modal-bg);
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-content.ai-dark-mode {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.ai-dark-mode .close:hover {
+    color: #fff;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.ai-dark-mode .theme-toggle {
+    color: #f8f9fa;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.ai-dark-mode #chat-messages {
+    background-color: #495057;
+    border-color: #6c757d;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.user-message {
+    background-color: var(--user-message-bg);
+    color: var(--text-color);
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.assistant-message {
+    background-color: var(--assistant-message-bg);
+    color: var(--text-color);
+    align-self: flex-start;
+}
+
+.ai-dark-mode .assistant-message {
+    background-color: #6c757d;
+    color: #f8f9fa;
+}
+
+#question-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    overflow-y: auto;
+    max-height: 150px;
+    padding: 10px 0;
+}
+
+.question-button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.9rem;
+}
+
+.question-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05);
+}
+
+.ai-dark-mode .question-button {
+    background-color: #6c757d;
+}
+
+.ai-dark-mode .question-button:hover {
+    background-color: #5a6268;
+}
+
 .config-button,
 .add-card-button {
     position: fixed;
@@ -613,65 +527,13 @@ h2 {
     right: 180px;
 }
 
-/* ... (CSS anterior se mantiene sin cambios) ... */
-
-/* Estilos para el modo de edición */
 .edit-mode .card {
-    position: relative;
     border: 2px dashed var(--primary-color);
 }
 
-
-.edit-controls {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.edit-controls button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-}
-
-.edit-controls button:nth-child(1) { background-color: #2196F3; }
-.edit-controls button:nth-child(2) { background-color: #4CAF50; }
-.edit-controls button:nth-child(3) { background-color: #f44336; }
-
-@media (max-width: 768px) {
-    .edit-controls {
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
-
-/* Ajuste para el contenido principal */
-
-
-/* ... (El resto del CSS se mantiene sin cambios) ... */
-
-.edit-controls button:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Ajustes para la visibilidad de los controles de edición */
-.sidebar:not(.collapsed) + main .edit-controls {
-    right: 10px;
-}
-
-.sidebar.collapsed + main .edit-controls {
-    right: 10px;
-}
-
-/* ... (El resto del CSS se mantiene sin cambios) ... */
 .notification {
     position: fixed;
+    
     top: 20px;
     right: 20px;
     background-color: var(--primary-color);
@@ -689,4 +551,161 @@ h2 {
     transform: translateY(0);
 }
 
-/* ... (rest of the CSS remains unchanged) ... */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: var(--sidebar-width-collapsed);
+        padding: 2rem 0.5rem;
+    }
+
+    .sidebar .profile-name,
+    .sidebar nav span,
+    .sidebar .sidebar-footer span {
+        display: none;
+    }
+
+    .sidebar .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .sidebar .profile,
+    .sidebar .sidebar-footer {
+        display: none;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sidebar nav li {
+        margin-bottom: 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .edit-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .config-button,
+    .add-card-button {
+        bottom: 10px;
+    }
+
+    .config-button {
+        right: 10px;
+    }
+
+    .add-card-button {
+        right: 120px;
+    }
+
+    .whatsapp-float,
+    .help-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .help-float {
+        bottom: 80px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar nav ul {
+        flex-wrap: wrap;
+    }
+
+    .sidebar nav li {
+        flex: 1 1 50%;
+        text-align: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 2% auto;
+    }
+
+    .config-button,
+    .add-card-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .add-card-button {
+        right: 100px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
