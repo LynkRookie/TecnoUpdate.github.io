@@ -393,17 +393,7 @@ h2 {
     align-items: center;
 }
 
-.close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-}
 
-.close:hover {
-    color: #000;
-}
 
 .ai-dark-mode .close:hover {
     color: #fff;
@@ -594,6 +584,9 @@ h2 {
         transition: color 0.3s;
         margin-left: 303px;
         margin-top: -43px;
+    }
+    .close:hover {
+        color: #000;
     }
 }
 /* Estilos para dispositivos con un ancho máximo de 1200px (generalmente pantallas de escritorio grandes y laptops) */
