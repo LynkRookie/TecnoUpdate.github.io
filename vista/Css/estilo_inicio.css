@@ -553,7 +553,20 @@ h2 {
     transform: translateY(0);
 }
 
-
+@media (max-width: 1440px) {
+    /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas que se ajustan automáticamente */
+    }
+    .theme-toggle {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-left: -344px;
+    }
+}
 /* Media queries para ajustar el diseño según el ancho de la pantalla 
  Estilos para dispositivos con un ancho máximo de 480px (dispositivos móviles pequeños como teléfonos) */
 @media (max-width: 480px) {
@@ -570,25 +583,20 @@ h2 {
 
     /* Elimina margen izquierdo en el botón de cambio de tema */
     .theme-toggle {
-        margin-left: 0;
+        margin-left: 146px;
+        margin-top: -39px;
+    }
+    .close{
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-left: 303px;
+        margin-top: -43px;
     }
 }
 /* Estilos para dispositivos con un ancho máximo de 1200px (generalmente pantallas de escritorio grandes y laptops) */
-@media (max-width: 1200px) {
-    /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas que se ajustan automáticamente */
-    }
-    .theme-toggle {
-        background: none;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        transition: color 0.3s;
-        margin-left: -344px;
-    }
-}
-
 /* Estilos para dispositivos con un ancho máximo de 992px (tablets en modo horizontal o laptops pequeñas) */
 @media (max-width: 992px) {
     /* Cambia el ancho de la barra lateral y añade padding */
