@@ -409,14 +409,6 @@ h2 {
     color: #fff;
 }
 
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    transition: color 0.3s;
-    margin-left: 10px;
-}
 
 .ai-dark-mode .theme-toggle {
     color: #f8f9fa;
@@ -627,10 +619,28 @@ h2 {
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Crea columnas que se ajustan automáticamente */
     }
+        
+    .theme-toggle {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-left: 10px;
+    }
 }
 
 /* Estilos para dispositivos con un ancho máximo de 768px (tablets en modo vertical y algunos teléfonos grandes) */
 @media (max-width: 768px) {
+        
+    .theme-toggle {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-left: 10px;
+    }
     /* Cambia la dirección del contenedor principal a columna */
     .container {
         flex-direction: column;
@@ -720,6 +730,15 @@ h2 {
 
 /* Estilos adicionales para dispositivos con un ancho máximo de 480px (dispositivos móviles pequeños) */
 @media (max-width: 480px) {
+        
+    .theme-toggle {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-left: 10px;
+    }
     /* Permite que los elementos de la lista de navegación se envuelvan */
     .sidebar nav ul {
         flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas */
