@@ -408,6 +408,7 @@ h2 {
     font-size: 20px;
     cursor: pointer;
     transition: color 0.3s;
+    margin-left: -341px;
 }
 
 .ai-dark-mode .theme-toggle {
