@@ -37,7 +37,7 @@ body.dark-mode {
 
 body:not(.dark-mode) {
     background-color: var(--bg-light);
-    color: #090909;
+    color: var(--text-light);
 }
 
 .container {
@@ -72,13 +72,18 @@ body:not(.dark-mode) .sidebar {
     margin-bottom: 2rem;
 }
 
-.profile-img {
+.sidebar .profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-bottom: 1rem;
     border: 3px solid var(--primary-color);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, width 0.3s, height 0.3s;
+}
+
+.sidebar.collapsed .profile-img {
+    width: 60px;
+    height: 60px;
 }
 
 .profile-img:hover {
@@ -143,7 +148,7 @@ main {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    
+    color: var(--text-color);
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
 }
@@ -384,6 +389,8 @@ h2 {
 .modal-header h2 {
     margin: 0;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .close {
@@ -408,12 +415,28 @@ h2 {
     font-size: 20px;
     cursor: pointer;
     transition: color 0.3s;
-    margin-left: -341px;
+    margin-left: 10px;
 }
 
 .ai-dark-mode .theme-toggle {
     color: #f8f9fa;
 }
+
+@media (max-width: 480px) {
+    .modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal-header h2 {
+        margin-bottom: 10px;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+    }
+}
+
 
 #chat-container {
     display: flex;
@@ -534,7 +557,6 @@ h2 {
 
 .notification {
     position: fixed;
-    
     top: 20px;
     right: 20px;
     background-color: var(--primary-color);
