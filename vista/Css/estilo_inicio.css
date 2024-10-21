@@ -545,6 +545,17 @@ h2 {
 
 @media (min-width: 1024px) {
     /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
+    .close{
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    
+    }
+    .close:hover {
+        color: #000;
+    }
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas que se ajustan automáticamente */
     }
