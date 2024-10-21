@@ -544,7 +544,7 @@ h2 {
 }
 
 /*Estilos para dispositivos con un ancho máximo de 480px (dispositivos móviles pequeños como teléfonos) */
-@media (min-width: 480px) {
+@media (max-width: 480px) {
     /* Cambia la dirección de los elementos del encabezado del modal a columna */
     .modal-header {
         flex-direction: column;
@@ -608,7 +608,7 @@ h2 {
     }
 }
 /*Estilos para dispositivos con un ancho máximo de 768px (tablets en modo vertical y algunos teléfonos grandes) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .close{
         color: #aaa;
         font-size: 28px;
