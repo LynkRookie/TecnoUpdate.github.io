@@ -50,7 +50,7 @@ body:not(.dark-mode) {
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
-    transition: all var(--transition-speed);
+    transition: all var(--transition-speed), width var(--transition-speed);
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -102,6 +102,12 @@ body:not(.dark-mode) .sidebar {
     display: none;
 }
 
+.sidebar:not(.collapsed) .profile-name,
+.sidebar:not(.collapsed) nav span,
+.sidebar:not(.collapsed) .sidebar-footer span {
+    display: inline;
+}
+
 nav ul {
     list-style-type: none;
 }
@@ -148,7 +154,7 @@ main {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-  
+    color: var(--text-color);
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
 }
@@ -393,18 +399,49 @@ h2 {
     align-items: center;
 }
 
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
 
+.close:hover {
+    color: #000;
+}
 
 .ai-dark-mode .close:hover {
     color: #fff;
 }
 
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 10px;
+}
 
 .ai-dark-mode .theme-toggle {
     color: #f8f9fa;
 }
 
+@media (max-width: 480px) {
+    .modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .modal-header h2 {
+        margin-bottom: 10px;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+    }
+}
 
 
 #chat-container {
@@ -543,255 +580,134 @@ h2 {
     transform: translateY(0);
 }
 
-/*Estilos para dispositivos con un ancho máximo de 480px (dispositivos móviles pequeños como teléfonos) */
-@media (max-width: 480px) {
-    /* Cambia la dirección de los elementos del encabezado del modal a columna */
-    .modal-header {
-        flex-direction: column;
-        align-items: flex-start; /* Alinea los elementos al inicio */
-    }
-
-    /* Añade un margen en la parte inferior del título */
-    .modal-header h2 {
-        margin-bottom: 10px;
-    }
-
-    /* Elimina margen izquierdo en el botón de cambio de tema */
-    .theme-toggle {
-        margin-left: 146px;
-        margin-top: -39px;
-    }
-    .close{
-        color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: color 0.3s;
-        margin-left: 303px;
-        margin-top: -43px;
-    }
-    .close:hover {
-        color: #000;
-    }
-    /* Permite que los elementos de la lista de navegación se envuelvan */
-    .sidebar nav ul {
-        flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas */
-    }
-
-    /* Ajusta el tamaño y alineación de los elementos de la lista de navegación */
-    .sidebar nav li {
-        flex: 1 1 50%; /* Permite que los elementos ocupen el 50% del ancho */
-        text-align: center; /* Centra el texto */
-    }
-
-    /* Ajusta el diseño de los enlaces sociales */
-    .social-links {
-        flex-direction: column; /* Cambia a dirección vertical */
-    }
-
-    /* Ajusta el tamaño del contenido del modal */
-    .modal-content {
-        width: 95%; /* Ancho del 95% del contenedor */
-        margin: 2% auto; /* Márgenes automático para centrar */
-    }
-
-    /* Ajusta el tamaño de los botones de configuración y añadir tarjeta */
-    .config-button,
-    .add-card-button {
-        padding: 8px 15px; /* Ajusta el padding */
-        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
-    }
-
-    /* Ajusta la posición del botón de añadir tarjeta */
-    .add-card-button {
-        right: 100px; /* Posicionamiento */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
-/*Estilos para dispositivos con un ancho máximo de 768px (tablets en modo vertical y algunos teléfonos grandes) */
+
+@media (max-width: 992px) {
+    .sidebar:not(.collapsed) {
+        width: var(--sidebar-width-collapsed);
+        padding: 2rem 0.5rem;
+    }
+
+    .sidebar:not(.collapsed) .profile-name,
+    .sidebar:not(.collapsed) nav span,
+    .sidebar:not(.collapsed) .sidebar-footer span {
+        display: none;
+    }
+
+    .sidebar:not(.collapsed) .profile-img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 @media (max-width: 768px) {
-    .close{
-        color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: color 0.3s;
-    
-    }
-    .close:hover {
-        color: #000;
-    }
-    .theme-toggle {
-        background: none;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        transition: color 0.3s;
-        margin-left: 144px;
-    }
-    /* Cambia la dirección del contenedor principal a columna */
     .container {
         flex-direction: column;
     }
 
-    /* Ajusta la barra lateral para que ocupe el 100% del ancho y cambia la disposición */
     .sidebar {
-        width: 100%; /* Ancho completo */
-        flex-direction: row; /* Cambia a dirección horizontal */
-        justify-content: space-around; /* Distribuye elementos de manera uniforme */
-        padding: 1rem; /* Añade padding */
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
     }
 
-    /* Oculta perfil y pie de página en la barra lateral */
     .sidebar .profile,
     .sidebar .sidebar-footer {
         display: none;
     }
 
-    /* Ajusta la navegación de la barra lateral */
     .sidebar nav ul {
-        display: flex; /* Muestra elementos de la lista en línea */
-        justify-content: space-around; /* Distribuye elementos de manera uniforme */
-        width: 100%; /* Ancho completo */
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
     }
 
-    /* Ajusta el margen de los elementos de la lista */
     .sidebar nav li {
-        margin-bottom: 0; /* Elimina margen inferior */
+        margin-bottom: 0;
     }
 
-    /* Ajusta el padding del contenedor principal */
     main {
         padding: 1rem;
     }
 
-    /* Cambia el diseño de la cuadrícula a una sola columna */
     .grid {
-        grid-template-columns: 1fr; /* Solo una columna */
+        grid-template-columns: 1fr;
     }
 
-    /* Ajusta el tamaño de los encabezados */
     h1 {
-        font-size: 2rem; /* Tamaño de fuente más grande */
+        font-size: 2rem;
     }
 
-    /* Ajusta los controles de edición */
     .edit-controls {
-        flex-direction: column; /* Cambia a dirección vertical */
-        align-items: stretch; /* Estira los elementos */
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    /* Ajusta la posición de los botones de configuración y añadir tarjeta */
     .config-button,
     .add-card-button {
-        bottom: 10px; /* Ajusta la posición inferior */
+        bottom: 10px;
     }
 
     .config-button {
-        right: 10px; /* Ajusta la posición derecha */
+        right: 10px;
     }
 
     .add-card-button {
-        right: 120px; /* Ajusta la posición derecha */
+        right: 120px;
     }
 
-    /* Ajusta el tamaño de los botones flotantes */
     .whatsapp-float,
     .help-float {
         width: 50px;
         height: 50px;
-        font-size: 24px; /* Tamaño de fuente más grande */
+        font-size: 24px;
     }
 
-    /* Ajusta la posición del botón de WhatsApp */
     .whatsapp-float {
         bottom: 20px;
-        right: 20px; /* Posicionamiento */
+        right: 20px;
     }
 
-    /* Ajusta la posición del botón de ayuda */
     .help-float {
         bottom: 80px;
-        right: 20px; /* Posicionamiento */
-    }
-}
-/* Estilos para dispositivos con un ancho máximo de 992px (tablets en modo horizontal o laptops pequeñas) */
-@media (min-width: 992px) {
-    .close{
-        color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: color 0.3s;
-    
-    }
-    .close:hover {
-        color: #000;
-    }
-    /* Cambia el ancho de la barra lateral y añade padding */
-    .sidebar {
-        width: var(--sidebar-width-collapsed); /* Ancho colapsado de la barra lateral */
-        padding: 2rem 0.5rem; /* Padding vertical y horizontal */
-    }
-
-    /* Oculta ciertos elementos en la barra lateral */
-    .sidebar .profile-name,
-    .sidebar nav span,
-    .sidebar .sidebar-footer span {
-        display: none;
-    }
-
-    /* Ajusta el tamaño de la imagen de perfil en la barra lateral */
-    .sidebar .profile-img {
-        width: 60px;
-        height: 60px;
-    }
-
-    /* Ajusta el padding del contenedor principal */
-    main {
-        padding: 1.5rem;
-    }
-
-    /* Ajusta el diseño de la cuadrícula para que tenga columnas más pequeñas */
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Crea columnas que se ajustan automáticamente */
-    }
-        
-    .theme-toggle {
-        background: none;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        transition: color 0.3s;
-        margin-left: 10px;
-    }
-}
-/* Estilos para dispositivos con un ancho máximo de 1200px (generalmente pantallas de escritorio grandes y laptops) */
-@media (min-width: 1024px) {
-    /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
-    .close{
-        color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: color 0.3s;
-    
-    }
-    .close:hover {
-        color: #000;
-    }
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas que se ajustan automáticamente */
-    }
-    .theme-toggle {
-        background: none;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        transition: color 0.3s;
-        margin-left: -344px;
+        right: 20px;
     }
 }
 
+@media (max-width: 480px) {
+    .sidebar nav ul {
+        flex-wrap: wrap;
+    }
+
+    .sidebar nav li {
+        flex: 1 1 50%;
+        text-align: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 2% auto;
+    }
+
+    .config-button,
+    .add-card-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .add-card-button {
+        right: 100px;
+    }
+}
 
 @keyframes fadeIn {
     from { opacity: 0; }
