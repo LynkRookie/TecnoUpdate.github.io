@@ -636,6 +636,17 @@ h2 {
 /* Estilos para dispositivos con un ancho máximo de 1200px (generalmente pantallas de escritorio grandes y laptops) */
 /* Estilos para dispositivos con un ancho máximo de 992px (tablets en modo horizontal o laptops pequeñas) */
 @media (max-width: 992px) {
+    .close{
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    
+    }
+    .close:hover {
+        color: #000;
+    }
     /* Cambia el ancho de la barra lateral y añade padding */
     .sidebar {
         width: var(--sidebar-width-collapsed); /* Ancho colapsado de la barra lateral */
@@ -677,7 +688,17 @@ h2 {
 
 /* Estilos para dispositivos con un ancho máximo de 768px (tablets en modo vertical y algunos teléfonos grandes) */
 @media (max-width: 768px) {
-        
+    .close{
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    
+    }
+    .close:hover {
+        color: #000;
+    }
     .theme-toggle {
         background: none;
         border: none;
