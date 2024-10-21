@@ -588,6 +588,39 @@ h2 {
     .close:hover {
         color: #000;
     }
+    /* Permite que los elementos de la lista de navegación se envuelvan */
+    .sidebar nav ul {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas */
+    }
+
+    /* Ajusta el tamaño y alineación de los elementos de la lista de navegación */
+    .sidebar nav li {
+        flex: 1 1 50%; /* Permite que los elementos ocupen el 50% del ancho */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* Ajusta el diseño de los enlaces sociales */
+    .social-links {
+        flex-direction: column; /* Cambia a dirección vertical */
+    }
+
+    /* Ajusta el tamaño del contenido del modal */
+    .modal-content {
+        width: 95%; /* Ancho del 95% del contenedor */
+        margin: 2% auto; /* Márgenes automático para centrar */
+    }
+
+    /* Ajusta el tamaño de los botones de configuración y añadir tarjeta */
+    .config-button,
+    .add-card-button {
+        padding: 8px 15px; /* Ajusta el padding */
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    }
+
+    /* Ajusta la posición del botón de añadir tarjeta */
+    .add-card-button {
+        right: 100px; /* Posicionamiento */
+    }
 }
 /* Estilos para dispositivos con un ancho máximo de 1200px (generalmente pantallas de escritorio grandes y laptops) */
 /* Estilos para dispositivos con un ancho máximo de 992px (tablets en modo horizontal o laptops pequeñas) */
@@ -729,51 +762,6 @@ h2 {
     }
 }
 
-/* Estilos adicionales para dispositivos con un ancho máximo de 480px (dispositivos móviles pequeños) */
-@media (max-width: 480px) {
-        
-    .theme-toggle {
-        background: none;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        transition: color 0.3s;
-        margin-left: 145px;
-    }
-    /* Permite que los elementos de la lista de navegación se envuelvan */
-    .sidebar nav ul {
-        flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas */
-    }
-
-    /* Ajusta el tamaño y alineación de los elementos de la lista de navegación */
-    .sidebar nav li {
-        flex: 1 1 50%; /* Permite que los elementos ocupen el 50% del ancho */
-        text-align: center; /* Centra el texto */
-    }
-
-    /* Ajusta el diseño de los enlaces sociales */
-    .social-links {
-        flex-direction: column; /* Cambia a dirección vertical */
-    }
-
-    /* Ajusta el tamaño del contenido del modal */
-    .modal-content {
-        width: 95%; /* Ancho del 95% del contenedor */
-        margin: 2% auto; /* Márgenes automático para centrar */
-    }
-
-    /* Ajusta el tamaño de los botones de configuración y añadir tarjeta */
-    .config-button,
-    .add-card-button {
-        padding: 8px 15px; /* Ajusta el padding */
-        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
-    }
-
-    /* Ajusta la posición del botón de añadir tarjeta */
-    .add-card-button {
-        right: 100px; /* Posicionamiento */
-    }
-}
 
 
 @keyframes fadeIn {
