@@ -543,7 +543,7 @@ h2 {
     transform: translateY(0);
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1024px) {
     /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas que se ajustan automáticamente */
