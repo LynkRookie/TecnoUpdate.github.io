@@ -124,6 +124,7 @@ nav a, .sidebar-footer button {
     padding: 1.5rem 1rem;
     border-radius: 0.5rem;
     transition: background-color 0.2s, transform 0.2s;
+    gap:1rem;
 }
 
 nav a:hover, .sidebar-footer button:hover {
@@ -218,6 +219,7 @@ h2 {
     align-items: center;
     text-decoration: none;
     color: inherit;
+    flex-direction: column;
     transition: color 0.2s;
 }
 
