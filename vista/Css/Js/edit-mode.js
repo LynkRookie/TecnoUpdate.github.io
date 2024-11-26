@@ -4,30 +4,104 @@ document.addEventListener('DOMContentLoaded', () => {
     let editMode = false;
     let previousContent = '';
 
+    // Función para activar el modo de edición
+    function activateEditMode() {
+        editMode = true;
+        document.body.classList.add('edit-mode');
+        document.querySelectorAll('.editable').forEach(el => {
+            el.contentEditable = true;
+            el.classList.add('editing');
+        });
+        document.getElementById('saveButton').style.display = 'inline-block';
+        document.getElementById('addSkillButton').style.display = 'inline-block';
+        toggleEditableElements(true);
+    }
+
+    // Función para desactivar el modo de edición
+    function deactivateEditMode() {
+        editMode = false;
+        document.body.classList.remove('edit-mode');
+        document.querySelectorAll('.editable').forEach(el => {
+            el.contentEditable = false;
+            el.classList.remove('editing');
+        });
+        document.getElementById('saveButton').style.display = 'none';
+        document.getElementById('addSkillButton').style.display = 'none';
+        toggleEditableElements(false);
+    }
+
+    // Función para guardar los cambios
+    function saveChanges() {
+        const data = {
+            name: document.getElementById('userName').textContent,
+            title: document.getElementById('userTitle').textContent,
+            about: document.getElementById('userAbout').textContent,
+            skills: []
+        };
+
+        document.querySelectorAll('.skill').forEach(skill => {
+            data.skills.push({
+                name: skill.querySelector('.skill-name').textContent,
+                percentage: skill.querySelector('.skill-percentage').textContent
+            });
+        });
+
+        // Enviar datos al servidor
+        fetch('save_data.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                showNotification('Datos guardados correctamente');
+                deactivateEditMode();
+            } else {
+                showNotification('Error al guardar los datos');
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            showNotification('Error al guardar los datos');
+        });
+    }
+
+    // Función para agregar una nueva habilidad
+    function addSkill() {
+        const skillsContainer = document.getElementById('skillsContainer');
+        const newSkill = document.createElement('div');
+        newSkill.className = 'skill';
+        newSkill.innerHTML = `
+            <span class="skill-name editable" contenteditable="true">Nueva Habilidad</span>
+            <span class="skill-percentage editable" contenteditable="true">0%</span>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 0%"></div>
+            </div>
+            <button class="delete-skill">Eliminar</button>
+        `;
+        skillsContainer.appendChild(newSkill);
+
+        // Agregar evento para eliminar la habilidad
+        newSkill.querySelector('.delete-skill').addEventListener('click', function() {
+            newSkill.remove();
+        });
+    }
+
     function toggleEditMode(event) {
         event.preventDefault();
         event.stopPropagation();
         
-        // Cambiar el estado de editMode
-        editMode = !editMode;
-        document.body.classList.toggle('edit-mode', editMode);
-        
-        const buttonText = configButton.querySelector('span');
-        if (buttonText) {
-            buttonText.textContent = editMode ? 'Salir de Configuración' : 'Configuración';
-        }
-
-        if (editMode) {
-            // Mostrar los elementos editables
-            toggleEditableElements(true);
+        if (!editMode) {
+            activateEditMode();
+            configButton.querySelector('span').textContent = 'Salir de Configuración';
         } else {
             const shouldExit = confirm('¿Estás seguro de que deseas salir de configuración?');
             if (shouldExit) {
-                toggleEditableElements(false);
-            } else {
-                editMode = true; // Revertir al modo de edición
-                document.body.classList.add('edit-mode');
-                buttonText.textContent = 'Salir de Configuración';
+                deactivateEditMode();
+                configButton.querySelector('span').textContent = 'Configuración';
             }
         }
     }
@@ -37,24 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach(card => {
             if (enable) {
                 addEditControls(card);
-                const textArea = card.querySelector('textarea');
-                if (textArea) {
-                    textArea.removeAttribute('readonly'); // Permitir edición
-                    textArea.contentEditable = "true"; // Hacerlo editable
-                }
             } else {
                 removeEditControls(card);
-                const titleElement = card.querySelector('h2');
-                const contentElement = card.querySelector('p');
-                if (titleElement && contentElement) {
-                    titleElement.contentEditable = false; // Desactivar edición
-                    contentElement.contentEditable = false; // Desactivar edición
-                }
             }
         });
     }
-
-    configButton.addEventListener('click', toggleEditMode);
 
     function addEditControls(element) {
         if (element.querySelector('.edit-controls')) return;
@@ -188,5 +249,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // Aquí puedes agregar más inicializaciones si es necesario
+    // Event Listeners
+    configButton.addEventListener('click', toggleEditMode);
+    document.getElementById('saveButton').addEventListener('click', saveChanges);
+    document.getElementById('addSkillButton').addEventListener('click', addSkill);
+    document.getElementById('logout-button').addEventListener('click', function(e) {
+        e.preventDefault();
+        fetch('logout.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = 'login.html';
+            } else {
+                showNotification('Error al cerrar sesión');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showNotification('Error al cerrar sesión');
+        });
+    });
+
+    // Inicialización
+    deactivateEditMode();
 });

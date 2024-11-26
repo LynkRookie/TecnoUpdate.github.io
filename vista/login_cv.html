@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+
+    <title>Login - Gestor de CV</title>
+    <link rel="website icon" type="png" href="img/newlogo_t.png">
+    <link rel="stylesheet" href="css/estilos_login_inicio.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</head>
+
+<body class="cuerp">
+    <div class="login-container">
+        <div class="login-box" id="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form" action="../controlador/procesar_login.php" method="POST">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required placeholder=" ">
+                    <label for="email">Correo electrónico</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="pass" name="pass" required placeholder=" ">
+                    <label for="password">Contraseña</label>
+                </div>
+                <!--<button type="button" class="login-button" src="inicio_gestor_cv.html">Iniciar Sesión</button>-->
+                <button class="login-button" onclick="window.location.href='inicio_gestor_cv.html';">
+                    Iniciar Sesión
+                </button>
+                
+            </form>
+            <div class="social-login">
+                <h2>O Conectarse con:</h2>
+                <button class="social-button facebook">
+                    <i class="fab fa-facebook-f"></i>  Facebook
+                    <svg xmlns="http://www.w3.org/2000/svg"style="position:static;margin-left: 0.5rem; width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </button>
+                <div id="g_id_onload"
+                    data-client_id=""
+                    data-login_uri="../controlador/google_login.php"
+                    data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                    data-type="standard"
+                    data-size="large"
+                    data-theme="outline"
+                    data-text="sign_in_with"
+                    data-shape="rectangular"
+                    data-logo_alignment="left">
+                </div>
+                </button>
+                <button id="github-login" class="social-button github">
+                    <i class="fab fa-github"></i>  GitHub
+                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 1.4rem;margin-left: 0.5rem;"viewBox="0 0 512 512">
+                        <path fill="#ffffff" d="M320 488c0 9.5-5.6 18.1-14.2 21.9s-18.8 2.3-25.8-4.1l-80-72c-5.1-4.6-7.9-11-7.9-17.8s2.9-13.3 7.9-17.8l80-72c7-6.3 17.2-7.9 25.8-4.1s14.2 12.4 14.2 21.9l0 40 16 0c35.3 0 64-28.7 64-64l0-166.7C371.7 141 352 112.8 352 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3L464 320c0 70.7-57.3 128-128 128l-16 0 0 40zM456 80a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM192 24c0-9.5 5.6-18.1 14.2-21.9s18.8-2.3 25.8 4.1l80 72c5.1 4.6 7.9 11 7.9 17.8s-2.9 13.3-7.9 17.8l-80 72c-7 6.3-17.2 7.9-25.8 4.1s-14.2-12.4-14.2-21.9l0-40-16 0c-35.3 0-64 28.7-64 64l0 166.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3L48 192c0-70.7 57.3-128 128-128l16 0 0-40zM56 432a24 24 0 1 0 48 0 24 24 0 1 0 -48 0z" />
+                    </svg>
+                </button>
+                <button  class="social-button linkedin">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="margin-left: 0.4rem;"viewBox="0 0 24 24" fill="none" 
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="linkedin" 
+                        class="lucide lucide-linkedin">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect width="4" height="12" x="2" y="9"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </button>
+            </div>
+            <p class="register-link">¿No tienes una cuenta?
+             <a href="#" id="register-toggle" role="button">Regístrate</a>
+            </p>
+        </div>
+        <div class="register-box hidden " id="register-container">
+         <h2>Registro</h2>
+            <form id="register-form">
+                <div class="input-group">
+                    <input type="text" id="register-name" required placeholder=" ">
+                    <label for="register-name">Nombre completo</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="register-email" required placeholder=" ">
+                    <label for="register-email">Correo electrónico</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="register-password" required placeholder=" ">
+                    <label for="register-password">Contraseña</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="register-confirm-password" required placeholder=" ">
+                    <label for="register-confirm-password">Confirmar contraseña</label>
+                </div>
+                <button type="submit" class="register-button">Registrarse</button>
+            </form>
+            <p class="login-link">¿Ya tienes una cuenta?
+            <a href="#" id="login-toggle">Inicia sesión</a>
+            </p>
+        </div>
+    </div>
+   
+   
+    <script src="../js/logins.js"></script>
+    <script>
+        // Agregar manejo de errores
+        window.onerror = function(message, source, lineno, colno, error) {
+            console.error("Error JavaScript:", message, "en", source, "línea:", lineno);
+            alert("Ocurrió un error en la página. Por favor, inténtelo de nuevo más tarde.");
+        };
+    </script>
+    <script>
+    function handleCredentialResponse(response) {
+        // Enviar el token ID al servidor
+        fetch('../controlador/google_login.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({credential: response.credential})
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = '../vista/inicio_gestor_cv.php';
+            } else {
+                alert('Error en el inicio de sesión: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error en el inicio de sesión');
+        });
+    }
+    </script>
+</body>
+
+</html>

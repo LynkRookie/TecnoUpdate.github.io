@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Damián Jinel Cortés</title>
+    <link rel="stylesheet" href="Css/estilo_inicio.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <aside class="sidebar expanded">
+            <div class="profile">
+                <img src="img/1.png" alt="Profile" class="profile-img">
+                <h2 class="profile-name">Damián Jinel Cortés</h2>
+            </div>
+            <nav>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="homeBtn"><i data-lucide="home"></i><span> Inicio</span></button>
+                <button id="configBtn"><i data-lucide="settings"></i><span> Configuración</span></button>
+                <button id="filesBtn"><i data-lucide="file-text"></i><span> Archivos</span></button>
+                <button id="toggleTheme"><i data-lucide="sun"></i><span> Modo Claro</span></button>
+                <button id="sidebarToggle"><i data-lucide="minimize"></i><span> Contraer</span></button>
+            
+                <button id="logout-button" onclick="window.location.href='login.html'">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>cerrar sesión</span>
+                </button>
+                
+
+            </div>
+        </aside>
+
+        <main>
+            <h1>Gestor de CV de Programación</h1>
+            <div class="grid">
+                <section class="card">
+                    <h2>Datos Sobre Mi</h2>
+                    <p>Mi Nombre es Damián Jinel Cortés. Aquí mostraré todos mis códigos, proyectos y el proceso de aprendizaje de programación que he realizado en estos años, en el cuales algunos son hechos en java otros en html, php. Todos mis códigos, proyectos y el proceso de aprendizaje de programación que he aprendido.</p>
+                    <p>Soy un técnico analista programador en proceso de obtener un título en Ingeniería Informática, con experiencia en desarrollo web y mantenimiento de sistemas. Mi objetivo es aplicar mis conocimientos en un entorno profesional, contribuyendo al éxito de una organización a través de soluciones tecnológicas innovadoras. A largo plazo, aspiro a establecer una empresa en el sector tecnológico, enfocada en satisfacer las necesidades del mercado y la sociedad.</p>
+                </section>
+
+                <section class="card">
+                    <h2>Intereses</h2>
+                    <ul style="margin-left: 1rem;">
+                        <li>Programación</li>
+                        <li>Robótica</li>
+                        <li>Música</li>
+                        <li>Películas y Series</li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>Habilidades Profesionales</h2>
+                    <ul style="margin-left: 1rem;">
+                        <li>Realizar Mantenimiento de diferentes equipos de forma interna y externa</li>
+                        <li>Realizar limpieza a los equipos y dispositivos</li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>Redes Sociales</h2>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lynk_rookie/?hl=es-la"><i data-lucide="instagram"></i><span>Instagram</span></a>
+                        <a href="https://github.com/LynkRookie"><i data-lucide="code-2"></i><span>GitHub</span></a>
+                        <a href="https://www.linkedin.com/in/damian-jinel-cortes-b61b56296/"><i data-lucide="linkedin"></i><span>Linkedin</span></a>
+                    </div>
+                </section>
+            </div>
+
+            
+
+            <section id="lenguajes-ad" class="cards full-width">
+                <h2>Lenguajes de Programación Adquiridos</h2>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span>HTML</span>
+                            <span class="percentage">77%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 77%"></div>
+                        </div>
+                        <div class="edit-buttons" style="display: none;">
+                            <input type="text" class="edit-title" placeholder="Nuevo Título">
+                            <input type="number" class="edit-percentage" placeholder="Nuevo Porcentaje" >
+                            <button class="save-btn">Guardar datos</button>
+                            <button class="delete-btn">Borrar Porcentaje</button>
+                        </div>
+
+                        
+                    </div>
+                    
+                    <!-- Repite el bloque anterior para CSS, JavaScript, y PHP -->
+                </div>
+                <button id="addSkillBtn" class="btn-3">Agregar Habilidad</button>
+            </section>
+            <a href="https://w.app/TechnoCraftOvalle" class="whatsapp-float" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <button id="help-button" class="help-float">
+                <i class="fa-solid fa-robot"></i>
+            </button>
+            <div id="chat-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Asistente IA</h2>
+                        <button id="ai-theme-toggle" class="theme-toggle">
+                            <i data-lucide="sun"></i>
+                        </button>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div id="chat-container">
+                        <div id="chat-messages"></div>
+                        <div id="question-buttons"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="Css/Js/ai-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="Css/Js/modo_thema_inicio.js"></script>
+    <script src="Css/Js/sidebar.js"></script>
+    <script src="Css/Js/edit-mode.js"></script>
+    <script src="Css/Js/edit-mode-bar.js"></script>
+    <script>
+        document.getElementById('addSkillBtn').addEventListener('click', () => {
+            const skillsContainer = document.querySelector('.skills');
+            const newSkillDiv = document.createElement('div');
+            newSkillDiv.classList.add('skill');
+            newSkillDiv.innerHTML = `
+                <div class="skill-header">
+                    <span class="new-skill-title">Nuevo Título</span>
+                    <span class="percentage">0%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%"></div>
+                </div>
+                <div class="edit-buttons" style="display: block;">
+                    <input type="text" class="edit-title" placeholder="Nuevo Título">
+                    <input type="number" class="edit-percentage" placeholder="Nuevo Porcentaje" >
+                    <button class="save-btn">Guardar</button>
+                    <button class="delete-btn">Borrar Porcentaje</button>
+                </div>
+            `;
+            skillsContainer.appendChild(newSkillDiv);
+
+            // Añadir funcionalidad a los botones del nuevo div
+            addSkillEventListeners(newSkillDiv);
+        });
+
+        function addSkillEventListeners(skill) {
+            const saveBtn = skill.querySelector('.save-btn');
+            const deleteBtn = skill.querySelector('.delete-btn');
+            const percentageSpan = skill.querySelector('.percentage');
+            const skillProgress = skill.querySelector('.skill-progress');
+
+            saveBtn.addEventListener('click', () => {
+                const newTitle = skill.querySelector('.edit-title').value;
+                const newPercentage = skill.querySelector('.edit-percentage').value;
+
+                if (newTitle) {
+                    skill.querySelector('.new-skill-title').textContent = newTitle;
+                }
+
+                if (newPercentage && newPercentage >= 0 && newPercentage <= 100) {
+                    percentageSpan.textContent = `${newPercentage}%`;
+                    skillProgress.style.width = `${newPercentage}%`;
+                } else {
+                    alert("Porcentaje debe ser entre 0 y 100.");
+                }
+            });
+
+            deleteBtn.addEventListener('click', () => {
+                percentageSpan.textContent = "0%";
+                skillProgress.style.width = "0%";
+                skill.querySelector('.edit-percentage').value = "";
+            });
+        }
+    </script>
+</body>
+</html>
