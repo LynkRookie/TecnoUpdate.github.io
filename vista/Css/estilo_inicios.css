@@ -16,7 +16,9 @@
     --button-bg: #007bff;
     --button-hover-bg: #0056b3;
 }
-
+.educacion{
+    margin-right: 979px;
+}
 .boton_edit{
     position: relative;
 }
@@ -574,6 +576,9 @@ h2 {
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
+    .educacion{
+        margin-right: 979px;
+    }
 }
 @media (min-width: 1024px) {
     /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
@@ -584,6 +589,9 @@ h2 {
         cursor: pointer;
         transition: color 0.3s;
     
+    }
+    .educacion{
+        margin-right: 979px;
     }
     .close:hover {
         color: #000;
@@ -758,9 +766,6 @@ h2 {
         right: 100px; /* Posicionamiento */
     }
 }
-
-
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
