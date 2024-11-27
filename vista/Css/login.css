@@ -1,11 +1,4 @@
-:root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --background-color: #f0f2f5;
-    --text-color: #333;
-    --input-bg: #ffffff;
-    --input-border: #ced4da;
-}
+
 
 .dark-mode {
     --primary-color: #4dabf7;
