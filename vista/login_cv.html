@@ -8,7 +8,6 @@
     <title>Login - Gestor de CV</title>
     <link rel="website icon" type="png" href="img/newlogo_t.png">
     <link rel="stylesheet" href="css/login_inicio.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
 
 </head>
 
@@ -100,40 +99,7 @@
             </p>
         </div>
     </div>
-   
-   
     <script src="../js/logins.js"></script>
-    <script>
-        // Agregar manejo de errores
-        window.onerror = function(message, source, lineno, colno, error) {
-            console.error("Error JavaScript:", message, "en", source, "línea:", lineno);
-            alert("Ocurrió un error en la página. Por favor, inténtelo de nuevo más tarde.");
-        };
-    </script>
-    <script>
-    function handleCredentialResponse(response) {
-        // Enviar el token ID al servidor
-        fetch('../controlador/google_login.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({credential: response.credential})
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                window.location.href = '../vista/inicio_gestor_cv.php';
-            } else {
-                alert('Error en el inicio de sesión: ' + data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error en el inicio de sesión');
-        });
-    }
-    </script>
 </body>
 
 </html>
