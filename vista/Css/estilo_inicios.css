@@ -633,15 +633,15 @@ h2 {
     .container {
         flex-direction: column;
     }
-
+    .perfil{
+        
+    }
     .sidebar {
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
         padding: 1rem;
     }
-
-    .sidebar .profile,
     .sidebar .sidebar-footer {
         display: none;
     }
