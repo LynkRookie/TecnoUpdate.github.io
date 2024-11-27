@@ -574,9 +574,9 @@ h2 {
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .educacion{
+    /*.educacion{
         margin-right: 979px;
-    }
+    }*/
 }
 @media (min-width: 1024px) {
     /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
