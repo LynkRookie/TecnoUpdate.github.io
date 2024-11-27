@@ -620,8 +620,12 @@ h2 {
     }
 
     .sidebar:not(.collapsed) .profile-img {
-        width: 60px;
-        height: 60px;
+        width: 10rem;
+    height: 10rem;
+    margin-left: 54rem;
+    }
+    .nombre{
+        margin-left: 54rem;
     }
 }
 
