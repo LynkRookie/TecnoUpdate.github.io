@@ -702,18 +702,7 @@ h2 {
         flex-direction: column;
     }
 
-    .sidebar {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 1rem;
-    }
-
-    .sidebar .profile,
-    .sidebar .sidebar-footer {
-        display: none;
-    }
-
+  
 
 }
 
