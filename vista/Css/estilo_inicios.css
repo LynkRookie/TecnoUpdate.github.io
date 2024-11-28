@@ -620,8 +620,23 @@ h2 {
     }
 }
 
-@media (max-width: 992px) {
-    
+@media (max-width: 390px) and (max-width: 844px){
+    .sidebar:not(.collapsed) {
+        width: var(--sidebar-width-collapsed);
+        padding: 2rem 0.5rem;
+    } 
+    .sidebar:not(.collapsed) nav span,
+    .sidebar:not(.collapsed) .sidebar-footer span {
+        display: none;
+    }
+    .sidebar:not(.collapsed) .profile-img {
+        width: 10rem;
+    height: 10rem;
+    margin-left: 54rem;
+    }
+    .nombre{
+        margin-left: 53rem;
+    }
 }
 @media (max-width: 768px) {
     .container {
