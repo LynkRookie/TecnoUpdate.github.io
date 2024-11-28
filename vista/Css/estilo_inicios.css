@@ -610,12 +610,12 @@ h2 {
         display: none;
     }
     .sidebar:not(.collapsed) .profile-img {
-        width: 9rem;
-        height: 9rem;
-        margin-left: 53rem;
+        width: 12rem;
+        height: 12rem;
+        margin-left: 55rem;
     }
     .nombre{
-        margin-left:51.1rem;
+        margin-left:55rem;
     }
     .close{
         color: #aaa;
