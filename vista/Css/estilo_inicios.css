@@ -570,7 +570,7 @@ h2 {
     transform: translateY(0);
 }
 
-@media (max-width: 1440px) and (min-width: 900px){
+@media (max-width: 1440px) and (min-width: 1024px){
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -594,7 +594,7 @@ h2 {
         margin-right: 979px;
     }
 }
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 900px) and (min-width: 768px) {
     /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
     .close{
         color: #aaa;
