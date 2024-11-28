@@ -701,6 +701,7 @@ h2 {
     .sidebar:not(.collapsed) {
         width: var(--sidebar-width-collapsed);
         padding: 2rem 0.5rem;
+        display: none;
     }
     .sidebar:not(.collapsed) nav span,
     .sidebar:not(.collapsed) .sidebar-footer span {
