@@ -571,32 +571,8 @@ h2 {
 }
 
 @media (max-width: 1920px) and (min-width: 1024px){
-    .sidebar{
-        width: var(--sidebar-width);
-        padding: 2rem 1.5rem;
-        display: flex;
-        flex-direction: column;
-        transition: all var(--transition-speed), width var(--transition-speed);
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .sidebar:not(.collapsed) {
-        width: var(--sidebar-width-collapsed);
-        padding: 2rem 0.5rem;
-    }
-    .sidebar:not(.collapsed) .profile-name,
-    .sidebar:not(.collapsed) nav span,
-    .sidebar:not(.collapsed) .sidebar-footer span {
-        display: none;
-    }
-    .sidebar:not(.collapsed) .profile-img {
-        width: 60px;
-        height: 60px;
-    }
-    .educacion{
-        margin-right: 979px;
-    }
-     /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
-     .close{
+      /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
+    .close{
         color: #aaa;
         font-size: 28px;
         font-weight: bold;
@@ -618,6 +594,10 @@ h2 {
         transition: color 0.3s;
         margin-left: -344px;
     }
+    .educacion{
+        margin-right: 979px;
+    }
+    
 }
 @media (max-width: 900px) and (min-width: 768px) {
     /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
