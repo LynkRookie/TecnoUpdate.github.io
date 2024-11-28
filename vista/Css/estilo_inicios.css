@@ -718,7 +718,6 @@ h2 {
         right: 20px;
     }
 }
-
 /*Estilos para dispositivos con un ancho máximo de 480px (dispositivos móviles pequeños como teléfonos) */
 @media (max-width: 480px) {
     /* Cambia la dirección de los elementos del encabezado del modal a columna */
