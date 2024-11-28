@@ -570,7 +570,7 @@ h2 {
     transform: translateY(0);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (max-width: 900px){
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
@@ -625,25 +625,6 @@ h2 {
         margin-left: 53rem;
     }
 }
-@media (min-width: 800px) {
-    .sidebar:not(.collapsed) {
-        width: var(--sidebar-width-collapsed);
-        padding: 2rem 0.5rem;
-    } 
-    .sidebar:not(.collapsed) nav span,
-    .sidebar:not(.collapsed) .sidebar-footer span {
-        display: none;
-    }
-    .sidebar:not(.collapsed) .profile-img {
-        width: 10rem;
-    height: 10rem;
-    margin-left: -10rem;
-    }
-    .nombre{
-        margin-left: 53rem;
-    }
-}
-  
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
