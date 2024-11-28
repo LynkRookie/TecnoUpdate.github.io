@@ -697,7 +697,7 @@ h2 {
         right: 20px;
     }
 }
-@media (max-width: 884px) and (min-width: 390px) {
+@media (max-width: 760px) and (min-width: 390px) {
      .container {
         flex-direction: column;
     }
@@ -711,6 +711,7 @@ h2 {
 
     .sidebar .profile,
     .sidebar .sidebar-footer {
+        display: none;
     }
 
     .sidebar nav ul {
