@@ -698,66 +698,77 @@ h2 {
     }
 }
 @media (max-width: 884px) and (min-width: 390px) {
-    /* Cambia la dirección de los elementos del encabezado del modal a columna */
-    .modal-header {
+    .container {
         flex-direction: column;
-        align-items: flex-start; /* Alinea los elementos al inicio */
     }
 
-    /* Añade un margen en la parte inferior del título */
-    .modal-header h2 {
-        margin-bottom: 10px;
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
     }
 
-    /* Elimina margen izquierdo en el botón de cambio de tema */
-    .theme-toggle {
-        margin-left: 146px;
-        margin-top: -39px;
+    .sidebar .profile,
+    .sidebar .sidebar-footer {
+        display: none;
     }
-    .close{
-        color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: color 0.3s;
-        margin-left: 303px;
-        margin-top: -43px;
-    }
-    .close:hover {
-        color: #000;
-    }
-    /* Permite que los elementos de la lista de navegación se envuelvan */
+
     .sidebar nav ul {
-        flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas */
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
     }
 
-    /* Ajusta el tamaño y alineación de los elementos de la lista de navegación */
     .sidebar nav li {
-        flex: 1 1 50%; /* Permite que los elementos ocupen el 50% del ancho */
-        text-align: center; /* Centra el texto */
+        margin-bottom: 0;
     }
 
-    /* Ajusta el diseño de los enlaces sociales */
-    .social-links {
-        flex-direction: column; /* Cambia a dirección vertical */
+    main {
+        padding: 1rem;
     }
 
-    /* Ajusta el tamaño del contenido del modal */
-    .modal-content {
-        width: 95%; /* Ancho del 95% del contenedor */
-        margin: 2% auto; /* Márgenes automático para centrar */
+    .grid {
+        grid-template-columns: 1fr;
     }
 
-    /* Ajusta el tamaño de los botones de configuración y añadir tarjeta */
+    h1 {
+        font-size: 2rem;
+    }
+
+    .edit-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .config-button,
     .add-card-button {
-        padding: 8px 15px; /* Ajusta el padding */
-        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+        bottom: 10px;
     }
 
-    /* Ajusta la posición del botón de añadir tarjeta */
+    .config-button {
+        right: 10px;
+    }
+
     .add-card-button {
-        right: 100px; /* Posicionamiento */
+        right: 120px;
+    }
+
+    .whatsapp-float,
+    .help-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .help-float {
+        bottom: 80px;
+        right: 20px;
     }
 }
 
