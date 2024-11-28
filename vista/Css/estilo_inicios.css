@@ -578,7 +578,7 @@ h2 {
         margin-right: 979px;
     }*/
 }
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
     /* Ajusta el diseño de la cuadrícula para que los elementos se adapten mejor */
     .close{
         color: #aaa;
