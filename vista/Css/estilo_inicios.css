@@ -604,7 +604,6 @@ h2 {
         transition: color 0.3s;
     
     }
-   
     .close:hover {
         color: #000;
     }
@@ -638,9 +637,7 @@ h2 {
     .nombre{
         margin-left: 53rem;
     }
-    .educacion{
-        margin-right: 979px;
-    }
+
 }
 @media (max-width: 768px) {
     .container {
