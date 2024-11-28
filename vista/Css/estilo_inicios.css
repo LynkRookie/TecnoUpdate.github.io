@@ -625,7 +625,7 @@ h2 {
         margin-left: 53rem;
     }
 }
-@media (min-width: 992px) {
+@media (min-width: 800px) {
     .sidebar:not(.collapsed) {
         width: var(--sidebar-width-collapsed);
         padding: 2rem 0.5rem;
