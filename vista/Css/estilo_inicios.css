@@ -575,17 +575,24 @@ h2 {
         width: var(--sidebar-width-collapsed);
         padding: 2rem 0.5rem;
     }
-
     .sidebar:not(.collapsed) .profile-name,
     .sidebar:not(.collapsed) nav span,
     .sidebar:not(.collapsed) .sidebar-footer span {
         display: none;
     }
-
     .sidebar:not(.collapsed) .profile-img {
         width: 60px;
         height: 60px;
     }
+    .sidebar{
+        width: var(--sidebar-width);
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        transition: all var(--transition-speed), width var(--transition-speed);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
     .educacion{
         margin-right: 979px;
     }
