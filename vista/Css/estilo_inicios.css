@@ -604,7 +604,7 @@ h2 {
         width: var(--sidebar-width-collapsed);
         padding: 2rem 0.5rem;
     }
-    .sidebar:not(.collapsed) .profile-name,
+    
     .sidebar:not(.collapsed) nav span,
     .sidebar:not(.collapsed) .sidebar-footer span {
         display: none;
