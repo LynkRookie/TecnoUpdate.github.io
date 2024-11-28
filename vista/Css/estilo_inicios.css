@@ -714,27 +714,6 @@ h2 {
         display: none;
     }
 
-    .sidebar nav ul {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .sidebar nav li {
-        margin-bottom: 0;
-    }
-
-    main {
-        padding: 1rem;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
 
 }
 
