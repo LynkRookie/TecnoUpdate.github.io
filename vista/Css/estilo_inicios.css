@@ -637,6 +637,9 @@ h2 {
     .nombre{
         margin-left: 53rem;
     }
+    .educacion{
+        margin-right: 979px;
+    }
 }
 @media (max-width: 768px) {
     .container {
