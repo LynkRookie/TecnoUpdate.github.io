@@ -697,7 +697,7 @@ h2 {
         right: 20px;
     }
 }
-@media (max-width: 390px) and (max-width: 844px){
+@media (max-width: 884px) and (min-width: 390px){
     .sidebar:not(.collapsed) {
         width: var(--sidebar-width-collapsed);
         padding: 2rem 0.5rem;
