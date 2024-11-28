@@ -708,8 +708,8 @@ h2 {
     }
     .sidebar:not(.collapsed) .profile-img {
         width: 10rem;
-    height: 10rem;
-    margin-left: 54rem;
+        height: 10rem;
+        margin-left: 54rem;
     }
     .nombre{
         margin-left: 53rem;
@@ -717,69 +717,7 @@ h2 {
 
 }
 /*Estilos para dispositivos con un ancho máximo de 480px (dispositivos móviles pequeños como teléfonos) */
-@media (max-width: 480px) {
-    /* Cambia la dirección de los elementos del encabezado del modal a columna */
-    .modal-header {
-        flex-direction: column;
-        align-items: flex-start; /* Alinea los elementos al inicio */
-    }
 
-    /* Añade un margen en la parte inferior del título */
-    .modal-header h2 {
-        margin-bottom: 10px;
-    }
-
-    /* Elimina margen izquierdo en el botón de cambio de tema */
-    .theme-toggle {
-        margin-left: 146px;
-        margin-top: -39px;
-    }
-    .close{
-        color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: color 0.3s;
-        margin-left: 303px;
-        margin-top: -43px;
-    }
-    .close:hover {
-        color: #000;
-    }
-    /* Permite que los elementos de la lista de navegación se envuelvan */
-    .sidebar nav ul {
-        flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas */
-    }
-
-    /* Ajusta el tamaño y alineación de los elementos de la lista de navegación */
-    .sidebar nav li {
-        flex: 1 1 50%; /* Permite que los elementos ocupen el 50% del ancho */
-        text-align: center; /* Centra el texto */
-    }
-
-    /* Ajusta el diseño de los enlaces sociales */
-    .social-links {
-        flex-direction: column; /* Cambia a dirección vertical */
-    }
-
-    /* Ajusta el tamaño del contenido del modal */
-    .modal-content {
-        width: 95%; /* Ancho del 95% del contenedor */
-        margin: 2% auto; /* Márgenes automático para centrar */
-    }
-
-    /* Ajusta el tamaño de los botones de configuración y añadir tarjeta */
-    .config-button,
-    .add-card-button {
-        padding: 8px 15px; /* Ajusta el padding */
-        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
-    }
-
-    /* Ajusta la posición del botón de añadir tarjeta */
-    .add-card-button {
-        right: 100px; /* Posicionamiento */
-    }
-}
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
