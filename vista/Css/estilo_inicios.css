@@ -736,40 +736,6 @@ h2 {
         font-size: 2rem;
     }
 
-    .edit-controls {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .config-button,
-    .add-card-button {
-        bottom: 10px;
-    }
-
-    .config-button {
-        right: 10px;
-    }
-
-    .add-card-button {
-        right: 120px;
-    }
-
-    .whatsapp-float,
-    .help-float {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-    }
-
-    .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .help-float {
-        bottom: 80px;
-        right: 20px;
-    }
 }
 
 /*Estilos para dispositivos con un ancho máximo de 480px (dispositivos móviles pequeños como teléfonos) */
