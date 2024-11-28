@@ -701,19 +701,15 @@ h2 {
      .container {
         flex-direction: column;
     }
-
     .sidebar {
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
         padding: 1rem;
     }
-
-    .sidebar .profile,
     .sidebar .sidebar-footer {
         display: none;
     }
-
     .sidebar nav ul {
         display: flex;
         justify-content: space-around;
