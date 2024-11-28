@@ -577,19 +577,19 @@ h2 {
     .sidebar:not(.collapsed) {
         width: var(--sidebar-width-collapsed);
         padding: 2rem 0.5rem;
-    } 
+    }
+
+    .sidebar:not(.collapsed) .profile-name,
     .sidebar:not(.collapsed) nav span,
     .sidebar:not(.collapsed) .sidebar-footer span {
         display: none;
     }
+
     .sidebar:not(.collapsed) .profile-img {
-        width: 10rem;
-    height: 10rem;
-    margin-left: 54rem;
+        width: 60px;
+        height: 60px;
     }
-    .nombre{
-        margin-left: 53rem;
-    }
+  
     .educacion{
         margin-right: 979px;
     }
