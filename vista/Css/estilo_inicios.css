@@ -699,12 +699,12 @@ h2 {
 }
 @media (max-width: 760px) and (min-width: 390px) {
     .nombre{
-        margin-left:6rem;
+        margin-left:9rem;
     }
     .sidebar:not(.collapsed) .profile-img {
         width: 12rem;
         height: 12rem;
-        margin-left: 6rem;
+        margin-left: 9rem;
     }
     .container {
         flex-direction: column;
