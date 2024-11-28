@@ -625,8 +625,7 @@ h2 {
         margin-left: 53rem;
     }
 }
-@media (max-width: 393px) {
-    /* Estilos específicos para un celular Xiaomi X3 Pro */
+@media (min-width: 992px) {
     .sidebar:not(.collapsed) {
         width: var(--sidebar-width-collapsed);
         padding: 2rem 0.5rem;
@@ -638,13 +637,11 @@ h2 {
     .sidebar:not(.collapsed) .profile-img {
         width: 10rem;
     height: 10rem;
-    margin-left: 54rem;
+    margin-left: -10rem;
     }
-    .nombre {
+    .nombre{
         margin-left: 53rem;
-        text-align: center;
     }
-
 }
   
 @media (max-width: 768px) {
