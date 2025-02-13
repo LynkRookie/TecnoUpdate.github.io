@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <link rel="stylesheet" href="Css/gestor_archivos.css">
+</head>
+<body>
+    <div class="flex-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>Showpad</h1>
+            </div>
+            <nav>
+                <a href="../index.html" class="nav-item"><span class="icon">🏚️</span> Inicio</a>
+                <a href="#" class="nav-item"><span class="icon">📁</span> todos los archivos</a>
+                <a href="inicio_gestor_cv.html" class="nav-item"><span class="icon">📄</span> Gestor de Curriculum</a>
+
+                <div class="collections">
+                    <h2>Collections</h2>
+                    <a href="#" class="folder-item">Product Demos</a>
+                    <a href="#" class="folder-item">Case Studies</a>
+                    <a href="#" class="folder-item">Sales Collateral</a>
+                    <a href="#" class="folder-item">Training Materials</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <header>
+                <div class="search-container">
+                    <input type="search" placeholder="Search files..." id="search-input">
+                </div>
+                <div class="header-icons">
+                    <button class="icon-button">🔍</button>
+                    <button class="icon-button">🔔</button>
+                    <div class="avatar"></div>
+                </div>
+            </header>
+
+            <div class="content">
+                <div class="action-buttons">
+                    <button class="btn primary">➕ Create</button>
+                    <button class="btn secondary">⬆️ Upload</button>
+                    <button class="btn secondary">📁 Create folder</button>
+                    <button class="btn secondary">🎥 Record</button>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab active" data-tab="recent">Recent</button>
+                    <button class="tab" data-tab="starred">Starred</button>
+                    <button class="tab" data-tab="shared">Shared</button>
+                </div>
+
+                <div class="file-grid" id="file-grid">
+                    <!-- File cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Css/Js/gestor_archivos.js"></script>
+</body>
+</html>

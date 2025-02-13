@@ -1,346 +1,244 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechnoCraft Ovalle</title>
-    <link href="vista/Css/pagina_principal.css" type="text/css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' 
-    width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' 
-    stroke-linejoin='round' class='w-8 h-8'><path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2
-    2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'></path><circle cx='12' cy='12' r='4'></circle></svg>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Damián Jinel | Full Stack Developer</title>
+    <link rel="stylesheet" href="vista/Css/pirncipal.css">
 </head>
-
-<body class="theme-light cuerp bd">
-    <section class="from-green-500">
-        <form action="controlador/validador.php" method="post">
-            <div class="flex flex-col min-h-[100dvh]">
-                <header class="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="w-8 h-8">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                            </path>
-                            <circle cx="12" cy="12" r="4"></circle>
-                        </svg>
-                        <h1 class="text-2xl font-bold">TechnoCraft Ovalle</h1>
-                    </div>
-                    <nav class="hidden md:flex items-center gap-6">
-                        <a class="text-sm font-medium hover:underline underline-offset-4" href="#inicio">
-                            Inicio
-                        </a>
-                        <a class="text-sm font-medium hover:underline underline-offset-4" href="#features">
-                            Acerca De mi y Proyectos
-                        </a>
-                        <a class="text-sm font-medium hover:underline underline-offset-4" href="#certificate">
-                            Certificados
-                        </a>
-                        <a class="text-sm font-medium hover:underline underline-offset-4" href="#languaje">
-                            Lenguajes
-                        </a>
-                        <a class="text-sm font-medium hover:underline underline-offset-4" href="#contacto">
-                            Contacto
-                        </a>
-                    </nav>
-                    <div class="flex items-center gap-2">
-                        <a type="" class="inline-flex items-center justify-center whitespace-nowrap 
-                                ring-offset-background transition-colors focus-visible:outline-none 
-                                focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
-                                disabled:pointer-events-none disabled:opacity-50 border border-input bg-background 
-                                hover:text-accent-foreground h-10 text-sm font-medium px-6 py-3 rounded-md hover:bg-primary/20 
-                                focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                            href="vista/login_cv.html">
-                            Iniciar Sesión
-                        </a>
-                    </div>
-                </header>
-                <main class="flex-1 me">
-                    <section id="inicio" class="sec_1 bg-primary py-20 px-6 text-primary-foreground debuel_mause">
-                        <div class="container mx-auto 
-                            max-w-4xl space-y-6 text-center">
-                            <span class="sp p text-4xl font-bold">
-                                Damián Jinel
-                                <a href="https://www.instagram.com/lynk_rookie/?hl=es-la" target="_blank" class="ml-4">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://github.com/LynkRookie" target="_blank" class="ml-4">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/damian-jinel-cortes-b61b56296/" target="_blank"
-                                    class="ml-4">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </span>
-                            <p class="p text-lg">
-                                Desarrollador Web Full Stack +2 años de experiencia.
-                            </p>
-                            <div class="p flex justify-center gap-4">
-                                <a href="vista/img/docu/CV_Damian_Eduardo_Jinel_Cortes.docx"
-                                    download="CV_Damian_Eduardo_Jinel_Cortes.docx" class="bu inline-flex items-center justify-center whitespace-nowrap 
-                                            ring-offset-background transition-colors focus-visible:outline-none 
-                                            focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
-                                            disabled:pointer-events-none disabled:opacity-50 border border-input bg-background 
-                                            hover:text-accent-foreground h-10 text-sm font-medium px-6 py-3 rounded-md 
-                                            hover:bg-primary-foreground/20 focus:outline-none focus:ring-2 focus:ring-primary 
-                                            focus:ring-offset-2">
-                                    Curriculum
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="sc_2">
-                        <section id="features" class="  bg-background py-20 px-6">
-                            <div
-                                class="opuesto contenedor container mx-auto max-w-6xl space-y-12 flex flex-row-reverse items-center">
-                                <div class="ima w-1/2">
-                                    <img class="imagen" src="vista/img/conoce.jpg"
-                                        alt="Concepto de lenguajes aprendidos" />
-                                </div>
-                                <div class="text-left w-1/2 space-y-4">
-                                    <h2 class="sobre text-3xl font-bold">Acerca de mi</h2>
-                                    <p class="sobre t text-muted-foreground">
-                                        Soy Damián Jinel Cortés, técnico analista programador en proceso de obtener el
-                                        título de Ingeniería Informática, con experiencia en desarrollo web y
-                                        mantenimiento
-                                        de sistemas. Mi objetivo es aplicar mis habilidades en un entorno profesional,
-                                        impulsando el éxito organizacional mediante soluciones tecnológicas innovadoras.
-                                        A
-                                        largo plazo, aspiro a fundar una empresa en el sector tecnológico, orientada a
-                                        satisfacer las demandas del mercado y contribuir positivamente a la sociedad.
-                                    </p>
-                                    <!-- <div class="stats flex space-x-8">
-                                        <div class="stat">
-                                            <h3 class="text-2xl font-bold">+2</h3>
-                                            <p>Años de experiencia</p>
-                                        </div>
-                                        <div class="stat">
-                                            <h3 class="text-2xl font-bold">100%</h3>
-                                            <p>Comprometido</p>
-                                        </div>
-                                    </div>-->
-                                </div>
-                            </div>
-                        </section>
-                        <section id="proyect" class="  bg-muted py-20 px-6  debuel_mause2">
-                            <div class="contenedor_2 container mx-auto max-w-4xl space-y-12 ">
-                                <div class="text-center space-y-4">
-                                    <h2 class="text-3xl font-bold">Proyectos Realizados</h2>
-                                </div>
-                                <div class="grid md:grid-cols-3 gap-8 text-center">
-                                    <div class="space-y-4 mx-auto">
-                                        <span
-                                            class="curso2 relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full mx-auto">
-                                            <img class="aspect-square h-full w-full" alt="Avatar"
-                                                src="vista/img/minilogo.png" />
-                                        </span>
-                                        <h3 class="text-xl font-bold">Gestor de Informe de Mantenimiento, Municipalidad
-                                            Ovalle</h3>
-                                        <p class="p text-muted-foreground">Marzo-Julio, 2023</p>
-                                    </div>
-                                    <div class="space-y-4 mx-auto debuelta_mause">
-                                        <span
-                                            class="curso2 relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full mx-auto">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
-                                                <path
-                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                                                </path>
-                                                <circle cx="12" cy="12" r="4"></circle>
-                                            </svg>
-                                        </span>
-                                        <h3 class="text-xl font-bold">TechnoCraft Ovalle</h3>
-                                        <p class="p text-muted-foreground">Enero-Actualmente, 2023</p>
-                                    </div>
-                                    <div class="space-y-4 mx-auto debuelta_mause">
-                                        <span
-                                            class="curso2 relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full mx-auto">
-                                            <img class="aspect-square h-full w-full" alt="Avatar"
-                                                src="vista/img/—Pngtree—desktop pc computer des (1).png" />
-                                        </span>
-                                        <h3 class="text-xl font-bold">TecnoUpdate</h3>
-                                        <p class="p text-muted-foreground">Enero-Actualmente, 2024</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </section>
-                    </div>
-
-                    <section id="certificate" class="sc_1 sec_12 bg-muted py-20 px-6">
-                        <div class="container mx-auto max-w-4xl space-y-12">
-                            <div class="p text-center space-y-4">
-                                <h2 class="text-3xl font-bold">Certificados</h2>
-                                <p class="text-muted-foreground">
-                                    Aquí se presentan los certificados obtenidos a lo largo de este período, los cuales
-                                    reflejan mi dedicación
-                                    y compromiso con el desarrollo continuo de mis habilidades.
-                                </p>
-                            </div>
-                            <div class="grid md:grid-cols-3 gap-8">
-                                <div class="space-y-4 text-center debuelta_mause">
-                                    <span class="curso1 relative flex shrink-0 overflow-hidden rounded-full mx-auto">
-                                        <img class="certif aspect-square h-full w-full"
-                                            alt="Medalla de Curso de Ciberseguridad en Certif"
-                                            src="vista/img/certificado_ciberseguridad.png" />
-                                    </span>
-                                    <h3 class="p text-xl font-bold">Curso de Ciberseguridad en Certif</h3>
-                                </div>
-                                <div class="space-y-4 text-center debuelta_mause">
-                                    <span class="curso1 relative flex shrink-0 overflow-hidden mx-auto">
-                                        <img class="certif aspect-square h-full w-full"
-                                            alt="Medalla de Curso Introduccón a Networks Cisco"
-                                            src="vista/img/certificado_introduccion_a_Networks.png" />
-                                    </span>
-                                    <h3 class="p text-xl font-bold">Curso Introduccón a Networks Cisco</h3>
-                                </div>
-                                <div class="space-y-4 text-center debuelta_mause">
-                                    <span class="curso1 relative flex shrink-0 overflow-hidden rounded-full mx-auto">
-                                        <img class="aspect-square h-full w-full" alt="Avatar"
-                                            src="/placeholder-user.jpg" />
-                                    </span>
-                                    <h3 class="p text-xl font-bold">Curso en Progreso</h3>
-
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="languaje" class="sc_3 bg-background py-20 px-6 deslice">
-                        <div class="container mx-auto max-w-4xl space-y-12">
-                            <div class="text-center space-y-4">
-                                <h2 class="text-3xl font-bold">Conocimientos y Lenguajes </h2>
-                            </div>
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <!-- Contenedor principal de habilidades -->
-                                <div class="container-main-habilidades">
-                                    <div class="image-container">
-                                        <ul class="ul-skills">
-                                            <li><img src="vista/img/html.png" alt="imagen-html" class="image-skillss">
-                                            </li>
-                                            <li><img src="vista/img/js.png" alt="imagen-js" class="image-skillss"></li>
-                                            <li><img src="vista/img/css.png" alt="imagen-css" class="image-skillss"></li>
-                                            <li><img src="vista/img/github.png" alt="imagen-github"
-                                                    class="image-skillss"></li>
-
-                                            <li><img src="vista/img/bootstrap.png" alt="imagen-github"
-                                                    class="image-skillss"></li>
-                                            <li><img src="vista/img/python.png" alt="imagen-github"
-                                                    class="image-skillss"></li>
-                                            <li><img src="vista/img/php.png" alt="imagen-github" class="image-skillss">
-                                            </li>
-                                            <li><img src="vista/img/tailwind.png" alt="imagen-github"
-                                                    class="image-skillss"></li>
-                                            <li><img src="vista/img/java.png" alt="imagen-github" class="image-skillss">
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                    <div class="image-containers">
-                                        <ul class="ul-skillss">
-                                            <li><img src="vista/img/html.png" alt="imagen-html" class="image-skillss">
-                                            </li>
-                                            <li><img src="vista/img/js.png" alt="imagen-js" class="image-skillss"></li>
-                                            <li><img src="vista/img/css.png" alt="imagen-css" class="image-skillss"></li>
-                                            <li><img src="vista/img/github.png" alt="imagen-github"
-                                                    class="image-skillss"></li>
-
-                                            <li><img src="vista/img/bootstrap.png" alt="imagen-github"
-                                                    class="image-skillss"></li>
-                                            <li><img src="vista/img/python.png" alt="imagen-github"
-                                                    class="image-skillss"></li>
-                                            <li><img src="vista/img/php.png" alt="imagen-github" class="image-skillss">
-                                            </li>
-                                            <li><img src="vista/img/tailwind.png" alt="imagen-github"
-                                                    class="image-skillss"></li>
-                                            <li><img src="vista/img/java.png" alt="imagen-github" class="image-skillss">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="contacto" class="sec_13 bg-background py-20 px-6">
-                        <div class=" tx p container mx-auto max-w-4xl space-y-12">
-                            <div class="text-center space-y-4">
-                                <h2 class="text-3xl font-bold">¡Contáctame!</h2>
-                                <p class="text-muted-foreground"></p>
-                            </div>
-                            <form class="space-y-6">
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <!-- Nombre -->
-                                    <div>
-                                        <p class="nombre text-muted-foreground">Nombre</p>
-                                        <input
-                                            class="ix flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                            label="Name" placeholder="Ingrese Su Nombre" />
-                                    </div>
-                                    <!-- Apellido -->
-                                    <div>
-                                        <p class="apellido text-muted-foreground">Apellido</p>
-                                        <input
-                                            class="ix flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                            label="Last Name" placeholder="Ingrese su Apellido" />
-                                    </div>
-                                    <!-- Teléfono -->
-                                    <div>
-                                        <p class="telefono text-muted-foreground">Teléfono</p>
-                                        <input
-                                            class="ix flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                            label="Phone" placeholder="Ingrese Su Numero Telefonico" />
-                                    </div>
-                                    <!-- Gmail -->
-                                    <div>
-                                        <p class="gmail text-muted-foreground">Gmail</p>
-                                        <input
-                                            class="ix flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                            label="Email" placeholder="Ingrese su correo@gmail.com" type="email" />
-                                    </div>
-                                </div>
-                                <!-- Mensaje -->
-                                <p class="telefono text-muted-foreground">Mensaje</p>
-                                <textarea
-                                    class="ix flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                                    label="Message" placeholder="Ingrese su Mensaje" rows="5"></textarea>
-                                <!-- Botón de envío -->
-                                <button
-                                    class="bu inline-flex items-center justify-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-full text-sm font-medium px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                                    type="submit">
-                                    Enviar
-                                </button>
-                            </form>
-                        </div>
-                    </section>
-                </main>
-                <footer class=" pie bg-primary text-primary-foreground py-6 px-6">
-                    <div class="container mx-auto max-w-4xl flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-6 h-6">
-                                <path
-                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                                </path>
-                                <circle cx="12" cy="12" r="4"></circle>
-                            </svg>
-                            <span class="text-sm">© 2024 TecnoUpdate. Todos los derechos reservados.</span>
-                        </div>
-                        <nav class="hidden md:flex items-center gap-6">
-                            <a class="text-sm hover:underline underline-offset-4" href="#">
-                                Privacy Policy
-                            </a>
-                        </nav>
-                    </div>
-                </footer>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">DJ</a>
+            <div class="nav-links">
+                <a href="#about">Sobre mi</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#certificates">Certificados</a>
+                <a href="#contact">Contacto</a>
             </div>
-        </form>
-    </section>
-    <script src="Js/efecto_deslizamiento.js"></script>
-    <script src="Js/cambio_color.js"></script>
-</body>
+            <div class="nav-right">
+                <button id="dark-mode-toggle" class="mode-toggle">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    </svg>
+                </button>
+                <a href="#contact" class="start-project-btn">Iniciar Proyecto</a>
+            </div>
+        </nav>
+    </header>
 
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Damián Jinel</h1>
+                <p>Full Stack Developer</p>
+                <div class="social-links">
+                    <a href="https://github.com/LynkRookie" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/damian-jinel-cortes-b61b56296/" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:your.email@example.com">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <a href="#about" class="cta-button">Discover More</a>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+                <h1>Sobre mí</h1>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Soy un desarrollador web apasionado por crear experiencias digitales excepcionales. Con más de 2 años de experiencia, me especializo en construir aplicaciones web modernas y eficientes utilizando las últimas tecnologías.</p>
+                        <p>Mi enfoque se centra en la creación de soluciones escalables y mantenibles, siempre buscando el equilibrio perfecto entre funcionalidad y diseño atractivo.</p>
+                        <a href="CV_Damian_Eduardo_Jinel_Cortes.pdf" download class="download-cv">Descargar CV</a>
+                    </div>
+                    <div class="about-decoration"></div>
+                </div>
+                <div class="imagen">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-full blur-2xl"></div>
+                     <img alt="Damián Jinel" loading="lazy" width="500" height="500" decoding="async" data-nimg="1"
+                    class="rounded-full relative z-10" src="/placeholder.svg" style="color: transparent;">
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <div class="projects-layout">
+                    <div class="featured-project" id="featured-project">
+                        <!-- Dynamic content will be inserted here by JavaScript -->
+                    </div>
+                    <div class="projects-list">
+                        <button class="project-link" data-project="gestor">Gestor de Informe de Mantenimiento</button>
+                        <button class="project-link" data-project="technocraft">TechnoCraft Ovalle</button>
+                        <button class="project-link" data-project="tecnoupdate">TecnoUpdate</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Habilidades Técnicas</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="medallas">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-full blur-2xl"></div>
+                             <img alt="Damián Jinel" loading="lazy" width="500" height="500" decoding="async" data-nimg="1"
+                            class="rounded-full relative z-10" src="/placeholder.svg" style="color: transparent;">
+                        </div>
+                        <h3>Frontend Development</h3>
+                        <p>Desarrollo de interfaces modernas y responsivas</p>
+                        <div class="skill-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="medallas">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-full blur-2xl"></div>
+                             <img alt="Damián Jinel" loading="lazy" width="500" height="500" decoding="async" data-nimg="1"
+                            class="rounded-full relative z-10" src="/placeholder.svg" style="color: transparent;">
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>Desarrollo de APIs y servicios del servidor</p>
+                        <div class="skill-tech">
+                            <span>Node.js</span>
+                            <span>Python</span>
+                            <span>Java</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="medallas">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-full blur-2xl"></div>
+                             <img alt="Damián Jinel" loading="lazy" width="500" height="500" decoding="async" data-nimg="1"
+                            class="rounded-full relative z-10" src="/placeholder.svg" style="color: transparent;">
+                        </div>
+                        <h3>Development Tools</h3>
+                        <p>Herramientas y tecnologías de desarrollo</p>
+                        <div class="skill-tech">
+                            <span>Git</span>
+                            <span>Docker</span>
+                            <span>AWS</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="py-20 bg-primary/5">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Habilidades y Tecnologías</h2>
+                <div class="flex flex-wrap justify-center gap-4"
+                    style="opacity: 1; transform: none; will-change: opacity, transform;">
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class=""> HTML5</div>
+                    </div>
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class=""> CSS3</div>
+                    </div>
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class="">JavaScript</div>
+                    </div>
+                
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class=""> React</div>
+                    </div>
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class="">Next.js</div>
+                    </div>
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class="">Node.js</div>
+                    </div>
+                   
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class=""> SQL</div>
+                    </div>
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class=""> Git</div>
+                    </div>
+                  
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class="">Python</div>
+                    </div>
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class="">Java</div>
+                    </div>
+                    <div style="opacity: 1; will-change: opacity, transform; transform: none;">
+                        <div class="">PHP</div>
+                    </div>
+                 
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contacto</h2>
+                <div class="contact-content">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                    <div class="location">
+                        <h3>Ubicación</h3>
+                        <div id="map" class="map"></div>
+                        <p class="location-address">TechnoCraft Ovalle</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Damián Jinel. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/LynkRookie" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/damian-jinel-cortes-b61b56296/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:contact@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="Js/modo.js"></script>
+</body>
 </html>
+
