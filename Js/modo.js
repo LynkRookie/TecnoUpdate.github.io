@@ -203,13 +203,25 @@ document.addEventListener("DOMContentLoaded", () => {
       technocraft: {
         title: "TechnoCraft Ovalle",
         description: "Plataforma de servicios tecnológicos",
-        image: "./vista/img/gestor.png",
+        image: "./vista/img/portafolio-1.png",
         technologies: ["Next.js", "Tailwind CSS", "Vercel"],
       },
-      tecnoupdate: {
-        title: "TecnoUpdate",
+      hacking: {
+        title: "Portafolio de Hacking etico",
         description: "Blog de noticias tecnológicas",
-        image: "./vista/img/gestor.png",
+        image: "./vista/img/portafolio_h.png",
+        technologies: ["Gatsby", "GraphQL", "Netlify CMS"],
+      },
+      ciberseguridad: {
+        title: "5 fases de ataque en ciberseguridad",
+        description: "Blog de noticias tecnológicas",
+        image: "./vista/img/5fases.png",
+        technologies: ["Gatsby", "GraphQL", "Netlify CMS"],
+      },
+      mineria: {
+        title: "Introduccion a la Mineria de Datos",
+        description: "Blog de noticias tecnológicas",
+        image: "./vista/img/mineria.png",
         technologies: ["Gatsby", "GraphQL", "Netlify CMS"],
       },
     }
