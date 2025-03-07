@@ -180,11 +180,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /**
    * Manejo del formulario de contacto
-   * Validación en tiempo real de los campos
+   * Validación en tiempo real de los campos y envío mediante AJAX
    */
-  const form = document.querySelector("[data-form]")
+  const form = document.querySelector("#contact-form")
   const formInputs = document.querySelectorAll("[data-form-input]")
   const formBtn = document.querySelector("[data-form-btn]")
+  const successMessage = document.getElementById("success-message")
+  const errorMessage = document.getElementById("error-message")
 
   // Verificar validación del formulario en la entrada
   for (let i = 0; i < formInputs.length; i++) {
@@ -197,10 +199,76 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+  // Manejar el envío del formulario
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault() // Prevenir el envío normal del formulario
+
+      // Ocultar mensajes previos
+      if (successMessage) successMessage.style.display = "none"
+      if (errorMessage) errorMessage.style.display = "none"
+
+      // Deshabilitar el botón durante el envío
+      formBtn.setAttribute("disabled", "")
+      formBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Enviando...</span>'
+
+      // Crear un objeto FormData con los datos del formulario
+      const formData = new FormData(form)
+
+      // Enviar los datos usando fetch
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Mostrar mensaje de éxito
+            if (successMessage) {
+              successMessage.style.display = "block"
+              // Desplazarse al mensaje
+              successMessage.scrollIntoView({ behavior: "smooth", block: "center" })
+
+              // Ocultar el mensaje después de 5 segundos
+              setTimeout(() => {
+                successMessage.style.display = "none"
+              }, 5000)
+            }
+
+            // Limpiar el formulario
+            form.reset()
+          } else {
+            throw new Error("Error en el envío del formulario")
+          }
+        })
+        .catch((error) => {
+          // Mostrar mensaje de error
+          if (errorMessage) {
+            errorMessage.style.display = "block"
+            // Desplazarse al mensaje
+            errorMessage.scrollIntoView({ behavior: "smooth", block: "center" })
+
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => {
+              errorMessage.style.display = "none"
+            }, 5000)
+          }
+        })
+        .finally(() => {
+          // Restaurar el botón
+          formBtn.removeAttribute("disabled")
+          formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Enviar Mensaje</span>'
+        })
+    })
+  }
+
   /**
    * Integración de Google Maps
    * Muestra un mapa interactivo con la ubicación
    */
+  let google
   window.initMap = () => {
     // Asegurarse de que google esté definido (cargado por la API de Google Maps)
     if (typeof google === "undefined") {
@@ -583,3 +651,4 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarCertificaciones()
   }
 })
+
