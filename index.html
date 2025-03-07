@@ -432,22 +432,16 @@
     
                     <section class="contact-form">
                         <h3 class="h3 form-title">Formulario de Contacto</h3>
-
-                        <form action="https://formsubmit.co/b7a67cb13cdf5058955366caa19541b6" method="POST" class="form" id="contact-form" data-form>
-                            <!-- Hidden inputs for FormSubmit.co configuration -->
-                            <input type="hidden" name="_subject" value="Nuevo mensaje de contacto desde el portafolio">
-                            <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_captcha" value="true">
-                            <input type="hidden" name="_next" value="https://tu-sitio.com/gracias.html">
-                            <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. Te contactaré pronto.">
-
+    
+                        <!-- IMPORTANTE: Método directo de correo electrónico -->
+                        <form action="mailto:lynkrookie@gmail.com" method="POST" enctype="text/plain" class="form" id="contact-form" data-form>
                             <div class="input-wrapper">
                                 <input type="text" name="name" id="name" class="form-input" placeholder="Nombre completo" required data-form-input>
                                 <input type="email" name="email" id="email" class="form-input" placeholder="Correo electrónico" required data-form-input>
                             </div>
-
+    
                             <textarea name="message" id="message" class="form-input" placeholder="Tu mensaje" required data-form-input></textarea>
-
+    
                             <button class="form-btn" type="submit" data-form-btn>
                                 <ion-icon name="paper-plane"></ion-icon>
                                 <span>Enviar Mensaje</span>
