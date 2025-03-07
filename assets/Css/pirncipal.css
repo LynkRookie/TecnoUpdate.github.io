@@ -993,11 +993,18 @@ footer .conteiner {
     width: 18rem;
   }
   .certificate-img img {
-    width: 35%;
+    width: 50%;
     height: auto;
     object-fit: cover;
     position: sticky;
-    left: 5rem;
+    left: 4rem;
+}
+.filter-list {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 }
 
