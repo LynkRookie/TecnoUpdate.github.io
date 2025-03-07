@@ -942,6 +942,15 @@ footer .conteiner {
 .dark-mode .content-card::before {
   background-color: var(--eerie-black-1);
 }
+.dark-mode .form-input {
+  color: #ffffff;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  padding: 13px 20px;
+  border: 1px solid hsl(0deg 0% 100%);
+  border-radius: 14px;
+  outline: none;
+}
 /* Botón de cambio de modo */
 .mode-toggle {
   position: fixed;
@@ -1021,6 +1030,15 @@ footer .conteiner {
   cursor: pointer;
   border: none;
   transition: transform 0.3s ease;
+}
+.dark-mode .form-input {
+  color: #ffffff;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  padding: 13px 20px;
+  border: 1px solid hsl(0deg 0% 100%);
+  border-radius: 14px;
+  outline: none;
 }
 }
 
