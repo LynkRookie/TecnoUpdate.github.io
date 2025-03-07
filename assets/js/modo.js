@@ -179,14 +179,51 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", animateSkillBars)
 
   /**
+   * Función para mostrar mensajes flotantes (toast)
+   * Muestra notificaciones en la esquina inferior derecha
+   */
+  const showToast = (type, title, message) => {
+    const toastContainer = document.getElementById("toast-container")
+
+    // Crear el elemento toast
+    const toast = document.createElement("div")
+    toast.className = `toast-message toast-${type}`
+
+    // Contenido del toast
+    toast.innerHTML = `
+      <div class="toast-icon">
+        <ion-icon name="${type === "success" ? "checkmark-circle-outline" : "alert-circle-outline"}"></ion-icon>
+      </div>
+      <div class="toast-content">
+        <div class="toast-title">${title}</div>
+        <div class="toast-text">${message}</div>
+      </div>
+    `
+
+    // Añadir al contenedor
+    toastContainer.appendChild(toast)
+
+    // Mostrar con animación
+    setTimeout(() => {
+      toast.classList.add("show")
+    }, 10)
+
+    // Ocultar después de 5 segundos
+    setTimeout(() => {
+      toast.classList.remove("show")
+      setTimeout(() => {
+        toastContainer.removeChild(toast)
+      }, 300)
+    }, 5000)
+  }
+
+  /**
    * Manejo del formulario de contacto
    * Validación en tiempo real de los campos y envío mediante AJAX
    */
   const form = document.querySelector("#contact-form")
   const formInputs = document.querySelectorAll("[data-form-input]")
   const formBtn = document.querySelector("[data-form-btn]")
-  const successMessage = document.getElementById("success-message")
-  const errorMessage = document.getElementById("error-message")
 
   // Verificar validación del formulario en la entrada
   for (let i = 0; i < formInputs.length; i++) {
@@ -204,13 +241,12 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
       e.preventDefault() // Prevenir el envío normal del formulario
 
-      // Ocultar mensajes previos
-      if (successMessage) successMessage.style.display = "none"
-      if (errorMessage) errorMessage.style.display = "none"
-
       // Deshabilitar el botón durante el envío
       formBtn.setAttribute("disabled", "")
       formBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Enviando...</span>'
+
+      // Obtener el nombre para personalizar el mensaje
+      const nombreUsuario = document.getElementById("name").value
 
       // Crear un objeto FormData con los datos del formulario
       const formData = new FormData(form)
@@ -225,17 +261,8 @@ document.addEventListener("DOMContentLoaded", () => {
       })
         .then((response) => {
           if (response.ok) {
-            // Mostrar mensaje de éxito
-            if (successMessage) {
-              successMessage.style.display = "block"
-              // Desplazarse al mensaje
-              successMessage.scrollIntoView({ behavior: "smooth", block: "center" })
-
-              // Ocultar el mensaje después de 5 segundos
-              setTimeout(() => {
-                successMessage.style.display = "none"
-              }, 5000)
-            }
+            // Mostrar mensaje de éxito con el nombre del usuario
+            showToast("success", "¡Mensaje enviado!", `Gracias ${nombreUsuario}, te responderé lo antes posible.`)
 
             // Limpiar el formulario
             form.reset()
@@ -245,16 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((error) => {
           // Mostrar mensaje de error
-          if (errorMessage) {
-            errorMessage.style.display = "block"
-            // Desplazarse al mensaje
-            errorMessage.scrollIntoView({ behavior: "smooth", block: "center" })
-
-            // Ocultar el mensaje después de 5 segundos
-            setTimeout(() => {
-              errorMessage.style.display = "none"
-            }, 5000)
-          }
+          showToast("error", "Error al enviar", "Hubo un problema con el envío. Por favor, intenta nuevamente.")
         })
         .finally(() => {
           // Restaurar el botón
@@ -268,7 +286,6 @@ document.addEventListener("DOMContentLoaded", () => {
    * Integración de Google Maps
    * Muestra un mapa interactivo con la ubicación
    */
-  let google
   window.initMap = () => {
     // Asegurarse de que google esté definido (cargado por la API de Google Maps)
     if (typeof google === "undefined") {
