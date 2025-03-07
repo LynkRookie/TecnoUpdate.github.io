@@ -9,6 +9,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el mensaje flotante */
+        .toast-message {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            display: none;
+            animation: slideIn 0.3s, fadeOut 0.5s 4.5s;
+            max-width: 350px;
+        }
+        
+        @keyframes slideIn {
+            from {transform: translateX(100%); opacity: 0;}
+            to {transform: translateX(0); opacity: 1;}
+        }
+        
+        @keyframes fadeOut {
+            from {opacity: 1;}
+            to {opacity: 0;}
+        }
+        
+        .dark-mode .toast-message {
+            background-color: #2E7D32;
+            color: white;
+        }
+    </style>
 </head>
 <body class="fondo">
     <main>
@@ -35,7 +67,7 @@
                         </div>
                         <div class="contact-info">
                             <p class="contact-title">Email</p>
-                            <a href="mailto:lynkrookie@gmail.com" class="contact-link">lynkrookie@gmail.com</a>
+                            <a href="/cdn-cgi/l/email-protection#8be7f2e5e0f9e4e4e0e2eecbece6eae2e7a5e8e4e6" class="contact-link"><span class="__cf_email__" data-cfemail="d9b5a0b7b2abb6b6b2b0bc99beb4b8b0b5f7bab6b4">[email&#160;protected]</span></a>
                         </div>
                     </li>
 
@@ -378,7 +410,7 @@
                             <li class="skills-item">
                                 <div class="title-wrapper">
                                     <h5 class="h5">maintenance of equipment and devices</h5>
-                                    <data value="35"35%</data>
+                                    <data value="35">35%</data>
                                 </div>
                                 <div class="skill-progress-bg">
                                     <div class="skill-progress-fill" style="width: 35%;"></div>
@@ -451,18 +483,21 @@
             </article>
         </div>
     </main>
-   <!-- Mensaje flotante de confirmación -->
-   <div id="toast-message" class="toast-message">
-    <div style="display: flex; align-items: center;">
-        <div style="margin-right: 12px; font-size: 24px;">✓</div>
-        <div>
-            <div style="font-weight: 600; margin-bottom: 4px;">¡Mensaje enviado!</div>
-            <div style="font-size: 14px;">Gracias por contactarme. Te responderé lo antes posible.</div>
+  
+    <!-- Mensaje flotante de confirmación -->
+    <div id="toast-message" class="toast-message">
+        <div style="display: flex; align-items: center;">
+            <div style="margin-right: 12px; font-size: 24px;">✓</div>
+            <div>
+                <div style="font-weight: 600; margin-bottom: 4px;">¡Mensaje enviado!</div>
+                <div style="font-size: 14px;">Gracias por contactarme. Te responderé lo antes posible.</div>
+            </div>
         </div>
     </div>
-</div>
+
     <!-- Custom JS -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/modo.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/modo.js"></script>
     <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -470,3 +505,4 @@
     <button id="dark-mode-toggle" class="mode-toggle" aria-label="Toggle Theme">🌑</button>
 </body>
 </html>
+
