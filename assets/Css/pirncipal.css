@@ -278,8 +278,8 @@ main {
   margin-bottom: 10px;
 }
 .info-content .title {
-  color: var(--text);
-  background: var(--onyx);
+  color: #44ff5d;
+  background: hsl(145.07deg 39.93% 24.65%);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
   width: max-content;
@@ -919,7 +919,7 @@ footer .conteiner {
   color: white;
 }
 .dark-mode .info-content .title {
-  background: rgba(0, 0, 0, 0.741);
+  background: hsl(145.07deg 39.93% 24.65%);
 }
 .dark-mode .icon-box::before {
   background: var(--bg-gradient-jet);
@@ -1014,6 +1014,22 @@ footer .conteiner {
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
+}
+.exp {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.exp button {
+  background: none;
+  color: var(--text);
+  font-size: var(--fs-6);
+  padding: 5px 10px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 .mode-toggle {
   position: fixed;
