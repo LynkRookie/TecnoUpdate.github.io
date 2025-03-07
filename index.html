@@ -431,38 +431,36 @@
                     </section>
     
                     <section class="contact-form">
-    <h3 class="h3 form-title">Formulario de Contacto</h3>
-    <!-- FORMULARIO MODIFICADO: Usando FormSubmit con manejo de JavaScript -->
-    <form action="https://formsubmit.co/lynkrookie@gmail.com" method="POST" class="form" id="contact-form" data-form>
-        <!-- Campos ocultos para configuración de FormSubmit -->
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
-        <input type="hidden" name="_captcha" value="false">
-        <!-- Quitamos la redirección a gracias.html -->
-        <input type="hidden" name="_template" value="table">
-        <!-- Añadimos un campo para AJAX -->
-        <input type="hidden" name="_next" value="">
-        
-        <div class="input-wrapper">
-            <input type="text" name="name" id="name" class="form-input" placeholder="Nombre completo" required data-form-input>
-            <input type="email" name="email" id="email" class="form-input" placeholder="Correo electrónico" required data-form-input>
-        </div>
-        
-        <textarea name="message" id="message" class="form-input" placeholder="Tu mensaje" required data-form-input></textarea>
-        
-        <button class="form-btn" type="submit" data-form-btn>
-            <ion-icon name="paper-plane"></ion-icon>
-            <span>Enviar Mensaje</span>
-        </button>
-    </form>
-    
-    <!-- Mensajes de éxito y error -->
-    <div id="success-message" style="display: none; color: green; margin-top: 15px; padding: 10px; background-color: rgba(0, 128, 0, 0.1); border-radius: 5px; text-align: center;">
-        ¡Mensaje enviado con éxito! Te responderé lo antes posible.
-    </div>
-    <div id="error-message" style="display: none; color: red; margin-top: 15px; padding: 10px; background-color: rgba(255, 0, 0, 0.1); border-radius: 5px; text-align: center;">
-        Hubo un problema al enviar el mensaje. Por favor, intenta nuevamente.
-    </div>
-</section>
+                        <h3 class="h3 form-title">Formulario de Contacto</h3>
+                        <!-- FORMULARIO MODIFICADO: Usando FormSubmit -->
+                        <form action="https://formsubmit.co/lynkrookie@gmail.com" method="POST" class="form" id="contact-form" data-form>
+                            <!-- Campos ocultos para configuración de FormSubmit -->
+                            <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+                            <input type="hidden" name="_template" value="table">
+                            
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name" class="form-input" placeholder="Nombre completo" required data-form-input>
+                                <input type="email" name="email" id="email" class="form-input" placeholder="Correo electrónico" required data-form-input>
+                            </div>
+                            
+                            <textarea name="message" id="message" class="form-input" placeholder="Tu mensaje" required data-form-input></textarea>
+                            
+                            <button class="form-btn" type="submit" data-form-btn>
+                                <ion-icon name="paper-plane"></ion-icon>
+                                <span>Enviar Mensaje</span>
+                            </button>
+                        </form>
+                        
+                        <!-- Mensajes de éxito y error -->
+                        <div id="success-message" style="display: none; color: green; margin-top: 15px;">
+                            ¡Mensaje enviado con éxito! Te responderé lo antes posible.
+                        </div>
+                        <div id="error-message" style="display: none; color: red; margin-top: 15px;">
+                            Hubo un problema al enviar el mensaje. Por favor, intenta nuevamente.
+                        </div>
+                    </section>
                 </div>
             </article>
         </div>
@@ -478,4 +476,3 @@
     <button id="dark-mode-toggle" class="mode-toggle" aria-label="Toggle Theme">🌑</button>
 </body>
 </html>
-

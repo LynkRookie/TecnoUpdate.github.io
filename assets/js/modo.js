@@ -180,13 +180,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /**
    * Manejo del formulario de contacto
-   * Validación en tiempo real de los campos y envío mediante AJAX
+   * Validación en tiempo real de los campos
    */
-  const form = document.querySelector("#contact-form")
+  const form = document.querySelector("[data-form]")
   const formInputs = document.querySelectorAll("[data-form-input]")
   const formBtn = document.querySelector("[data-form-btn]")
-  const successMessage = document.getElementById("success-message")
-  const errorMessage = document.getElementById("error-message")
 
   // Verificar validación del formulario en la entrada
   for (let i = 0; i < formInputs.length; i++) {
@@ -196,66 +194,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         formBtn.setAttribute("disabled", "")
       }
-    })
-  }
-
-  // Manejar el envío del formulario
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault() // Prevenir el envío normal del formulario
-
-      // Ocultar mensajes previos
-      successMessage.style.display = "none"
-      errorMessage.style.display = "none"
-
-      // Deshabilitar el botón durante el envío
-      formBtn.setAttribute("disabled", "")
-      formBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Enviando...</span>'
-
-      // Crear un objeto FormData con los datos del formulario
-      const formData = new FormData(form)
-
-      // Enviar los datos usando fetch
-      fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      })
-        .then((response) => {
-          if (response.ok) {
-            // Mostrar mensaje de éxito
-            successMessage.style.display = "block"
-            // Limpiar el formulario
-            form.reset()
-            // Desplazarse al mensaje
-            successMessage.scrollIntoView({ behavior: "smooth", block: "center" })
-
-            // Ocultar el mensaje después de 5 segundos
-            setTimeout(() => {
-              successMessage.style.display = "none"
-            }, 5000)
-          } else {
-            throw new Error("Error en el envío del formulario")
-          }
-        })
-        .catch((error) => {
-          // Mostrar mensaje de error
-          errorMessage.style.display = "block"
-          // Desplazarse al mensaje
-          errorMessage.scrollIntoView({ behavior: "smooth", block: "center" })
-
-          // Ocultar el mensaje después de 5 segundos
-          setTimeout(() => {
-            errorMessage.style.display = "none"
-          }, 5000)
-        })
-        .finally(() => {
-          // Restaurar el botón
-          formBtn.removeAttribute("disabled")
-          formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Enviar Mensaje</span>'
-        })
     })
   }
 
@@ -288,11 +226,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ventana de información
     const infoWindow = new google.maps.InfoWindow({
       content: `
-       <div style="padding: 8px;">
-         <h3 style="margin: 0 0 4px; font-family: 'Poppins', sans-serif;">TechnoCraft Ovalle</h3>
-         <p style="margin: 0; font-family: 'Poppins', sans-serif;">Servicios tecnológicos profesionales</p>
-       </div>
-     `,
+        <div style="padding: 8px;">
+          <h3 style="margin: 0 0 4px; font-family: 'Poppins', sans-serif;">TechnoCraft Ovalle</h3>
+          <p style="margin: 0; font-family: 'Poppins', sans-serif;">Servicios tecnológicos profesionales</p>
+        </div>
+      `,
     })
 
     marker.addListener("click", () => {
@@ -400,17 +338,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const project = projectsData[projectKey]
     if (featuredProject && project) {
       featuredProject.innerHTML = `
-       <div class="project-card">
-         <img src="${project.image}" alt="${project.title}" class="project-image">
-         <div class="project-content">
-           <h3>${project.title}</h3>
-           <p>${project.description}</p>
-           <div class="project-tech">
-             ${project.technologies.map((tech) => `<span>${tech}</span>`).join("")}
-           </div>
-         </div>
-       </div>
-     `
+        <div class="project-card">
+          <img src="${project.image}" alt="${project.title}" class="project-image">
+          <div class="project-content">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <div class="project-tech">
+              ${project.technologies.map((tech) => `<span>${tech}</span>`).join("")}
+            </div>
+          </div>
+        </div>
+      `
 
       // Actualizar estado activo de los enlaces de proyectos
       projectLinks.forEach((link) => {
@@ -609,12 +547,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const li = document.createElement("li")
         li.className = "timeline-item"
         li.innerHTML = `
-         <h4 class="h4 timeline-item-title">${item.title}</h4>
-         <span>${item.periodo}</span>
-         <p class="timeline-text">
-           ${item.descripcion}
-         </p>
-       `
+          <h4 class="h4 timeline-item-title">${item.title}</h4>
+          <span>${item.periodo}</span>
+          <p class="timeline-text">
+            ${item.descripcion}
+          </p>
+        `
         timelineList.appendChild(li)
       })
     }
@@ -645,4 +583,3 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarCertificaciones()
   }
 })
-
