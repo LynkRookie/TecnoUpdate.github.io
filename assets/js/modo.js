@@ -186,8 +186,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
-      // No prevenimos el envío del formulario para permitir que el método mailto funcione
-
+      e.preventDefault() // Prevenir el envío normal del formulario
+      
       // Obtener datos del formulario
       const name = document.getElementById("name").value
       const email = document.getElementById("email").value
@@ -195,7 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Validación simple
       if (!name || !email || !message) {
-        e.preventDefault() // Prevenir envío solo si la validación falla
         alert("Por favor, completa todos los campos")
         return
       }
@@ -207,12 +206,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Formatear el asunto y cuerpo del correo para mailto
       const subject = `Contacto desde Portafolio: ${name}`
-      contactForm.action = `mailto:lynkrookie@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`)}`
+      const body = `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`
+      
+      // Crear la URL de mailto con los parámetros codificados
+      const mailtoUrl = `mailto:lynkrookie@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      
+      // Abrir el cliente de correo del usuario
+      window.location.href = mailtoUrl
 
-      // El formulario se enviará naturalmente usando el protocolo mailto
-
-      // Nota: No podemos detectar cuando se completa el envío con mailto,
-      // así que restauramos el botón después de un tiempo
+      // Restaurar el botón después de un tiempo
       setTimeout(() => {
         formBtn.disabled = false
         formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Enviar Mensaje</span>'
@@ -627,4 +629,3 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarCertificaciones()
   }
 })
-

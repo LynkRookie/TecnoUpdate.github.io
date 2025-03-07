@@ -432,24 +432,12 @@
     
                     <section class="contact-form">
                         <h3 class="h3 form-title">Formulario de Contacto</h3>
-
-                        <article class="contacto" data-page="contacto">
                             <div id="contacto" class="contacto">
                                 <header>
                                     <h2 class="h2 article-title">Contacto</h2>
                                 </header>
-                
-                                <section class="mapbox" data-mapbox>
-                                    <figure>
-                                        <iframe
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6791.521239531361!2d-71.21345837073053!3d-30.60150498213289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9687b9c4d3194d7f%3A0xb3995c1e1e7d4d3e!2sOvalle%2C%20Coquimbo!5e0!3m2!1ses!2scl!4v1709747427889!5m2!1ses!2scl"
-                                            width="400" height="300" loading="lazy"></iframe>
-                                    </figure>
-                                </section>
-                
                                 <section class="contact-form">
                                     <h3 class="h3 form-title">Formulario de Contacto</h3>
-                
                                     <!-- IMPORTANTE: Método directo de correo electrónico -->
                                     <form action="mailto:lynkrookie@gmail.com" method="POST" enctype="text/plain" class="form" id="contact-form" data-form>
                                         <div class="input-wrapper">
@@ -457,7 +445,8 @@
                                             <input type="email" name="email" id="email" class="form-input" placeholder="Correo electrónico" required data-form-input>
                                         </div>
                 
-                                        <textarea name="message" id="message" class="form-input" placeholder="Tu mensaje" required data-form-input></textarea>
+                                         <label for="message" class="form-label">Tu mensaje</label>
+                                             <textarea name="message" id="message" class="form-input" placeholder="Tu mensaje" required data-form-input></textarea>
                 
                                         <button class="form-btn" type="submit" data-form-btn>
                                             <ion-icon name="paper-plane"></ion-icon>
@@ -466,7 +455,6 @@
                                     </form>
                                 </section>
                             </div>
-                        </article>
                     </section>
                 </div>
             </article>
