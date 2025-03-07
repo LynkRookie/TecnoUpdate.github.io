@@ -981,6 +981,25 @@ footer .conteiner {
   color: white;
   border-color: var(--primary);
 }
+@media (max-width: 760px) and (min-width: 390px) {
+  .timeline-item{
+    position: relative;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+    z-index: 1;
+    width: 18rem;
+  }
+  .certificate-img img {
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+    position: sticky;
+    left: 5rem;
+}
+}
 
 @media (min-width: 580px) {
   .filter-list {
