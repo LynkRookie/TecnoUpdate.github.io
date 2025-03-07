@@ -1,4 +1,9 @@
+/**
+ * Script principal para el portafolio
+ * Este archivo contiene todas las funcionalidades interactivas del sitio
+ */
 document.addEventListener("DOMContentLoaded", () => {
+  // Selección de elementos del DOM
   const header = document.querySelector("header")
   const menuBtn = document.querySelector(".menu-btn")
   const mobileMenu = document.querySelector(".mobile-menu")
@@ -6,38 +11,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body
   let map
 
-  // Header scroll effect
+  /**
+   * Efecto de scroll en el header
+   * Añade una clase cuando se hace scroll para cambiar su apariencia
+   */
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
-      header.classList.add("scrolled")
+      header?.classList.add("scrolled")
     } else {
-      header.classList.remove("scrolled")
+      header?.classList.remove("scrolled")
     }
   })
 
-  // Mobile menu toggle
+  /**
+   * Alternar menú móvil
+   * Muestra u oculta el menú en dispositivos móviles
+   */
   menuBtn?.addEventListener("click", () => {
     menuBtn.classList.toggle("active")
-    mobileMenu.classList.toggle("active")
+    mobileMenu?.classList.toggle("active")
   })
 
-  // Close mobile menu when clicking a link
+  /**
+   * Cerrar menú móvil al hacer clic en un enlace
+   * Mejora la experiencia de usuario en dispositivos móviles
+   */
   document.querySelectorAll(".mobile-nav-item").forEach((link) => {
     link.addEventListener("click", () => {
-      mobileMenu.classList.remove("active")
-      menuBtn.classList.remove("active")
+      mobileMenu?.classList.remove("active")
+      menuBtn?.classList.remove("active")
     })
   })
 
-  // Close mobile menu when clicking outside
+  /**
+   * Cerrar menú móvil al hacer clic fuera de él
+   * Proporciona una forma intuitiva de cerrar el menú
+   */
   document.addEventListener("click", (e) => {
     if (!e.target.closest(".mobile-menu") && !e.target.closest(".menu-btn")) {
-      mobileMenu.classList.remove("active")
-      menuBtn.classList.remove("active")
+      mobileMenu?.classList.remove("active")
+      menuBtn?.classList.remove("active")
     }
   })
 
-  // Smooth scroll for anchor links
+  /**
+   * Desplazamiento suave para enlaces de anclaje
+   * Mejora la navegación dentro de la página
+   */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault()
@@ -57,7 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Function to set the dark mode
+  /**
+   * Función para establecer el modo oscuro
+   * Cambia la apariencia del sitio y guarda la preferencia del usuario
+   */
   const setDarkMode = (isDark) => {
     if (isDark) {
       body.classList.add("dark-mode")
@@ -71,7 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (map) updateMapStyle(isDark)
   }
 
-  // Check for saved dark mode preference or system preference
+  /**
+   * Verificar preferencia de modo oscuro guardada o preferencia del sistema
+   * Respeta las preferencias del usuario
+   */
   const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
   const savedMode = localStorage.getItem("darkMode")
 
@@ -79,19 +105,28 @@ document.addEventListener("DOMContentLoaded", () => {
     setDarkMode(true)
   }
 
-  // Toggle dark mode
+  /**
+   * Alternar modo oscuro
+   * Permite al usuario cambiar entre modo claro y oscuro
+   */
   darkModeToggle.addEventListener("click", () => {
     setDarkMode(!body.classList.contains("dark-mode"))
   })
 
-  // Listen for changes in system color scheme
+  /**
+   * Escuchar cambios en el esquema de color del sistema
+   * Actualiza el modo si cambia la preferencia del sistema
+   */
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
     if (localStorage.getItem("darkMode") === null) {
       setDarkMode(e.matches)
     }
   })
 
-  // Animate elements on scroll
+  /**
+   * Animar elementos al hacer scroll
+   * Añade efectos visuales al desplazarse por la página
+   */
   const animateOnScroll = () => {
     const elements = document.querySelectorAll(".animate-on-scroll")
 
@@ -105,7 +140,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Add animate-on-scroll class to elements
+  /**
+   * Agregar clase animate-on-scroll a los elementos
+   * Prepara las secciones para ser animadas
+   */
   const addAnimationClasses = () => {
     const sections = document.querySelectorAll("section")
     sections.forEach((section) => {
@@ -119,7 +157,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", animateOnScroll)
   window.addEventListener("load", animateOnScroll)
 
-  // Animate skill bars on scroll
+  /**
+   * Animar barras de habilidades al hacer scroll
+   * Muestra el progreso de las habilidades de forma visual
+   */
   const animateSkillBars = () => {
     const skillBars = document.querySelectorAll(".progress-fill")
     skillBars.forEach((bar) => {
@@ -137,54 +178,62 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", animateSkillBars)
   window.addEventListener("load", animateSkillBars)
 
-  // Form submission
+  /**
+   * Manejo del formulario de contacto
+   * Gestiona la validación y envío del formulario
+   */
   const contactForm = document.getElementById("contact-form")
 
   if (contactForm) {
-    contactForm.addEventListener("submit", async (e) => {
-      e.preventDefault()
+    contactForm.addEventListener("submit", (e) => {
+      // No prevenimos el envío del formulario para permitir que el método mailto funcione
 
-      // Get form data
+      // Obtener datos del formulario
       const name = document.getElementById("name").value
       const email = document.getElementById("email").value
       const message = document.getElementById("message").value
 
-      // Simple validation
+      // Validación simple
       if (!name || !email || !message) {
+        e.preventDefault() // Prevenir envío solo si la validación falla
         alert("Por favor, completa todos los campos")
         return
       }
 
-      try {
-        // Mostrar indicador de carga
-        const formBtn = document.querySelector("[data-form-btn]")
-        const originalBtnText = formBtn.innerHTML
-        formBtn.disabled = true
-        formBtn.innerHTML = "<span>Enviando...</span>"
+      // Mostrar indicador de carga
+      const formBtn = document.querySelector("[data-form-btn]")
+      formBtn.disabled = true
+      formBtn.innerHTML = "<span>Enviando...</span>"
 
-        // FormSubmit will handle the form submission
-        await fetch(contactForm.action, {
-          method: "POST",
-          body: new FormData(contactForm),
-        })
+      // Formatear el asunto y cuerpo del correo para mailto
+      const subject = `Contacto desde Portafolio: ${name}`
+      contactForm.action = `mailto:lynkrookie@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`)}`
 
-        alert(`Mensaje enviado con éxito. Gracias ${name}!`)
-        contactForm.reset()
-      } catch (error) {
-        console.error("Error al enviar el mensaje:", error)
-        alert("Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.")
-      } finally {
-        // Restaurar botón
-        const formBtn = document.querySelector("[data-form-btn]")
+      // El formulario se enviará naturalmente usando el protocolo mailto
+
+      // Nota: No podemos detectar cuando se completa el envío con mailto,
+      // así que restauramos el botón después de un tiempo
+      setTimeout(() => {
         formBtn.disabled = false
         formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Enviar Mensaje</span>'
-      }
+        alert(`Gracias ${name}! Tu cliente de correo se abrirá para enviar el mensaje.`)
+        contactForm.reset()
+      }, 2000)
     })
   }
 
-  // Google Maps integration
+  /**
+   * Integración de Google Maps
+   * Muestra un mapa interactivo con la ubicación
+   */
   window.initMap = () => {
-    const technoCraft = { lat: -30.6015, lng: -71.2086 } // Ovalle, Chile coordinates
+    // Asegurarse de que google esté definido (cargado por la API de Google Maps)
+    if (typeof google === "undefined") {
+      console.error("Google Maps API no está cargada correctamente")
+      return
+    }
+
+    const technoCraft = { lat: -30.6015, lng: -71.2086 } // Coordenadas de Ovalle, Chile
 
     map = new google.maps.Map(document.getElementById("map"), {
       zoom: 15,
@@ -199,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "TechnoCraft Ovalle",
     })
 
-    // Info window
+    // Ventana de información
     const infoWindow = new google.maps.InfoWindow({
       content: `
         <div style="padding: 8px;">
@@ -214,13 +263,17 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+  /**
+   * Actualizar estilo del mapa según el modo (claro/oscuro)
+   * Adapta el mapa al tema del sitio
+   */
   const updateMapStyle = (isDark) => {
     if (map) {
       map.setOptions({ styles: isDark ? darkMapStyle : lightMapStyle })
     }
   }
 
-  // Map styles
+  // Estilos del mapa
   const lightMapStyle = [
     {
       featureType: "all",
@@ -257,7 +310,10 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ]
 
-  // Projects functionality
+  /**
+   * Funcionalidad de proyectos
+   * Datos de los proyectos a mostrar
+   */
   const projectsData = {
     gestor: {
       title: "Gestor de Informe de Mantenimiento",
@@ -299,7 +355,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const featuredProject = document.getElementById("featured-project")
   const projectLinks = document.querySelectorAll(".project-link")
 
-  // Function to update featured project
+  /**
+   * Función para actualizar el proyecto destacado
+   * Muestra el proyecto seleccionado en la sección destacada
+   */
   const updateFeaturedProject = (projectKey) => {
     const project = projectsData[projectKey]
     if (featuredProject && project) {
@@ -316,44 +375,56 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `
 
-      // Update active state of project links
+      // Actualizar estado activo de los enlaces de proyectos
       projectLinks.forEach((link) => {
         link.classList.toggle("active", link.dataset.project === projectKey)
       })
     }
   }
 
-  // Add click handlers to project links
+  /**
+   * Agregar manejadores de clic a los enlaces de proyectos
+   * Permite cambiar entre proyectos al hacer clic
+   */
   projectLinks.forEach((link) => {
     link.addEventListener("click", () => {
       updateFeaturedProject(link.dataset.project)
     })
   })
 
-  // Initialize with TechnoCraft Ovalle selected
+  // Inicializar con TechnoCraft Ovalle seleccionado
   if (featuredProject) {
     updateFeaturedProject("technocraft")
   }
 
-  // element toggle function
+  /**
+   * Función para alternar elementos
+   * Utilidad para mostrar/ocultar elementos
+   */
   const elementToggleFunc = (elem) => {
     elem.classList.toggle("active")
   }
 
-  // sidebar variables
+  // Variables de la barra lateral
   const sidebar = document.querySelector("[data-sidebar]")
   const sidebarBtn = document.querySelector("[data-sidebar-btn]")
 
-  // sidebar toggle functionality for mobile
+  /**
+   * Funcionalidad de alternancia de la barra lateral para móvil
+   * Permite expandir/contraer la barra lateral
+   */
   sidebarBtn?.addEventListener("click", () => {
     elementToggleFunc(sidebar)
   })
 
-  // page navigation variables
+  // Variables de navegación de página
   const navLinks = document.querySelectorAll("[data-nav-link]")
   const pages = document.querySelectorAll("[data-page]")
 
-  // add event to all nav links
+  /**
+   * Agregar evento a todos los enlaces de navegación
+   * Gestiona la navegación entre secciones
+   */
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
       const targetPage = this.textContent.toLowerCase()
@@ -374,7 +445,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       })
 
-      // Close the mobile menu if it's open
+      // Cerrar el menú móvil si está abierto
       const sidebar = document.querySelector("[data-sidebar]")
       if (sidebar) {
         sidebar.classList.remove("active")
@@ -382,20 +453,23 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Ensure the first tab is active by default
+  // Asegurar que la primera pestaña esté activa por defecto
   if (pages.length > 0 && navLinks.length > 0) {
     pages[0].classList.add("active")
     navLinks[0].classList.add("active")
   }
 
-  // Portfolio filter functionality
+  /**
+   * Funcionalidad de filtro de portafolio
+   * Permite filtrar proyectos por categoría
+   */
   const filterBtns = document.querySelectorAll("[data-filter-btn]")
   const filterItems = document.querySelectorAll("[data-filter-item]")
   const filterSelectBox = document.querySelector("[data-select]")
   const selectItems = document.querySelectorAll("[data-select-item]")
   const selectValue = document.querySelector("[data-selecct-value]")
 
-  // Filter items on button click
+  // Filtrar elementos al hacer clic en el botón
   let lastClickedBtn = filterBtns[0]
 
   for (let i = 0; i < filterBtns.length; i++) {
@@ -410,7 +484,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Filter items on select change
+  // Filtrar elementos al cambiar la selección
   filterSelectBox?.addEventListener("click", () => {
     elementToggleFunc(filterSelectBox)
   })
@@ -424,7 +498,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Filter function
+  /**
+   * Función de filtro
+   * Muestra u oculta elementos según el filtro seleccionado
+   */
   const filterFunc = (selectedValue) => {
     for (let i = 0; i < filterItems.length; i++) {
       if (selectedValue === "todos") {
@@ -437,12 +514,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Contact form functionality
+  /**
+   * Funcionalidad del formulario de contacto
+   * Validación en tiempo real de los campos
+   */
   const form = document.querySelector("[data-form]")
   const formInputs = document.querySelectorAll("[data-form-input]")
   const formBtn = document.querySelector("[data-form-btn]")
 
-  // Check form validation on input
+  // Verificar validación del formulario en la entrada
   for (let i = 0; i < formInputs.length; i++) {
     formInputs[i].addEventListener("input", () => {
       if (form.checkValidity()) {
@@ -453,7 +533,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // Certificados y Experiencia Laboral Toggle
+  /**
+   * Alternancia de Certificados y Experiencia Laboral
+   * Permite cambiar entre ver certificados o experiencia
+   */
   const certificadosSection = document.getElementById("certificados")
   if (certificadosSection) {
     const experienciaBtn = certificadosSection.querySelector(".filter-list .filter-item:nth-child(1) button")
@@ -491,7 +574,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
 
-    // Función para mostrar experiencia laboral
+    /**
+     * Función para mostrar experiencia laboral
+     * Actualiza la sección para mostrar la experiencia
+     */
     const mostrarExperiencia = () => {
       // Activar botón
       experienciaBtn.classList.add("active")
@@ -515,7 +601,10 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     }
 
-    // Función para mostrar certificaciones
+    /**
+     * Función para mostrar certificaciones
+     * Actualiza la sección para mostrar las certificaciones
+     */
     const mostrarCertificaciones = () => {
       // Activar botón
       certificacionesBtn.classList.add("active")
