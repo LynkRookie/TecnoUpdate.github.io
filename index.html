@@ -432,14 +432,8 @@
     
                     <section class="contact-form">
                         <h3 class="h3 form-title">Formulario de Contacto</h3>
-                        <!-- FORMULARIO MODIFICADO: Usando FormSubmit -->
-                        <form action="https://formsubmit.co/lynkrookie@gmail.com" method="POST" class="form" id="contact-form" data-form>
-                            <!-- Campos ocultos para configuración de FormSubmit -->
-                            <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
-                            <input type="hidden" name="_template" value="table">
-                            
+                        <!-- FORMULARIO MODIFICADO: Usando FormSubmit con manejo en JavaScript -->
+                        <form id="contact-form" class="form" data-form>
                             <div class="input-wrapper">
                                 <input type="text" name="name" id="name" class="form-input" placeholder="Nombre completo" required data-form-input>
                                 <input type="email" name="email" id="email" class="form-input" placeholder="Correo electrónico" required data-form-input>
@@ -452,20 +446,21 @@
                                 <span>Enviar Mensaje</span>
                             </button>
                         </form>
-                        
-                        <!-- Mensajes de éxito y error -->
-                        <div id="success-message" style="display: none; color: green; margin-top: 15px;">
-                            ¡Mensaje enviado con éxito! Te responderé lo antes posible.
-                        </div>
-                        <div id="error-message" style="display: none; color: red; margin-top: 15px;">
-                            Hubo un problema al enviar el mensaje. Por favor, intenta nuevamente.
-                        </div>
                     </section>
                 </div>
             </article>
         </div>
     </main>
-  
+   <!-- Mensaje flotante de confirmación -->
+   <div id="toast-message" class="toast-message">
+    <div style="display: flex; align-items: center;">
+        <div style="margin-right: 12px; font-size: 24px;">✓</div>
+        <div>
+            <div style="font-weight: 600; margin-bottom: 4px;">¡Mensaje enviado!</div>
+            <div style="font-size: 14px;">Gracias por contactarme. Te responderé lo antes posible.</div>
+        </div>
+    </div>
+</div>
     <!-- Custom JS -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/modo.js"></script>
     <!-- Ionicons -->

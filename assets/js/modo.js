@@ -180,11 +180,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /**
    * Manejo del formulario de contacto
-   * Validación en tiempo real de los campos
+   * Validación en tiempo real de los campos y envío con mensaje flotante
    */
-  const form = document.querySelector("[data-form]")
+  const form = document.querySelector("#contact-form")
   const formInputs = document.querySelectorAll("[data-form-input]")
   const formBtn = document.querySelector("[data-form-btn]")
+  const toastMessage = document.getElementById("toast-message")
 
   // Verificar validación del formulario en la entrada
   for (let i = 0; i < formInputs.length; i++) {
@@ -195,6 +196,61 @@ document.addEventListener("DOMContentLoaded", () => {
         formBtn.setAttribute("disabled", "")
       }
     })
+  }
+
+  // Manejar el envío del formulario
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault()
+
+    // Deshabilitar el botón durante el envío
+    formBtn.setAttribute("disabled", "")
+    formBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Enviando...</span>'
+
+    try {
+      // Crear FormData del formulario
+      const formData = new FormData(form)
+
+      // Enviar datos a FormSubmit
+      const response = await fetch("https://formsubmit.co/lynkrookie@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      // Verificar si la respuesta fue exitosa
+      if (response.ok) {
+        // Mostrar mensaje de éxito
+        showToastMessage()
+        // Limpiar el formulario
+        form.reset()
+      } else {
+        // Si hay un error, mostrar en consola
+        console.error("Error al enviar el formulario:", await response.text())
+        alert("Hubo un problema al enviar el mensaje. Por favor, intenta nuevamente.")
+      }
+    } catch (error) {
+      console.error("Error:", error)
+      alert("Hubo un problema al enviar el mensaje. Por favor, intenta nuevamente.")
+    } finally {
+      // Restaurar el botón
+      formBtn.removeAttribute("disabled")
+      formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Enviar Mensaje</span>'
+    }
+  })
+
+  /**
+   * Mostrar mensaje flotante de confirmación
+   * Aparece después de enviar el formulario correctamente
+   */
+  const showToastMessage = () => {
+    toastMessage.style.display = "block"
+
+    // Ocultar el mensaje después de 5 segundos
+    setTimeout(() => {
+      toastMessage.style.display = "none"
+    }, 5000)
   }
 
   /**
@@ -583,3 +639,4 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarCertificaciones()
   }
 })
+
