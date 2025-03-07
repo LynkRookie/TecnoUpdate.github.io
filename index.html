@@ -4,221 +4,449 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Damián Jinel | Full Stack Developer</title>
-    <link rel="stylesheet" href="vista/Css/pirncipal.css">
+    <link rel="stylesheet" href="assets/Css/pirncipal.css           ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                </path>
-                <circle cx="12" cy="12" r="4"></circle>
-            </svg></a>
-            <div class="nav-links">
-                <a href="#about">Sobre mi</a>
-                <a href="#projects">Proyectos</a>
-                <a href="#skills">Certificados</a>
-                <a href="#lenguajes">Habilidades</a>
-                <a href="#contact">Contacto</a>
-            </div>
-            <div class="nav-right">
-              
-                <button id="dark-mode-toggle" class="mode-toggle" aria-label="Toggle Theme">🌑</button>
-
-                <a href="#contact" class="start-project-btn">Iniciar Proyecto</a>
-            </div>
-        </nav>
-    </header>
-
+<body class="fondo">
     <main>
-        <section id="hero" class="hero">
-            <div class="hero-background">
-                <div class="gradient-overlay"></div>
-                <div class="animated-gradient"></div>
-            </div>
-            <div class="hero-content animate-fade-in">
-                <h1 class="hero-title">Damián Jinel</h1>
-                <p class="hero-subtitle">Desarrollador Web Full Stack</p>
-                <div class="social-links">
-                    <a href="https://github.com/LynkRookie" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/lynk_rookie/" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/damian-jinel-cortes-b61b56296/" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="assets/images/1.png" alt="Damián Jinel" width="80">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="Damián Jinel">Damián Jinel</h1>
+                    <p class="title">Desarrollador Web Full Stack</p>
                 </div>
-                <a href="#contact" class="cta-button">Iniciar un Proyecto</a>
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Mostrar Contactos</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
             </div>
-        </section>
-        <section id="about" class="about">
-            <div class="container">
-                <h1>Sobre mí</h1>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Soy un desarrollador web apasionado por crear experiencias digitales excepcionales. Con más de 2 años de experiencia, me especializo en construir aplicaciones web modernas y eficientes utilizando las últimas tecnologías.</p>
-                        <p>Mi enfoque se centra en la creación de soluciones escalables y mantenibles, siempre buscando el equilibrio perfecto entre funcionalidad y diseño atractivo.</p>
-                        <a href="vista/img/docu/CV_Damian_Eduardo_Jinel_Cortes_informatica.docx" download class="download-cv">Descargar CV</a>
-                    </div>
-                    <div class="about-decoration"></div>
-                </div>
-                <div class="imagen ">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-full blur-2xl"></div>
-                     <img alt="Damián Jinel" loading="lazy" width="500" height="500" decoding="async" data-nimg="1"
-                    class="student-image" src="vista/img/yo.jpg" style="color: transparent;">
-                </div>
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:lynkrookie@gmail.com" class="contact-link">lynkrookie@gmail.com</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Teléfono</p>
+                            <a href="tel:+56933471250" class="contact-link">+56933471250</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Ubicación</p>
+                            <address>TechnoCraft Ovalle, Chile</address>
+                        </div>
+                    </li>
+                </ul>
+                <div class="separator"></div>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://github.com/LynkRookie" target="_blank" class="social-link">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/lynk_rookie/" target="_blank" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/damian-jinel-cortes-b61b56296/" target="_blank" class="social-link">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
+        </aside>
+        <div class="main-content">
+            <nav class="navbar">
+                    <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a class="navbar-link"href="#sobremi">Sobre mi</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link"href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link"href="#certificados">Certificados</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link"href="#habilidades">Habilidades</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link"href="#contacto">Contacto</a>
+                    </li>
+                    </ul>
+            </nav>
+            <article class="about" data-page="about">
+                <div id="sobremi" class="about">
+                    <header>
+                        <h2 class="h2 article-title">Sobre mí</h2>
+                    </header>
+                        <section class="about-text">
+                            <p>Soy un desarrollador web apasionado por crear experiencias digitales excepcionales. Con más de 2 años de experiencia, me especializo en construir aplicaciones web modernas y eficientes utilizando las últimas tecnologías.</p>
+                            <p>Mi enfoque se centra en la creación de soluciones escalables y mantenibles, siempre buscando el equilibrio perfecto entre funcionalidad y diseño atractivo.</p>
+                            <a href="vista/img/docu/CV_Damian_Eduardo_Jinel_Cortes_informatica.docx" download class="download-cv">Descargar CV</a>
+                        </section>
+                        <!-- SERVICES -->
+                        <section class="service">
+                            <h3 class="h3 service-title">Lo que hago</h3>
+
+                            <ul class="service-list">
+                                <li class="service-item">
+                                    <div class="service-icon-box">
+                                        <img src="assets/images/icon-design.svg" alt="Desarrollo Web" width="40">
+                                    </div>
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title">Desarrollo Web</h4>
+                                        <p class="service-item-text">
+                                            Desarrollo de sitios web modernos, responsivos y optimizados para todos los dispositivos.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="service-item">
+                                    <div class="service-icon-box">
+                                        <img src="assets/images/icon-dev.svg" alt="Desarrollo Backend" width="40">
+                                    </div>
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title">Desarrollo Backend</h4>
+                                        <p class="service-item-text">
+                                            Creación de APIs y servicios del servidor robustos, seguros y escalables.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="service-item">
+                                    <div class="service-icon-box">
+                                        <img src="assets/images/icon-app.svg" alt="Aplicaciones Móviles" width="40">
+                                    </div>
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title">Aplicaciones Móviles</h4>
+                                        <p class="service-item-text">
+                                            Desarrollo de aplicaciones móviles nativas y multiplataforma para iOS y Android.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="service-item">
+                                    <div class="service-icon-box">
+                                        <img src="/placeholder.svg?height=40&width=40" alt="Ciberseguridad" width="40">
+                                    </div>
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title">Ciberseguridad</h4>
+                                        <p class="service-item-text">
+                                            Implementación de medidas de seguridad y auditorías para proteger sus sistemas.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                </div>
+            </article>
+            <br>
+            <article class="proyectos" data-page="proyectos">
+                <div id="proyectos"class="proyectos">
+                    <header>
+                        <h2 class="h2 article-title">Proyectos</h2>
+                    </header>
+
+                    <section id="proyectos"class="projects">
+                        <ul class="filter-list">
+                            <li class="filter-item">
+                                <button class="active" data-filter-btn>Todos</button>
+                            </li>
+                            <li class="filter-item">
+                                <button data-filter-btn>Web</button>
+                            </li>
+                            <li class="filter-item">
+                                <button data-filter-btn>Aplicaciones</button>
+                            </li>
+                            <li class="filter-item">
+                                <button data-filter-btn>Ciberseguridad</button>
+                            </li>
+                        </ul>
+
+                        <div class="filter-select-box">
+                            <button class="filter-select" data-select>
+                                <div class="select-value" data-selecct-value>Seleccionar categoría</div>
+                                <div class="select-icon">
+                                    <ion-icon name="chevron-down"></ion-icon>
+                                </div>
+                            </button>
+
+                            <ul class="select-list">
+                                <li class="select-item">
+                                    <button data-select-item>Todos</button>
+                                </li>
+                                <li class="select-item">
+                                    <button data-select-item>Web</button>
+                                </li>
+                                <li class="select-item">
+                                    <button data-select-item>Aplicaciones</button>
+                                </li>
+                                <li class="select-item">
+                                    <button data-select-item>Ciberseguridad</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="project-list">
+                            <li class="project-item active" data-filter-item data-category="web">
+                                <a href="https://technocraftovalle.vercel.app/vista/inicio_gestor_cv.html">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </div>
+                                        <img src="assets/images/gestor.png" alt="Gestor de Informe de Mantenimiento" loading="lazy">
+                                    </figure>
+                                    <h3 class="project-title">Gestor de Informe de Mantenimiento</h3>
+                                    <p class="project-category">Web</p>
+                                </a>
+                            </li>
+                            <li class="project-item active" data-filter-item data-category="web">
+                                <a href="https://technocraftovalle.netlify.app">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </div>
+                                        <img src="assets/images/portafolio-1.png" alt="TechnoCraft Ovalle" loading="lazy">
+                                    </figure>
+                                    <h3 class="project-title">TechnoCraft Ovalle</h3>
+                                    <p class="project-category">Web</p>
+                                </a>
+                            </li>
+                            <li class="project-item active" data-filter-item data-category="ciberseguridad">
+                                <a href="https://lynkrookie.github.io/Hkdamian.github.io/">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </div>
+                                        <img src="assets/images/portafolio_h.png" alt="Portafolio de hacking etico" loading="lazy">
+                                    </figure>
+                                    <h3 class="project-title">Portafolio de hacking etico</h3>
+                                    <p class="project-category">Ciberseguridad</p>
+                                </a>
+                            </li>
+                            <li class="project-item active" data-filter-item data-category="ciberseguridad">
+                                <a href="https://hketicodamianjinel.vercel.app">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </div>
+                                        <img src="assets/images/5fases.png" alt="5 fases de ataque en ciberseguridad" loading="lazy">
+                                    </figure>
+                                    <h3 class="project-title">5 fases de ataque en ciberseguridad</h3>
+                                    <p class="project-category">Ciberseguridad</p>
+                                </a>
+                            </li>
+                            <li class="project-item active" data-filter-item data-category="aplicaciones">
+                                <a href="https://lynkrookie.github.io/Grmineria.github.io/index.html">
+                                    <figure class="project-img">
+                                        <div class="project-item-icon-box">
+                                            <ion-icon name="eye-outline"></ion-icon>
+                                        </div>
+                                        <img src="assets/images/mineria.png" alt="Mineria de datos" loading="lazy">
+                                    </figure>
+                                    <h3 class="project-title">Mineria de datos</h3>
+                                    <p class="project-category">Aplicaciones</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+            <br>
+            <article class="certificados" data-page="certificados">
+                <div id="certificados" class="certificados">
+                        <header>
+                            <h2 class="h2 article-title">Certificados</h2>
+                        </header>
         
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Proyectos Destacados</h2>
-                <div class="projects-layout">
-                    <div class="featured-project" id="featured-project">
-                        <!-- Dynamic content will be inserted here by JavaScript -->
-                    </div>
-                    <div class="projects-list">
-                        <button class="project-link" data-project="gestor">Gestor de Informe de Mantenimiento</button>
-                        <button class="project-link" data-project="technocraft">TechnoCraft Ovalle</button>
-                        <button class="project-link" data-project="hacking">Portafolio de hacking etico</button>
-                        <button class="project-link" data-project="ciberseguridad">5 fases de ataque en ciberseguridad</button>
-                        <button class="project-link" data-project="mineria">Mineria de datos</button>
-
-                    </div>
+                        <section class="timeline">
+                            <div class="title-wrapper">
+                                <div class="icon-box">
+                                    <ion-icon name="book-outline"></ion-icon>
+                                </div>
+                                <h3 class="h3">Experiencia Lboral y Certificaciones</h3>
+                            </div>
+                            <ul class="filter-list">
+                                <li class="filter-item">
+                                    <button data-filter-btn>Experiencia Lboral</button>
+                                </li>
+                                <li class="filter-item">
+                                    <button data-filter-btn>Certificaciones</button>
+                                </li>
+                            </ul>
+    
+                            <ol class="timeline-list">
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Curso de Ciberseguridad en Certif</h4>
+                                    <span>2023</span>
+                                    <p class="timeline-text">
+                                        Desarrollo de interfaces modernas y responsivas. Completado en 2023.
+                                    </p>
+                                    <div class="certificate-img">
+                                        <img src="assets/images/certificado_ciberseguridad.png" alt="Certificado de Ciberseguridad" width="200">
+                                    </div>
+                                </li>
+        
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Curso Introducción a Networks Cisco</h4>
+                                    <span>2023</span>
+                                    <p class="timeline-text">
+                                        Desarrollo de APIs y servicios del servidor. Completado en 2023.
+                                    </p>
+                                    <div class="certificate-img">
+                                        <img src="assets/images/certificado_introduccion_a_Networks.png" alt="Certificado de Networks" width="200">
+                                    </div>
+                                </li>
+        
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Curso en Progreso</h4>
+                                    <span>En curso</span>
+                                    <p class="timeline-text">
+                                        En progreso...
+                                    </p>
+                                </li>
+                            </ol>
+                        </section>
                 </div>
+            </article>
+            <br>
+            <article class="habilidades" data-page="habilidades">
+                <div id="habilidades" class="habilidades">
+                    <header>
+                        <h2 class="h2 article-title">Habilidades y Tecnologías</h2>
+                    </header>
+    
+                    <section class="skill">
+                        <h3 class="h3 skills-title">Mis habilidades</h3>
+    
+                        <ul class="skills-list content-card">
+                            <li class="skills-item">
+                                <div class="title-wrapper">
+                                    <h5 class="h5">Frontend Development</h5>
+                                    <data value="90">90%</data>
+                                </div>
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 90%;"></div>
+                                </div>
+                            </li>
+    
+                            <li class="skills-item">
+                                <div class="title-wrapper">
+                                    <h5 class="h5">Backend Development</h5>
+                                    <data value="45">45%</data>
+                                </div>
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 45%;"></div>
+                                </div>
+                            </li>
+    
+                            <li class="skills-item">
+                                <div class="title-wrapper">
+                                    <h5 class="h5">maintenance of equipment and devices</h5>
+                                    <data value="35"35%</data>
+                                </div>
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 35%;"></div>
+                                </div>
+                            </li>
+    
+                            <li class="skills-item">
+                                <div class="title-wrapper">
+                                    <h5 class="h5">computer performance optimization</h5>
+                                    <data value="30">30%</data>
+                                </div>
+                                <div class="skill-progress-bg">
+                                    <div class="skill-progress-fill" style="width: 30%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+    
+                    <section class="tech-skills">
+                        <h3 class="h3 skills-title">Tecnologías</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">HTML5</div>
+                            <div class="tech-item">CSS3</div>
+                            <div class="tech-item">JavaScript</div>
+                            <div class="tech-item">React</div>
+                            <div class="tech-item">Next.js</div>
+                            <div class="tech-item">Node.js</div>
+                            <div class="tech-item">SQL</div>
+                            <div class="tech-item">Git</div>
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">Java</div>
+                            <div class="tech-item">PHP</div>
+                        </div>
+                    </section>
             </div>
-        </section>
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2>Certificados</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="medallas">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-full blur-2xl"></div>
-                             <img alt="Damián Jinel" loading="lazy" width="500" height="500" decoding="async" data-nimg="1"
-                            class="medallas" src="vista/img/certificado_ciberseguridad.png" style="color: transparent;">
-                        </div>
-                        <h3>Curso de Ciberseguridad en Certif</h3>
-                        <p>Desarrollo de interfaces modernas y responsivas  Completado en 2023</p>
-                        <div class="skill-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>React</span>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="medallas">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-full blur-2xl"></div>
-                             <img alt="Damián Jinel" loading="lazy" width="500" height="500" decoding="async" data-nimg="1"
-                            class="medallas" src="vista/img/certificado_introduccion_a_Networks.png" style="color: transparent;">
-                        </div>
-                        <h3>Curso Introduccón a Networks Cisco</h3>
-                        <p>Desarrollo de APIs y servicios del servidor  Completado en 2023</p>
-                        <div class="skill-tech">
-                            <span>Node.js</span>
-                            <span>Python</span>
-                            <span>Java</span>
-                            <span>SQL</span>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="medallas">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-20 rounded-full blur-2xl"></div>
-                             <img alt="Damián Jinel" loading="lazy" width="500" height="500" decoding="async" data-nimg="1"
-                            class="medallas" src="/placeholder.svg" style="color: transparent;">
-                        </div>
-                        <h3>Curso en Progreso</h3>
-                        <p>En progreso...</p>
-                        <div class="skill-tech">
-                            <span>Git</span>
-                            <span>Docker</span>
-                            <span>AWS</span>
-                            <span>Linux</span>
-                        </div>
-                    </div>
+            </article>
+            <br>
+            <article class="contacto" data-page="contacto">
+                <div id="contacto" class="contacto">
+                    <header>
+                        <h2 class="h2 article-title">Contacto</h2>
+                    </header>
+    
+                    <section class="mapbox" data-mapbox>
+                        <figure>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6791.521239531361!2d-71.21345837073053!3d-30.60150498213289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9687b9c4d3194d7f%3A0xb3995c1e1e7d4d3e!2sOvalle%2C%20Coquimbo!5e0!3m2!1ses!2scl!4v1709747427889!5m2!1ses!2scl"
+                                width="400" height="300" loading="lazy"></iframe>
+                        </figure>
+                    </section>
+    
+                    <section class="contact-form">
+                        <h3 class="h3 form-title">Formulario de Contacto</h3>
+    
+                        <form action="https://formsubmit.co/lynkrookie@gmail.com" method="POST" class="form" id="contact-form" data-form>
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name" class="form-input" placeholder="Nombre completo" required data-form-input>
+                                <input type="email" name="email" id="email" class="form-input" placeholder="Correo electrónico" required data-form-input>
+                            </div>
+    
+                            <textarea name="message" id="message" class="form-input" placeholder="Tu mensaje" required data-form-input></textarea>
+    
+                            <button class="form-btn" type="submit" data-form-btn>
+                                <ion-icon name="paper-plane"></ion-icon>
+                                <span>Enviar Mensaje</span>
+                            </button>
+                        </form>
+                    </section>
                 </div>
-            </div>
-        </section>
-        <section id="lenguajes" class="lenguaje">
-            <div class="container">
-                <h2>Habilidades y Tecnologías</h2>
-                <div class="sk-grid">
-                    <div class="sk-item">HTML5</div>
-                    <div class="sk-item">CSS3</div>
-                    <div class="sk-item">JavaScript</div>
-                    <div class="sk-item">TypeScript</div>
-                    <div class="sk-item">React</div>
-                    <div class="sk-item">Next.js</div>
-                    <div class="sk-item">Node.js</div>
-                    <div class="sk-item">Express</div>
-                    <div class="sk-item">MongoDB</div>
-                    <div class="sk-item">SQL</div>
-                    <div class="sk-item">Git</div>
-                    <div class="sk-item">Docker</div>
-                    <div class="sk-item">AWS</div>
-                    <div class="sk-item">Python</div>
-                    <div class="sk-item">Java</div>
-                    <div class="sk-item">PHP</div>
-                    <div class="sk-item">GraphQL</div>
-                    <div class="sk-item">REST API</div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contacto</h2>
-                <div class="contact-content">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
-                    </form>
-                    <div class="location">
-                        <h3>Ubicación</h3>
-                        <div id="map" class="map"></div>
-                        <p class="location-address">TechnoCraft Ovalle</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Damián Jinel. Todos los derechos Reservados.</p>
-            <div class="footer-social">
-                <a href="https://github.com/LynkRookie" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/damian-jinel-cortes-b61b56296/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:lynkrookie@gmail.com">Email</a>
-            </div>
+            </article>
         </div>
-    </footer>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-    <script src="Js/modo.js"></script>
+    </main>
+  
+    <!-- Custom JS -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/modo.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="mode-toggle" aria-label="Toggle Theme">🌑</button>
 </body>
 </html>
-
