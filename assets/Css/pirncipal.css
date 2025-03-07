@@ -420,7 +420,7 @@ main {
   margin-bottom: 15px;
 }
 .about-text {
-  color: var(--text-light);
+  color: black;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -951,6 +951,9 @@ footer .conteiner {
   border-radius: 14px;
   outline: none;
 }
+.dark-mode .about-text{
+  color: white;
+}
 /* Botón de cambio de modo */
 .mode-toggle {
   position: absolute;
@@ -968,7 +971,9 @@ footer .conteiner {
   border: none;
   transition: transform 0.3s ease;
 }
-
+.logo{
+width: 10rem;
+}
 .mode-toggle:hover {
   transform: translateY(-2px);
 }
