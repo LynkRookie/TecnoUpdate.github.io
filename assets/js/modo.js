@@ -180,47 +180,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /**
    * Manejo del formulario de contacto
-   * Gestiona la validación y envío del formulario
+   * Validación en tiempo real de los campos
    */
-  const contactForm = document.getElementById("contact-form")
+  const form = document.querySelector("[data-form]")
+  const formInputs = document.querySelectorAll("[data-form-input]")
+  const formBtn = document.querySelector("[data-form-btn]")
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault() // Prevenir el envío normal del formulario
-      
-      // Obtener datos del formulario
-      const name = document.getElementById("name").value
-      const email = document.getElementById("email").value
-      const message = document.getElementById("message").value
-
-      // Validación simple
-      if (!name || !email || !message) {
-        alert("Por favor, completa todos los campos")
-        return
+  // Verificar validación del formulario en la entrada
+  for (let i = 0; i < formInputs.length; i++) {
+    formInputs[i].addEventListener("input", () => {
+      if (form.checkValidity()) {
+        formBtn.removeAttribute("disabled")
+      } else {
+        formBtn.setAttribute("disabled", "")
       }
-
-      // Mostrar indicador de carga
-      const formBtn = document.querySelector("[data-form-btn]")
-      formBtn.disabled = true
-      formBtn.innerHTML = "<span>Enviando...</span>"
-
-      // Formatear el asunto y cuerpo del correo para mailto
-      const subject = `Contacto desde Portafolio: ${name}`
-      const body = `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`
-      
-      // Crear la URL de mailto con los parámetros codificados
-      const mailtoUrl = `mailto:lynkrookie@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-      
-      // Abrir el cliente de correo del usuario
-      window.location.href = mailtoUrl
-
-      // Restaurar el botón después de un tiempo
-      setTimeout(() => {
-        formBtn.disabled = false
-        formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Enviar Mensaje</span>'
-        alert(`Gracias ${name}! Tu cliente de correo se abrirá para enviar el mensaje.`)
-        contactForm.reset()
-      }, 2000)
     })
   }
 
@@ -514,25 +487,6 @@ document.addEventListener("DOMContentLoaded", () => {
         filterItems[i].classList.remove("active")
       }
     }
-  }
-
-  /**
-   * Funcionalidad del formulario de contacto
-   * Validación en tiempo real de los campos
-   */
-  const form = document.querySelector("[data-form]")
-  const formInputs = document.querySelectorAll("[data-form-input]")
-  const formBtn = document.querySelector("[data-form-btn]")
-
-  // Verificar validación del formulario en la entrada
-  for (let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener("input", () => {
-      if (form.checkValidity()) {
-        formBtn.removeAttribute("disabled")
-      } else {
-        formBtn.setAttribute("disabled", "")
-      }
-    })
   }
 
   /**
