@@ -590,21 +590,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const experienciaItems = [
       {
         title: "Desarrollador Web en TechnoCraft",
-        periodo: "2022 - Presente",
+        periodo: "2023 - Presente",
         descripcion:
           "Desarrollo de aplicaciones web y mantenimiento de sistemas existentes. Implementación de nuevas funcionalidades y mejoras de rendimiento.",
       },
       {
-        title: "Técnico en Soporte IT",
-        periodo: "2020 - 2022",
+        title: "Gestor de Informe de Mantenimiento, Municipalidad Ovalle",
+        periodo: "Enero 2023 - Junio 2023",
         descripcion:
-          "Soporte técnico a usuarios, mantenimiento de equipos y redes. Resolución de incidencias y configuración de sistemas.",
+          "Desarrollo de aplicaciones web, mantenimiento y optimización de sistemas existentes.",
       },
       {
         title: "Pasante en Desarrollo Web",
-        periodo: "2019 - 2020",
+        periodo: "Enero 2023 - Junio 2023",
         descripcion:
           "Desarrollo de componentes frontend y colaboración en proyectos de diseño web. Aprendizaje de tecnologías modernas.",
+      },
+      {
+        title: "Desarrollador - Cesfam Fray Jorge (Colaboración)",
+        periodo: "Julio 2023 - Noviembre 2023",
+        descripcion:
+          "En colaboración con un equipo multidisciplinario, participé en el desarrollo de una aplicación web destinada a los aduultos mayores",
+      },
+      {
+        title: "Soporte IT",
+        periodo: "2021 - Presente",
+        descripcion:
+          "Soporte técnico a usuarios, mantenimiento de equipos y redes. Resolución de incidencias y configuración de sistemas.",
       },
     ]
 
