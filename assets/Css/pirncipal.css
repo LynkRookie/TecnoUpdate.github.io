@@ -1403,6 +1403,11 @@ width: 10rem;
 visibility: inherit;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hydrated{
+    visibility: inherit;
+      }
+}
 @media (min-width: 1024px) {
   /**
    * CUSTOM PROPERTY
