@@ -1399,6 +1399,9 @@ width: 10rem;
     width: max-content;
     margin-left: auto;
   }
+  .hydrated{
+visibility: inherit;
+  }
 }
 @media (min-width: 1024px) {
   /**
