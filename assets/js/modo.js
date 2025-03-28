@@ -589,10 +589,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Datos de experiencia laboral
     const experienciaItems = [
       {
-        title: "Desarrollador Web en TechnoCraft",
-        periodo: "2023 - Presente",
+        title: "Soporte IT",
+        periodo: "2021 - Presente",
         descripcion:
-          "Desarrollo de aplicaciones web y mantenimiento de sistemas existentes. Implementación de nuevas funcionalidades y mejoras de rendimiento.",
+          "Soporte técnico a usuarios, mantenimiento de equipos y redes. Resolución de incidencias y configuración de sistemas.",
+      },
+      {
+        title: "Desarrollador - Cesfam Fray Jorge (Colaboración)",
+        periodo: "Julio 2022 - Noviembre 2022",
+        descripcion:
+          "En colaboración con un equipo multidisciplinario, participé en el desarrollo de una aplicación web destinada a los aduultos mayores",
       },
       {
         title: "Gestor de Informe de Mantenimiento, Municipalidad Ovalle",
@@ -606,18 +612,13 @@ document.addEventListener("DOMContentLoaded", () => {
         descripcion:
           "Desarrollo de componentes frontend y colaboración en proyectos de diseño web. Aprendizaje de tecnologías modernas.",
       },
+      
       {
-        title: "Desarrollador - Cesfam Fray Jorge (Colaboración)",
-        periodo: "Julio 2023 - Noviembre 2023",
+        title: "Desarrollador Web en  portafolio TechnoCraft",
+        periodo: "2023 - Presente",
         descripcion:
-          "En colaboración con un equipo multidisciplinario, participé en el desarrollo de una aplicación web destinada a los aduultos mayores",
-      },
-      {
-        title: "Soporte IT",
-        periodo: "2021 - Presente",
-        descripcion:
-          "Soporte técnico a usuarios, mantenimiento de equipos y redes. Resolución de incidencias y configuración de sistemas.",
-      },
+          "Desarrollo de aplicaciones web y mantenimiento de sistemas existentes. Implementación de nuevas funcionalidades y mejoras de rendimiento.",
+      }
     ]
 
     // Datos de certificaciones (usar los existentes del HTML)
